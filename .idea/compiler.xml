@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="across-autoconfigure" />
+        <module name="actuator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="across-autoconfigure" target="1.5" />
+      <module name="across-autoconfigure-project" target="1.5" />
+      <module name="actuator" target="1.5" />
+      <module name="root" target="1.5" />
+      <module name="test-projects" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

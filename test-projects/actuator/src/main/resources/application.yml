@@ -1,0 +1,7 @@
+endpoints:
+  health:
+    sensitive: false
+  metrics:
+    sensitive: false
+  beans:
+    sensitive: false

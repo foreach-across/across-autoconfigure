@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>test-projects</groupId>
+	<artifactId>test-projects</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<across.version>3.0.0-SNAPSHOT</across.version>
+	</properties>
+
+	<name>${project.groupId}:${project.artifactId}</name>
+
+	<modules>
+		<module>../across-autoconfigure</module>
+		<module>actuator</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>foreach-nexus</id>
+			<name>Foreach nexus</name>
+			<url>http://repository.foreach.be/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>standard-module-bom</artifactId>
+				<version>${across.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-autoconfigure</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
