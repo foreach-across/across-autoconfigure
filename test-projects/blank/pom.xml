@@ -19,13 +19,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>across-autoconfigure</artifactId>
+	<artifactId>blank</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<parent>
-		<groupId>com.foreach.across</groupId>
-		<artifactId>across-autoconfigure-project</artifactId>
+		<groupId>test-projects</groupId>
+		<artifactId>test-projects</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
@@ -34,12 +34,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.foreach.across</groupId>
-			<artifactId>across-web</artifactId>
+			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-			<optional>true</optional>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 	</dependencies>
 </project>

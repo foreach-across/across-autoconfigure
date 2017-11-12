@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/across-autoconfigure/across-autoconfigure.iml" filepath="$PROJECT_DIR$/across-autoconfigure/across-autoconfigure.iml" />
       <module fileurl="file://$PROJECT_DIR$/across-autoconfigure-project.iml" filepath="$PROJECT_DIR$/across-autoconfigure-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/actuator/actuator.iml" filepath="$PROJECT_DIR$/test-projects/actuator/actuator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/blank/blank.iml" filepath="$PROJECT_DIR$/test-projects/blank/blank.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/test-projects.iml" filepath="$PROJECT_DIR$/test-projects/test-projects.iml" />
     </modules>
   </component>

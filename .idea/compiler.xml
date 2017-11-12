@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="across-autoconfigure" />
         <module name="actuator" />
+        <module name="blank" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="across-autoconfigure" target="1.5" />
       <module name="across-autoconfigure-project" target="1.5" />
       <module name="actuator" target="1.5" />
+      <module name="blank" target="1.5" />
       <module name="root" target="1.5" />
       <module name="test-projects" target="1.5" />
     </bytecodeTargetLevel>

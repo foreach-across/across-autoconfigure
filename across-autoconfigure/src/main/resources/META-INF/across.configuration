@@ -13,40 +13,40 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-#
-# List of AutoConfiguration classes that should never be allowed.
-# Once a class has been added here, it can only ever be added manually to the application.
+com.foreach.across.Exposed=\
+  org.springframework.boot.actuate.endpoint.Endpoint,\
+  org.springframework.boot.actuate.endpoint.PublicMetrics,\
+  org.springframework.boot.actuate.endpoint.mvc.MvcEndpoint,\
+  org.springframework.boot.actuate.endpoint.jmx.JmxEndpoint,\
+  org.springframework.boot.actuate.cache.CacheStatisticsProvider,\
+  org.springframework.boot.actuate.health.HealthIndicator,\
+  org.springframework.boot.actuate.info.InfoContributor,\
+  org.springframework.boot.actuate.metrics.CounterService,\
+  org.springframework.boot.actuate.metrics.GaugeService
 #
 #com.foreach.across.AutoConfigurationDisabled=\
-
-#
-#
-# List of AutoConfiguration classes that are supported on the application level, these will always be allowed.
-# Optionally an adapter class name can be specified, if that is the case, the original class will not be directly
-# imported, but the adapter configuration will.
 #
 com.foreach.across.AutoConfigurationEnabled=\
-org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.JolokiaAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.MetricsChannelAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,\
-org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,\
-org.springframework.boot.actuate.cloudfoundry.CloudFoundryActuatorAutoConfiguration
-
+  org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.JolokiaAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricsChannelAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,\
+  org.springframework.boot.actuate.cloudfoundry.CloudFoundryActuatorAutoConfiguration
 #org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
