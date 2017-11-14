@@ -1,0 +1,12 @@
+<div class="container">
+	<sba-info-panel panel-title="Across Application Info">
+		<table class="table">
+			<col width="38%">
+			<col width="62%">
+			<tr ng-repeat="applicationInfoItem in applicationInfo">
+				<td style="word-break: break-all;">{{applicationInfoItem.name}}</td>
+				<td style="word-break: break-all;">{{applicationInfoItem.value}}</td>
+			</tr>
+		</table>
+	</sba-info-panel>
+</div>
