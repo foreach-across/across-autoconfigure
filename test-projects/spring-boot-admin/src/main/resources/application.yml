@@ -1,0 +1,10 @@
+spring.boot.admin.url: http://localhost:8080
+management.security.enabled: false
+
+endpoints:
+  health:
+    sensitive: false
+  metrics:
+    sensitive: false
+  beans:
+    sensitive: false
