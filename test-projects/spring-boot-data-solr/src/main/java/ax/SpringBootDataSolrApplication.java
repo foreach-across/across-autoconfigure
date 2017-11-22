@@ -16,15 +16,17 @@ import javax.annotation.PreDestroy;
         modules = AcrossWebModule.NAME
 )
 public class SpringBootDataSolrApplication {
+    private static String commandLineLocation;
     private JettySolrRunner jetty;
 
     public static void main(String[] args) {
+        commandLineLocation = "./test-projects/spring-boot-data-solr/src/solr";
         SpringApplication.run(SpringBootDataSolrApplication.class);
     }
 
     @PostConstruct
     public void setup() throws Exception {
-        jetty = new JettySolrRunner("./src/solr", "/solr", 8983);
+        jetty = new JettySolrRunner(commandLineLocation == null ? "./src/solr" : commandLineLocation, "/solr", 8983);
         jetty.start();
     }
 
