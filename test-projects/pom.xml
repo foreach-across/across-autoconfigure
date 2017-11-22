@@ -21,6 +21,7 @@
 		<module>blank</module>
 		<module>actuator</module>
 		<module>spring-boot-admin</module>
+		<module>spring-boot-data-solr</module>
 	</modules>
 
 	<repositories>
@@ -69,6 +70,12 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>fluent-hc</artifactId>
 			<version>4.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>LATEST</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
