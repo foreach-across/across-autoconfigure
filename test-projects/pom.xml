@@ -30,6 +30,7 @@
 		<module>actuator</module>
 		<module>spring-boot-admin</module>
 		<module>spring-boot-data-solr</module>
+		<module>spring-boot-data-ldap</module>
 	</modules>
 
 	<repositories>

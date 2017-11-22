@@ -51,7 +51,11 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
   org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration,\
-  org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration
+  org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
+  org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
+  org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
@@ -69,8 +73,6 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
@@ -102,8 +104,6 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\
 #org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
-#org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
-#org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration,\

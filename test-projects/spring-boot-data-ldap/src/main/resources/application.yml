@@ -1,0 +1,6 @@
+server:
+  port: 8000
+spring:
+  ldap:
+    embedded:
+      base-dn: dc=springframework,dc=org

@@ -9,6 +9,9 @@
         <module name="across-autoconfigure" />
         <module name="actuator" />
         <module name="blank" />
+        <module name="spring-boot-admin" />
+        <module name="spring-boot-data-ldap" />
+        <module name="spring-boot-data-solr" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,7 +19,9 @@
       <module name="across-autoconfigure-project" target="1.5" />
       <module name="actuator" target="1.5" />
       <module name="blank" target="1.5" />
-      <module name="root" target="1.5" />
+      <module name="spring-boot-admin" target="1.5" />
+      <module name="spring-boot-data-ldap" target="1.5" />
+      <module name="spring-boot-data-solr" target="1.5" />
       <module name="test-projects" target="1.5" />
     </bytecodeTargetLevel>
   </component>
