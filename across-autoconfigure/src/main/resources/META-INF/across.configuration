@@ -55,7 +55,14 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
   org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration
+  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
@@ -73,8 +80,6 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
@@ -87,7 +92,7 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
 #org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration,\
 #org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration,\
-#org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\
+
 #org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
@@ -104,13 +109,9 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\
 #org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
-#org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
-#org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration,\
-#org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
-#org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
 #org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
 #org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
 #org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration,\
