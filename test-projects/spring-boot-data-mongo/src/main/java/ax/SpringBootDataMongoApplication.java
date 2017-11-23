@@ -11,8 +11,8 @@ import org.springframework.boot.SpringApplication;
 @AcrossApplication(
         modules = AcrossWebModule.NAME
 )
-public class MongoApplication {
+public class SpringBootDataMongoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MongoApplication.class);
+        SpringApplication.run(SpringBootDataMongoApplication.class);
     }
 }
