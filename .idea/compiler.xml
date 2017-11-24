@@ -10,9 +10,11 @@
         <module name="actuator" />
         <module name="blank" />
         <module name="spring-boot-admin" />
+        <module name="spring-boot-data-elasticsearch" />
         <module name="spring-boot-data-ldap" />
         <module name="spring-boot-data-mongo" />
         <module name="spring-boot-data-neo4j" />
+        <module name="spring-boot-data-redis" />
         <module name="spring-boot-data-solr" />
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
@@ -24,9 +26,11 @@
       <module name="actuator" target="1.8" />
       <module name="blank" target="1.8" />
       <module name="spring-boot-admin" target="1.8" />
+      <module name="spring-boot-data-elasticsearch" target="1.8" />
       <module name="spring-boot-data-ldap" target="1.8" />
       <module name="spring-boot-data-mongo" target="1.8" />
       <module name="spring-boot-data-neo4j" target="1.8" />
+      <module name="spring-boot-data-redis" target="1.8" />
       <module name="spring-boot-data-solr" target="1.8" />
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />

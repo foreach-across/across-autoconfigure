@@ -64,6 +64,11 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
   org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
@@ -78,12 +83,7 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\
 #org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration,\
