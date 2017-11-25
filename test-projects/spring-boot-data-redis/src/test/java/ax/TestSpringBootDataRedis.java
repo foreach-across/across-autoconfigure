@@ -1,7 +1,7 @@
 package ax;
 
-import ax.business.Person;
-import ax.repositories.PersonRepository;
+import ax.application.business.Person;
+import ax.application.repositories.PersonRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package ax.business;
+package ax.application.business;
 
 import lombok.Data;
 import org.springframework.ldap.odm.annotations.Attribute;

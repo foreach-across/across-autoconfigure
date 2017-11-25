@@ -2,7 +2,8 @@ package ax;
 
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
 
 /**
  * @author Marc Vanbrabant
@@ -13,6 +14,19 @@ import org.springframework.boot.SpringApplication;
 )
 public class SpringBootDataMongoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDataMongoApplication.class);
+        new SpringApplicationBuilder(SpringBootDataMongoApplication.class).contextClass(Me.class).build().run();
+    }
+
+    public static class Me extends AnnotationConfigEmbeddedWebApplicationContext {
+        public Me() {
+        }
+
+        public Me(Class<?>... annotatedClasses) {
+            super(annotatedClasses);
+        }
+
+        public Me(String... basePackages) {
+            super(basePackages);
+        }
     }
 }

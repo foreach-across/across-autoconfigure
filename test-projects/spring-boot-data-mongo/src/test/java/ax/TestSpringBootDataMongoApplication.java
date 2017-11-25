@@ -1,7 +1,7 @@
 package ax;
 
-import ax.business.Customer;
-import ax.repositories.CustomerRepository;
+import ax.application.business.Customer;
+import ax.application.repositories.CustomerRepository;
 import com.mongodb.MongoClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;

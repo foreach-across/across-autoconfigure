@@ -1,6 +1,6 @@
-package ax.repositories;
+package ax.application.repositories;
 
-import ax.business.Person;
+import ax.application.business.Person;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;

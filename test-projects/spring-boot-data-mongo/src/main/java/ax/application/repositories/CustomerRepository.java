@@ -1,6 +1,6 @@
-package ax.repositories;
+package ax.application.repositories;
 
-import ax.business.Customer;
+import ax.application.business.Customer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
