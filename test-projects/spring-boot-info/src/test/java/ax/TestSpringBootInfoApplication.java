@@ -51,7 +51,7 @@ public class TestSpringBootInfoApplication {
         Map build = (Map) body.get("build");
         assertEquals(5, build.size());
         assertEquals("spring-boot-info", build.get("artifact"));
-        assertEquals(1511428046000L, build.get("time"));
+        assertEquals( "test-projects:spring-boot-info", build.get( "name" ) );
 
         Map deployment = (Map) body.get("deployment");
         assertEquals("s3-website-eu-west-1.amazonaws.com", deployment.get("host"));

@@ -61,13 +61,14 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- mvn git-commit-id:revision
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
                 <executions>
                     <execution>
                         <goals>
-                            <!-- mvn git-commit-id:revision -->
+
                             <goal>revision</goal>
                         </goals>
                     </execution>
@@ -76,6 +77,7 @@
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
                 </configuration>
             </plugin>
+        -->
         </plugins>
     </build>
 </project>
