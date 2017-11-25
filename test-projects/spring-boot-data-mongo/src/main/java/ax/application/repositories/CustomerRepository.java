@@ -1,13 +1,15 @@
 package ax.application.repositories;
 
 import ax.application.business.Customer;
+import com.foreach.across.core.annotations.Exposed;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface CustomerRepository extends MongoRepository<Customer, String> {
-    public Customer findByFirstName(String firstName);
+@Exposed
+public interface CustomerRepository extends MongoRepository<Customer, String>
+{
+	Customer findByFirstName( String firstName );
 
-    public List<Customer> findByLastName(String lastName);
-
+	List<Customer> findByLastName( String lastName );
 }

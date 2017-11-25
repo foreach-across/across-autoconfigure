@@ -9,24 +9,24 @@ import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebAppl
  * @author Marc Vanbrabant
  * @since 1.0.0
  */
-@AcrossApplication(
-        modules = AcrossWebModule.NAME
-)
-public class SpringBootDataMongoApplication {
-    public static void main(String[] args) {
-        new SpringApplicationBuilder(SpringBootDataMongoApplication.class).contextClass(Me.class).build().run();
-    }
+@AcrossApplication(modules = AcrossWebModule.NAME)
+public class SpringBootDataMongoApplication
+{
+	public static void main( String[] args ) {
+		new SpringApplicationBuilder( SpringBootDataMongoApplication.class ).contextClass( Me.class ).build().run();
+	}
 
-    public static class Me extends AnnotationConfigEmbeddedWebApplicationContext {
-        public Me() {
-        }
+	public static class Me extends AnnotationConfigEmbeddedWebApplicationContext
+	{
+		public Me() {
+		}
 
-        public Me(Class<?>... annotatedClasses) {
-            super(annotatedClasses);
-        }
+		public Me( Class<?>... annotatedClasses ) {
+			super( annotatedClasses );
+		}
 
-        public Me(String... basePackages) {
-            super(basePackages);
-        }
-    }
+		public Me( String... basePackages ) {
+			super( basePackages );
+		}
+	}
 }

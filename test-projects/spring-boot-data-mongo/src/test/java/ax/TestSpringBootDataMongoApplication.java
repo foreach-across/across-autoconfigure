@@ -16,23 +16,24 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataMongoApplication.class)
-public class TestSpringBootDataMongoApplication {
+public class TestSpringBootDataMongoApplication
+{
+	@Autowired
+	private MongoClient mongoClient;
 
-    @Autowired
-    private MongoClient mongoClient;
-    @Autowired
-    private CustomerRepository repository;
+	@Autowired
+	private CustomerRepository repository;
 
-    @Test
-    public void shouldBootStrap() throws IOException {
-        assertNotNull(mongoClient);
+	@Test
+	public void shouldBootStrap() throws IOException {
+		assertNotNull( mongoClient );
 
-        repository.deleteAll();
+		repository.deleteAll();
 
-        // save a couple of customers
-        repository.save(new Customer("Alice", "Smith"));
-        repository.save(new Customer("Bob", "Smith"));
+		// save a couple of customers
+		repository.save( new Customer( "Alice", "Smith" ) );
+		repository.save( new Customer( "Bob", "Smith" ) );
 
-        assertEquals(2, repository.count());
-    }
+		assertEquals( 2, repository.count() );
+	}
 }
