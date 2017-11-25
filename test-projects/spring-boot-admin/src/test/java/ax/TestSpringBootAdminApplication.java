@@ -12,13 +12,14 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TestSpringBootAdminApplication {
-    @Autowired
-    private AcrossContextInfo contextInfo;
+public class TestSpringBootAdminApplication
+{
+	@Autowired
+	private AcrossContextInfo contextInfo;
 
-    @Test
-    public void shouldBootStrap() {
-        assertTrue(contextInfo.hasModule("SpringCloudApplicationModule"));
-        assertTrue(contextInfo.hasModule(AcrossWebModule.NAME));
-    }
+	@Test
+	public void shouldBootStrap() {
+		assertTrue( contextInfo.hasModule( "SpringBootAdminApplicationModule" ) );
+		assertTrue( contextInfo.hasModule( AcrossWebModule.NAME ) );
+	}
 }
