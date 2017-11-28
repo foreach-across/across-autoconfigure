@@ -30,3 +30,5 @@ target
 *.iml
 pom.xml.versionsBackup
 
+*/spring-boot-data-elasticsearch/data/
+

@@ -10,6 +10,8 @@
         <module name="actuator" />
         <module name="blank" />
         <module name="spring-boot-admin" />
+        <module name="spring-boot-data-cassandra" />
+        <module name="spring-boot-data-couchbase" />
         <module name="spring-boot-data-elasticsearch" />
         <module name="spring-boot-data-ldap" />
         <module name="spring-boot-data-mongo" />
@@ -26,6 +28,8 @@
       <module name="actuator" target="1.8" />
       <module name="blank" target="1.8" />
       <module name="spring-boot-admin" target="1.8" />
+      <module name="spring-boot-data-cassandra" target="1.8" />
+      <module name="spring-boot-data-couchbase" target="1.8" />
       <module name="spring-boot-data-elasticsearch" target="1.8" />
       <module name="spring-boot-data-ldap" target="1.8" />
       <module name="spring-boot-data-mongo" target="1.8" />

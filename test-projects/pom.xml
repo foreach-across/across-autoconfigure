@@ -29,6 +29,8 @@
 		<module>blank</module>
 		<module>actuator</module>
 		<module>spring-boot-admin</module>
+		<module>spring-boot-data-cassandra</module>
+		<module>spring-boot-data-couchbase</module>
         <module>spring-boot-data-elasticsearch</module>
 		<module>spring-boot-data-ldap</module>
         <module>spring-boot-data-mongo</module>
