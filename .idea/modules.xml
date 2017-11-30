@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-mongo/spring-boot-data-mongo.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-mongo/spring-boot-data-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/spring-boot-data-neo4j.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/spring-boot-data-neo4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" />

@@ -47,6 +47,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,\
   org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,\
   org.springframework.boot.actuate.cloudfoundry.CloudFoundryActuatorAutoConfiguration,\
+  org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
   org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
@@ -73,6 +74,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
@@ -82,7 +84,6 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
 #org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-#org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\
 #org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\
 #org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration,\
 #org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\

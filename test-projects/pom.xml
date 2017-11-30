@@ -36,6 +36,7 @@
         <module>spring-boot-data-mongo</module>
         <module>spring-boot-data-neo4j</module>
         <module>spring-boot-data-redis</module>
+		<module>spring-boot-data-rest</module>
 		<module>spring-boot-data-solr</module>
 		<module>spring-boot-info</module>
 		<module>spring-boot-mail</module>

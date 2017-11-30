@@ -1,0 +1,3 @@
+com.foreach.across.AutoConfigurationEnabled=\
+  org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration->DynamicApplicationModule
