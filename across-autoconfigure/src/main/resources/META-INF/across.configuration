@@ -75,6 +75,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\
   org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
 #org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 #org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
@@ -125,6 +126,5 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,\
 #org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\
 #org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
-#org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\
 #org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration,\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration

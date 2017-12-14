@@ -40,6 +40,7 @@
 		<module>spring-boot-data-solr</module>
 		<module>spring-boot-info</module>
 		<module>spring-boot-mail</module>
+		<module>spring-boot-websocket</module>
 	</modules>
 
 	<repositories>

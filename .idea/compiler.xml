@@ -21,6 +21,7 @@
         <module name="spring-boot-data-solr" />
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
+        <module name="spring-boot-websocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,6 +41,7 @@
       <module name="spring-boot-data-solr" target="1.8" />
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
+      <module name="spring-boot-websocket" target="1.8" />
       <module name="test-projects" target="1.8" />
     </bytecodeTargetLevel>
   </component>
