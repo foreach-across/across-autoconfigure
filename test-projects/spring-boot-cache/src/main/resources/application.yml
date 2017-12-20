@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring.datasource.url: jdbc:hsqldb:mem:mydb
+spring.datasource.username: sa
+spring.datasource.password:
+spring.datasource.driver-class-name: org.hsqldb.jdbcDriver
+
+acrossHibernate:
+  hibernate-properties:
+    hibernate.format_sql: false
+    hibernate.use_sql_comments: false
+    hibernate.show_sql: false
+    hibernate.hbm2ddl.auto: update

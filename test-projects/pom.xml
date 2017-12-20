@@ -41,6 +41,8 @@
 		<module>spring-boot-info</module>
 		<module>spring-boot-mail</module>
 		<module>spring-boot-websocket</module>
+		<module>spring-boot-cache</module>
+		<module>swagger2</module>
 	</modules>
 
 	<repositories>

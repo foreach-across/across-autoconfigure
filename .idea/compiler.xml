@@ -10,6 +10,7 @@
         <module name="actuator" />
         <module name="blank" />
         <module name="spring-boot-admin" />
+        <module name="spring-boot-cache" />
         <module name="spring-boot-data-cassandra" />
         <module name="spring-boot-data-couchbase" />
         <module name="spring-boot-data-elasticsearch" />
@@ -22,6 +23,7 @@
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-websocket" />
+        <module name="swagger2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="actuator" target="1.8" />
       <module name="blank" target="1.8" />
       <module name="spring-boot-admin" target="1.8" />
+      <module name="spring-boot-cache" target="1.8" />
       <module name="spring-boot-data-cassandra" target="1.8" />
       <module name="spring-boot-data-couchbase" target="1.8" />
       <module name="spring-boot-data-elasticsearch" target="1.8" />
@@ -42,6 +45,7 @@
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
+      <module name="swagger2" target="1.8" />
       <module name="test-projects" target="1.8" />
     </bytecodeTargetLevel>
   </component>
