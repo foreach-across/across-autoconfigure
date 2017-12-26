@@ -42,11 +42,6 @@
 			<artifactId>spring-social-facebook</artifactId>
 			<version>3.0.0.M1</version>
 		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>debug-web-module</artifactId>
-			<version>1.0.1.RELEASE</version>
-		</dependency>
 	</dependencies>
 
 </project>

@@ -45,6 +45,7 @@
 		<module>swagger2</module>
 		<module>spring-social-twitter</module>
 		<module>spring-social-facebook</module>
+		<module>spring-social-linkedin</module>
 	</modules>
 
 	<repositories>
