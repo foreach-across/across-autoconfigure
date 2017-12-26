@@ -1,10 +1,6 @@
-
 spring:
   social:
     twitter:
       app-id: NUi72SITQlHrVcOpO8Sz0hMlS
       app-secret: qbeiGFNel0NAZ1wQqDFOUg5RGmv9bO7auCfrKtjU6b0S8EK5k8
     auto-connection-views: true
-across:
-  development:
-    active: true

@@ -18,7 +18,6 @@ import javax.inject.Inject;
 @RequestMapping("/")
 public class HelloController
 {
-
 	private Twitter twitter;
 
 	private ConnectionRepository connectionRepository;
@@ -40,5 +39,4 @@ public class HelloController
 		model.addAttribute( "friends", friends );
 		return "th/springBootSocialTwitter/hello";
 	}
-
 }
