@@ -10,7 +10,7 @@ public class HelloMessage
 	public HelloMessage() {
 	}
 
-	public HelloMessage(String name) {
+	public HelloMessage( String name ) {
 		this.name = name;
 	}
 
@@ -18,7 +18,7 @@ public class HelloMessage
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName( String name ) {
 		this.name = name;
 	}
 }

@@ -23,6 +23,9 @@
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-websocket" />
+        <module name="spring-social-facebook" />
+        <module name="spring-social-linkedin" />
+        <module name="spring-social-twitter" />
         <module name="swagger2" />
       </profile>
     </annotationProcessing>
@@ -45,6 +48,9 @@
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
+      <module name="spring-social-facebook" target="1.8" />
+      <module name="spring-social-linkedin" target="1.8" />
+      <module name="spring-social-twitter" target="1.8" />
       <module name="swagger2" target="1.8" />
       <module name="test-projects" target="1.8" />
     </bytecodeTargetLevel>
