@@ -10,7 +10,7 @@ public class GreetingMessage
 	public GreetingMessage() {
 	}
 
-	public GreetingMessage(String content) {
+	public GreetingMessage( String content ) {
 		this.content = content;
 	}
 
