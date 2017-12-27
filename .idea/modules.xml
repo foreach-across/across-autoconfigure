@@ -20,6 +20,9 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-linkedin/spring-social-linkedin.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-linkedin/spring-social-linkedin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-twitter/spring-social-twitter.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-twitter/spring-social-twitter.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/swagger2/swagger2.iml" filepath="$PROJECT_DIR$/test-projects/swagger2/swagger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/test-projects.iml" filepath="$PROJECT_DIR$/test-projects/test-projects.iml" />
     </modules>

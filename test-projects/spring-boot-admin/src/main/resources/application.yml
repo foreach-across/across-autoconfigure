@@ -8,3 +8,6 @@ endpoints:
     sensitive: false
   beans:
     sensitive: false
+spring:
+  application:
+    name: Spring Boot Admin Server
