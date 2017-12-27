@@ -1,7 +1,7 @@
-package ax.application.controllers;
+package ax.modules.websocket.controllers;
 
-import ax.application.messages.GreetingMessage;
 import ax.application.messages.HelloMessage;
+import ax.modules.websocket.messages.FarewellMessage;
 import ax.modules.websocket.websocket.WebSocketScopeBean;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -13,14 +13,14 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @RequiredArgsConstructor
-public class GreetingController
+public class FarewellController
 {
 	private final WebSocketScopeBean webSocketScopeBean;
 
-	@MessageMapping("/hello")
-	@SendTo("/topic/greetings")
-	public GreetingMessage greeting( HelloMessage message ) throws Exception {
-		Thread.sleep( 1000 ); // simulated delay
-		return new GreetingMessage( "Hello, " + message.getName() + "! " + webSocketScopeBean.getUuid() );
+	@MessageMapping("/farewell")
+	@SendTo("/topic/farewell")
+	public FarewellMessage farewell( HelloMessage message ) throws Exception {
+		return new FarewellMessage( "Farewell, " + message.getName() + "! " + webSocketScopeBean.getUuid() );
 	}
 }
+

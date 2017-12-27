@@ -1,16 +1,16 @@
-package ax.application.messages;
+package ax.modules.websocket.messages;
 
 /**
  * @author Steven Gentens
  */
-public class GreetingMessage
+public class FarewellMessage
 {
 	private String content;
 
-	public GreetingMessage() {
+	public FarewellMessage() {
 	}
 
-	public GreetingMessage( String content ) {
+	public FarewellMessage( String content ) {
 		this.content = content;
 	}
 
