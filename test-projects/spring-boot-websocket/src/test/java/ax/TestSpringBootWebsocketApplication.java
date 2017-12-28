@@ -53,6 +53,7 @@ public class TestSpringBootWebsocketApplication
 	private String GREETING_URL;
 	private String FAREWELL_URL;
 	private String HANDLER_GOODBYE_URL;
+	private String HANDLER_HELLO_URL;
 	private CompletableFuture<GreetingMessage> greetingCompletableFuture;
 	private CompletableFuture<FarewellMessage> farewellCompletableFuture;
 
@@ -63,7 +64,8 @@ public class TestSpringBootWebsocketApplication
 		String baseUrl = "ws://localhost:" + port;
 		GREETING_URL = baseUrl + "/gs-guide-websocket";
 		FAREWELL_URL = baseUrl + "/bar";
-		HANDLER_GOODBYE_URL = baseUrl + "/module/goodbye";
+		HANDLER_GOODBYE_URL = baseUrl + "/app/goodbye";
+		HANDLER_HELLO_URL = baseUrl + "/module/hello";
 	}
 
 	@Test
@@ -179,16 +181,29 @@ public class TestSpringBootWebsocketApplication
 	}
 
 	@Test
-	public void websocketHandler() throws InterruptedException, ExecutionException, TimeoutException, IOException {
-		SockJsClient websocketClient = new SockJsClient( createTransportClient() );
+	public void applicationWebSocketHandler() throws InterruptedException, ExecutionException, TimeoutException, IOException {
+		SockJsClient socketClient = new SockJsClient( createTransportClient() );
 		GoodbyeSocketHandler socketHandler = new GoodbyeSocketHandler();
-		ListenableFuture<WebSocketSession> future = websocketClient.doHandshake( socketHandler, HANDLER_GOODBYE_URL, "" );
+		ListenableFuture<WebSocketSession> future = socketClient.doHandshake( socketHandler, HANDLER_GOODBYE_URL, "" );
 		WebSocketSession session = future.get( 10, SECONDS );
 		session.sendMessage( new TextMessage( "{\"name\":\"Jane\"}" ) );
 		Thread.sleep( 4000 );
-		assertEquals( "Hello Jane !", socketHandler.getMostRecentPayload() );
+		assertEquals( "Bye Jane !", socketHandler.getMostRecentPayload() );
 		session.close();
-		websocketClient.stop();
+		socketClient.stop();
+	}
+
+	@Test
+	public void moduleWebSocketHandler() throws InterruptedException, ExecutionException, TimeoutException, IOException {
+		SockJsClient socketClient = new SockJsClient( createTransportClient() );
+		GoodbyeSocketHandler socketHandler = new GoodbyeSocketHandler();
+		ListenableFuture<WebSocketSession> future = socketClient.doHandshake( socketHandler, HANDLER_HELLO_URL, "" );
+		WebSocketSession session = future.get( 10, SECONDS );
+		session.sendMessage( new TextMessage( "{\"name\":\"Karen\"}" ) );
+		Thread.sleep( 4000 );
+		assertEquals( "Hello Karen !", socketHandler.getMostRecentPayload() );
+		session.close();
+		socketClient.stop();
 	}
 
 	private WebSocketStompClient getStompClient() {
