@@ -12,12 +12,18 @@ import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.WebSocketMessage;
+import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,17 +41,18 @@ import static junit.framework.TestCase.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestSpringBootWebsocketApplication
 {
-
-	@org.springframework.beans.factory.annotation.Value("${local.server.port}")
-	private int port;
-
 	private static final String GREETING_ENDPOINT = "/app/hello";
 	private static final String SUBSCRIBE_GREETING_ENDPOINT = "/topic/greetings";
 	private static final String FAREWELL_ENDPOINT = "/app/farewell";
 	private static final String SUBSCRIBE_FAREWELL_ENDPOINT = "/topic/farewell";
+	private static final String GOODBYE_ENDPOINT = "/app/goodbye";
+	private static final String SUBSCRIBE_GOODBYE_ENDPOINT = "/topic/goodbye";
 
+	@org.springframework.beans.factory.annotation.Value("${local.server.port}")
+	private int port;
 	private String GREETING_URL;
 	private String FAREWELL_URL;
+	private String HANDLER_GOODBYE_URL;
 	private CompletableFuture<GreetingMessage> greetingCompletableFuture;
 	private CompletableFuture<FarewellMessage> farewellCompletableFuture;
 
@@ -53,12 +60,14 @@ public class TestSpringBootWebsocketApplication
 	public void setup() {
 		greetingCompletableFuture = new CompletableFuture<>();
 		farewellCompletableFuture = new CompletableFuture<>();
-		GREETING_URL = "ws://localhost:" + port + "/gs-guide-websocket";
-		FAREWELL_URL = "ws://localhost:" + port + "/bar";
+		String baseUrl = "ws://localhost:" + port;
+		GREETING_URL = baseUrl + "/gs-guide-websocket";
+		FAREWELL_URL = baseUrl + "/bar";
+		HANDLER_GOODBYE_URL = baseUrl + "/module/goodbye";
 	}
 
 	@Test
-	public void greetingEndpoint() throws InterruptedException, ExecutionException, TimeoutException {
+	public void applicationEndpoint() throws InterruptedException, ExecutionException, TimeoutException {
 		WebSocketStompClient stompClient = getStompClient();
 
 		StompSession stompSession = getStompSession( stompClient, GREETING_URL );
@@ -75,7 +84,7 @@ public class TestSpringBootWebsocketApplication
 	}
 
 	@Test
-	public void farewellEndpoint() throws InterruptedException, ExecutionException, TimeoutException {
+	public void moduleEndpoint() throws InterruptedException, ExecutionException, TimeoutException {
 		WebSocketStompClient stompClient = getStompClient();
 
 		StompSession stompSession = getStompSession( stompClient, FAREWELL_URL );
@@ -92,7 +101,24 @@ public class TestSpringBootWebsocketApplication
 	}
 
 	@Test
-	public void testScopedBeansSame() throws InterruptedException, ExecutionException, TimeoutException {
+	public void simpMessagingTemplate() throws InterruptedException, ExecutionException, TimeoutException {
+		WebSocketStompClient stompClient = getStompClient();
+
+		StompSession stompSession = getStompSession( stompClient, FAREWELL_URL );
+
+		stompSession.subscribe( SUBSCRIBE_GOODBYE_ENDPOINT, new CreateFarewellStompFrameHandler() );
+		stompSession.send( GOODBYE_ENDPOINT, "Jocelyn" );
+
+		FarewellMessage farewellMessage = farewellCompletableFuture.get( 10, SECONDS );
+
+		assertNotNull( farewellMessage );
+		assertTrue( farewellMessage.getContent().startsWith( "Goodbye, Jocelyn!" ) );
+
+		disconnect( stompClient, stompSession );
+	}
+
+	@Test
+	public void websocketScopedBeansAreEqual() throws InterruptedException, ExecutionException, TimeoutException {
 		WebSocketStompClient stompClient = getStompClient();
 
 		StompSession stompSession = getStompSession( stompClient, FAREWELL_URL );
@@ -121,7 +147,7 @@ public class TestSpringBootWebsocketApplication
 	}
 
 	@Test
-	public void testScopedBeansDifferent() throws InterruptedException, ExecutionException, TimeoutException {
+	public void websocketScopedBeansAreDifferent() throws InterruptedException, ExecutionException, TimeoutException {
 		WebSocketStompClient stompClient = getStompClient();
 		StompSession stompSession = getStompSession( stompClient, FAREWELL_URL );
 
@@ -152,42 +178,29 @@ public class TestSpringBootWebsocketApplication
 		disconnect( stompClient, stompSession );
 	}
 
-	private List<Transport> createTransportClient() {
-		List<Transport> transports = new ArrayList<>( 1 );
-		transports.add( new WebSocketTransport( new StandardWebSocketClient() ) );
-		return transports;
-	}
-
-	private class CreateGreetingStompFrameHandler implements StompFrameHandler
-	{
-		@Override
-		public Type getPayloadType( StompHeaders stompHeaders ) {
-			return GreetingMessage.class;
-		}
-
-		@Override
-		public void handleFrame( StompHeaders stompHeaders, Object o ) {
-			greetingCompletableFuture.complete( (GreetingMessage) o );
-		}
-	}
-
-	private class CreateFarewellStompFrameHandler implements StompFrameHandler
-	{
-		@Override
-		public Type getPayloadType( StompHeaders stompHeaders ) {
-			return FarewellMessage.class;
-		}
-
-		@Override
-		public void handleFrame( StompHeaders stompHeaders, Object o ) {
-			farewellCompletableFuture.complete( (FarewellMessage) o );
-		}
+	@Test
+	public void websocketHandler() throws InterruptedException, ExecutionException, TimeoutException, IOException {
+		SockJsClient websocketClient = new SockJsClient( createTransportClient() );
+		GoodbyeSocketHandler socketHandler = new GoodbyeSocketHandler();
+		ListenableFuture<WebSocketSession> future = websocketClient.doHandshake( socketHandler, HANDLER_GOODBYE_URL, "" );
+		WebSocketSession session = future.get( 10, SECONDS );
+		session.sendMessage( new TextMessage( "{\"name\":\"Jane\"}" ) );
+		Thread.sleep( 4000 );
+		assertEquals( "Hello Jane !", socketHandler.getMostRecentPayload() );
+		session.close();
+		websocketClient.stop();
 	}
 
 	private WebSocketStompClient getStompClient() {
 		WebSocketStompClient stompClient = new WebSocketStompClient( new SockJsClient( createTransportClient() ) );
 		stompClient.setMessageConverter( new MappingJackson2MessageConverter() );
 		return stompClient;
+	}
+
+	private List<Transport> createTransportClient() {
+		List<Transport> transports = new ArrayList<>( 1 );
+		transports.add( new WebSocketTransport( new StandardWebSocketClient() ) );
+		return transports;
 	}
 
 	private StompSession getStompSession( WebSocketStompClient stompClient, String url ) throws InterruptedException, ExecutionException, TimeoutException {
@@ -199,5 +212,50 @@ public class TestSpringBootWebsocketApplication
 	private void disconnect( WebSocketStompClient stompClient, StompSession stompSession ) {
 		stompSession.disconnect();
 		stompClient.stop();
+	}
+
+	private class GoodbyeSocketHandler extends TextWebSocketHandler
+	{
+		private String mostRecentPayload;
+
+		@Override
+		public void handleMessage( WebSocketSession session, WebSocketMessage<?> message ) throws Exception {
+			mostRecentPayload = (String) message.getPayload();
+			System.out.println( mostRecentPayload );
+		}
+
+		public String getMostRecentPayload() {
+			return mostRecentPayload;
+		}
+	}
+
+	private class CreateGreetingStompFrameHandler implements StompFrameHandler
+	{
+
+		@Override
+		public Type getPayloadType( StompHeaders stompHeaders ) {
+			return GreetingMessage.class;
+		}
+
+		@Override
+		public void handleFrame( StompHeaders stompHeaders, Object o ) {
+			greetingCompletableFuture.complete( (GreetingMessage) o );
+		}
+
+	}
+
+	private class CreateFarewellStompFrameHandler implements StompFrameHandler
+	{
+
+		@Override
+		public Type getPayloadType( StompHeaders stompHeaders ) {
+			return FarewellMessage.class;
+		}
+
+		@Override
+		public void handleFrame( StompHeaders stompHeaders, Object o ) {
+			farewellCompletableFuture.complete( (FarewellMessage) o );
+		}
+
 	}
 }

@@ -4,12 +4,15 @@ import com.foreach.across.core.context.bootstrap.AcrossBootstrapConfig;
 import com.foreach.across.core.context.bootstrap.AcrossBootstrapConfigurer;
 import com.foreach.across.core.context.bootstrap.ModuleBootstrapConfig;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 
 /**
- * Ensures that the DelegatingWebSocketMessageBrokerConfiguration is properly created,
- * as well as that the {@code websocket} scope is configured for every bootstrapped module.
+ * Ensures that the {@link DelegatingWebSocketConfiguration} is created at the latest possible moment,
+ * when all {@link WebSocketConfigurer}s are created.
+ *
+ * Exposes all {@link WebSocketConfigurer}s from the bootstrapped modules
+ * so they can be picked up by the {@link DelegatingWebSocketConfiguration}.
  *
  * @author Steven Gentens
  * @since 3.0.0
@@ -19,12 +22,11 @@ public class AcrossWebSocketConfiguration implements AcrossBootstrapConfigurer
 {
 	@Override
 	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
-		moduleConfiguration.addApplicationContextConfigurer( WebSocketScopeConfiguration.class );
-		moduleConfiguration.expose( WebSocketMessageBrokerConfigurer.class );
+		moduleConfiguration.expose( WebSocketConfigurer.class );
 	}
 
 	@Override
 	public void configureContext( AcrossBootstrapConfig contextConfiguration ) {
-		contextConfiguration.extendModule( CONTEXT_POSTPROCESSOR_MODULE, DelegatingWebSocketMessageBrokerConfiguration.class );
+		contextConfiguration.extendModule( CONTEXT_POSTPROCESSOR_MODULE, DelegatingWebSocketConfiguration.class );
 	}
 }

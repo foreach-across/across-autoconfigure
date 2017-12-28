@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Import;
 import java.lang.annotation.*;
 
 /**
- * Add this annotation to an {@code @Configuration} class to enable broker-backed
+ * Add this annotation to an {@code @Configuration} or application class to enable broker-backed
  * messaging over WebSocket using a higher-level messaging sub-protocol.
  *
  * @author Steven Gentens
@@ -15,7 +15,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE })
 @Documented
-@Import({ AcrossWebSocketConfiguration.class })
+@Import({ AcrossWebSocketMessageBrokerConfiguration.class })
 public @interface EnableWebSocketMessageBroker
 {
 }
