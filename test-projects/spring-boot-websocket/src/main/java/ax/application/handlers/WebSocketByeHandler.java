@@ -16,7 +16,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @author Steven Gentens
  */
 @Component
-public class WebSocketHandler extends TextWebSocketHandler
+public class WebSocketByeHandler extends TextWebSocketHandler
 {
 	private List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
 	private ObjectMapper objectMapper = new ObjectMapper();
@@ -29,7 +29,7 @@ public class WebSocketHandler extends TextWebSocketHandler
 			Map value = objectMapper.readValue( message.getPayload(), new TypeReference<Map<String, String>>()
 			{
 			} );
-			webSocketSession.sendMessage( new TextMessage( "Hello " + value.get( "name" ) + " !" ) );
+			webSocketSession.sendMessage( new TextMessage( "Bye " + value.get( "name" ) + " !" ) );
 		}
 	}
 

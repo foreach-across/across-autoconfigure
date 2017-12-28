@@ -46,6 +46,7 @@
 		<module>spring-social-twitter</module>
 		<module>spring-social-facebook</module>
 		<module>spring-social-linkedin</module>
+		<module>spring-boot-rabbitmq</module>
 	</modules>
 
 	<repositories>
