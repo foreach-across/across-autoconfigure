@@ -102,6 +102,7 @@ public class TestSpringBootSocialLinkedinApplication
 		Company foreach = companies.stream().filter( c -> c.getName().equalsIgnoreCase( "foreach" ) ).findFirst().get();
 		assertNotNull( foreach );
 		assertEquals( "https://www.foreach.be/", foreach.getWebsiteUrl() );
+		driver.quit();
 	}
 
 	private String getCode( String url ) {
