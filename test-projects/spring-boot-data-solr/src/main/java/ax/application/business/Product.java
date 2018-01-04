@@ -10,29 +10,30 @@ import java.util.Date;
 
 @Data
 @SolrDocument(solrCoreName = "techproducts")
-public class Product {
-    @Id
-    @Indexed
-    private String id;
+public class Product
+{
+	@Id
+	@Indexed
+	private String id;
 
-    @Field
-    private String name;
+	@Field
+	private String name;
 
-    @Field
-    private boolean inStock;
+	@Field
+	private boolean inStock;
 
-    @Field
-    private String manu;
+	@Field
+	private String manu;
 
-    @Field("manu_id_s")
-    private String manufacturerId;
+	@Field("manu_id_s")
+	private String manufacturerId;
 
-    @Field
-    private Date manufacturedate_dt;
+	@Field
+	private Date manufacturedate_dt;
 
-    @Field
-    private float price;
+	@Field
+	private float price;
 
-    @Field
-    private int popularity;
+	@Field
+	private int popularity;
 }

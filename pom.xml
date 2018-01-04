@@ -12,6 +12,7 @@
 
 	<properties>
 		<across.version>3.0.0-SNAPSHOT</across.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<name>${project.groupId}:${project.artifactId}</name>

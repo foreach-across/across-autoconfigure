@@ -15,21 +15,22 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TestSpringBootDataLdap {
+public class TestSpringBootDataLdap
+{
 
-    @Autowired
-    private PersonRepository personRepository;
+	@Autowired
+	private PersonRepository personRepository;
 
-    @Test
-    public void shouldBootstrapAndReturnWhitelabelErrorPage() throws Exception {
-        assertEquals(7, personRepository.count());
+	@Test
+	public void shouldBootstrapAndReturnWhitelabelErrorPage() throws Exception {
+		assertEquals( 7, personRepository.count() );
 
-        Person person = personRepository.findByUid("joe");
-        assertNotNull(person);
-        assertEquals("joe", person.getUid());
-        assertEquals("Joe Smeth", person.getCn());
-        assertEquals("Smeth", person.getSn());
+		Person person = personRepository.findByUid( "joe" );
+		assertNotNull( person );
+		assertEquals( "joe", person.getUid() );
+		assertEquals( "Joe Smeth", person.getCn() );
+		assertEquals( "Smeth", person.getSn() );
 
-        assertEquals(person, personRepository.findOne(new LdapName("uid=joe,ou=otherpeople,dc=springframework,dc=org")));
-    }
+		assertEquals( person, personRepository.findOne( new LdapName( "uid=joe,ou=otherpeople,dc=springframework,dc=org" ) ) );
+	}
 }

@@ -8,20 +8,21 @@ import org.springframework.ldap.odm.annotations.Id;
 import javax.naming.Name;
 
 @Data
-@Entry(objectClasses = {"person", "top"})
-public class Person {
-    @Id
-    private Name dn;
+@Entry(objectClasses = { "person", "top" })
+public class Person
+{
+	@Id
+	private Name dn;
 
-    @Attribute(name = "uid")
-    private String uid;
+	@Attribute(name = "uid")
+	private String uid;
 
-    @Attribute(name = "cn")
-    private String cn;
+	@Attribute(name = "cn")
+	private String cn;
 
-    @Attribute(name = "sn")
-    private String sn;
+	@Attribute(name = "sn")
+	private String sn;
 
-    @Attribute(name = "userPassword")
-    private String userPassword;
+	@Attribute(name = "userPassword")
+	private String userPassword;
 }

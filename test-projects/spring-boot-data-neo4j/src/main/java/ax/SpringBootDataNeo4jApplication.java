@@ -21,42 +21,43 @@ import java.util.Optional;
  * @since 1.0.0
  */
 @AcrossApplication(
-        modules = AcrossWebModule.NAME
+		modules = AcrossWebModule.NAME
 )
-public class SpringBootDataNeo4jApplication {
-    private File neoDbPath = new File("./neoDbTempDir");
+public class SpringBootDataNeo4jApplication
+{
+	private File neoDbPath = new File( "./neoDbTempDir" );
 
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootDataNeo4jApplication.class);
-    }
+	public static void main( String[] args ) {
+		SpringApplication.run( SpringBootDataNeo4jApplication.class );
+	}
 
-    @PreDestroy
-    public void cleanupDir() throws IOException {
-        FileUtils.deleteDirectory(neoDbPath);
-    }
+	@PreDestroy
+	public void cleanupDir() throws IOException {
+		FileUtils.deleteDirectory( neoDbPath );
+	}
 
-    @Bean(destroyMethod = "stop")
-    public ServerBootstrapper neo4jDatabase() {
-        ServerBootstrapper serverBootstrapper = new CommunityBootstrapper();
-        serverBootstrapper.start(
-                neoDbPath,
-                Optional.empty(), // omit configfile, properties follow
-                Pair.of("dbms.connector.http.address", "127.0.0.1:7474"),
-                Pair.of("dbms.connector.http.enabled", "true"),
-                Pair.of("dbms.connector.bolt.enabled", "false"),
-                Pair.of("dbms.security.auth_enabled", "false"),
+	@Bean(destroyMethod = "stop")
+	public ServerBootstrapper neo4jDatabase() {
+		ServerBootstrapper serverBootstrapper = new CommunityBootstrapper();
+		serverBootstrapper.start(
+				neoDbPath,
+				Optional.empty(), // omit configfile, properties follow
+				Pair.of( "dbms.connector.http.address", "127.0.0.1:7474" ),
+				Pair.of( "dbms.connector.http.enabled", "true" ),
+				Pair.of( "dbms.connector.bolt.enabled", "false" ),
+				Pair.of( "dbms.security.auth_enabled", "false" ),
 
-                // allow the shell connections via port 1337 (default)
-                Pair.of("dbms.shell.enabled", "true"),
-                Pair.of("dbms.shell.host", "127.0.0.1"),
-                Pair.of("dbms.shell.port", "1337")
-        );
-        return serverBootstrapper;
-    }
+				// allow the shell connections via port 1337 (default)
+				Pair.of( "dbms.shell.enabled", "true" ),
+				Pair.of( "dbms.shell.host", "127.0.0.1" ),
+				Pair.of( "dbms.shell.port", "1337" )
+		);
+		return serverBootstrapper;
+	}
 
-    @Bean
-    public GraphDatabaseFacade neo4jFacade(ServerBootstrapper serverBootstrapper) {
-        NeoServer neoServer = serverBootstrapper.getServer();
-        return neoServer.getDatabase().getGraph();
-    }
+	@Bean
+	public GraphDatabaseFacade neo4jFacade( ServerBootstrapper serverBootstrapper ) {
+		NeoServer neoServer = serverBootstrapper.getServer();
+		return neoServer.getDatabase().getGraph();
+	}
 }
