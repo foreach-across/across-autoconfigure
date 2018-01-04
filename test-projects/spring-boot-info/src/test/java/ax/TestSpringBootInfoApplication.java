@@ -23,37 +23,38 @@ import static org.junit.Assert.assertNotNull;
 @DirtiesContext
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootInfoApplication.class)
-public class TestSpringBootInfoApplication {
+public class TestSpringBootInfoApplication
+{
 
-    @Autowired
-    private GitProperties gitProperties;
-    @Autowired
-    private BuildProperties buildProperties;
-    @Value("${local.server.port}")
-    private int port;
+	@Autowired
+	private GitProperties gitProperties;
+	@Autowired
+	private BuildProperties buildProperties;
+	@Value("${local.server.port}")
+	private int port;
 
-    @Test
-    public void shouldBootStrapAndExposeBuildInfo() throws IOException, InterruptedException {
-        assertNotNull(gitProperties);
-        assertNotNull(buildProperties);
+	@Test
+	public void shouldBootStrapAndExposeBuildInfo() throws IOException, InterruptedException {
+		assertNotNull( gitProperties );
+		assertNotNull( buildProperties );
 
-        TestRestTemplate restTemplate = new TestRestTemplate();
-        ResponseEntity<Map> entity = restTemplate.getForEntity("http://localhost:" + port + "/info", Map.class);
+		TestRestTemplate restTemplate = new TestRestTemplate();
+		ResponseEntity<Map> entity = restTemplate.getForEntity( "http://localhost:" + port + "/info", Map.class );
 
-        assertNotNull(entity);
-        Map body = entity.getBody();
+		assertNotNull( entity );
+		Map body = entity.getBody();
 
-        assertEquals(3, body.size());
+		assertEquals( 3, body.size() );
 
-        Map git = (Map) body.get("git");
-        assertEquals("6147f97", ((Map) git.get("commit")).get("id"));
+		Map git = (Map) body.get( "git" );
+		assertEquals( "6147f97", ( (Map) git.get( "commit" ) ).get( "id" ) );
 
-        Map build = (Map) body.get("build");
-        assertEquals(5, build.size());
-        assertEquals("spring-boot-info", build.get("artifact"));
-        assertEquals( "test-projects:spring-boot-info", build.get( "name" ) );
+		Map build = (Map) body.get( "build" );
+		assertEquals( 5, build.size() );
+		assertEquals( "spring-boot-info", build.get( "artifact" ) );
+		assertEquals( "test-projects:spring-boot-info", build.get( "name" ) );
 
-        Map deployment = (Map) body.get("deployment");
-        assertEquals("s3-website-eu-west-1.amazonaws.com", deployment.get("host"));
-    }
+		Map deployment = (Map) body.get( "deployment" );
+		assertEquals( "s3-website-eu-west-1.amazonaws.com", deployment.get( "host" ) );
+	}
 }

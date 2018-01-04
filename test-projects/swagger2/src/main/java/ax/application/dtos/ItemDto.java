@@ -22,6 +22,6 @@ public class ItemDto
 	private Integer amount;
 	private List<ItemDto> relatedItems;
 	private boolean deleted;
-	@ApiModelProperty(notes = "The date the item was created", readOnly = true, example="2017-12-19T13:39:14.007Z")
+	@ApiModelProperty(notes = "The date the item was created", readOnly = true, example = "2017-12-19T13:39:14.007Z")
 	private Date created;
 }

@@ -17,27 +17,28 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataElasticSearch.class)
-public class TestSpringBootDataElasticSearch {
+public class TestSpringBootDataElasticSearch
+{
 
-    @Autowired
-    private Client client;
-    @Autowired
-    private PersonRepository repository;
+	@Autowired
+	private Client client;
+	@Autowired
+	private PersonRepository repository;
 
-    @Test
-    public void shouldBootstrap() throws IOException {
-        assertNotNull(client);
-        assertNotNull(repository);
+	@Test
+	public void shouldBootstrap() throws IOException {
+		assertNotNull( client );
+		assertNotNull( repository );
 
-        repository.deleteAll();
+		repository.deleteAll();
 
-        repository.save(new Person("Alice", "Chan"));
-        repository.save(new Person("Bob", "Builder"));
-        repository.save(new Person("Chris", "Adolf"));
+		repository.save( new Person( "Alice", "Chan" ) );
+		repository.save( new Person( "Bob", "Builder" ) );
+		repository.save( new Person( "Chris", "Adolf" ) );
 
-        assertEquals(3, repository.count());
+		assertEquals( 3, repository.count() );
 
-        List<Person> persons = repository.findByFirstname("Alice");
-        assertEquals(1, persons.size());
-    }
+		List<Person> persons = repository.findByFirstname( "Alice" );
+		assertEquals( 1, persons.size() );
+	}
 }

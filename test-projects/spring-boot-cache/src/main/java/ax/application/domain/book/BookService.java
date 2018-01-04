@@ -8,10 +8,16 @@ import java.util.List;
 public interface BookService
 {
 	List<Book> findAll();
-	void saveBook(Book book);
-	Book findOne(long id);
-	void delete(long id);
-	List<Book> findByName(String name);
-	List<Book> findByNameAndAuthor(String name, String author);
-	List<Book> findByPrice(long price);
+
+	void saveBook( Book book );
+
+	Book findOne( long id );
+
+	void delete( long id );
+
+	List<Book> findByName( String name );
+
+	List<Book> findByNameAndAuthor( String name, String author );
+
+	List<Book> findByPrice( long price );
 }

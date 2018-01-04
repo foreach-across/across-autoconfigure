@@ -9,10 +9,11 @@ import org.springframework.boot.SpringApplication;
  * @since 1.0.0
  */
 @AcrossApplication(
-        modules = AcrossWebModule.NAME
+		modules = AcrossWebModule.NAME
 )
-public class SpringBootDataLdap {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootDataLdap.class);
-    }
+public class SpringBootDataLdap
+{
+	public static void main( String[] args ) {
+		SpringApplication.run( SpringBootDataLdap.class );
+	}
 }

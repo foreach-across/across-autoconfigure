@@ -28,7 +28,7 @@ public class TestSpringBootCacheApplication
 	private CacheManager cacheManager;
 
 	@Before
-	public void setUp(){
+	public void setUp() {
 		assertNotNull( bookService );
 		Book book = new Book();
 		book.setId( 1L );
@@ -41,7 +41,7 @@ public class TestSpringBootCacheApplication
 
 	@Test
 	@Ignore("Across provides a NoOpCacheManager by default")
-	public void shouldBootstrap(){
+	public void shouldBootstrap() {
 		assertNotNull( cacheManager );
 		Book book = bookService.findOne( 1L );
 		Cache cache = cacheManager.getCache( "books" );

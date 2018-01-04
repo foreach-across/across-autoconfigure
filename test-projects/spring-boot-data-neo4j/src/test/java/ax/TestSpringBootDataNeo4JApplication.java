@@ -16,27 +16,28 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataNeo4jApplication.class)
-public class TestSpringBootDataNeo4JApplication {
+public class TestSpringBootDataNeo4JApplication
+{
 
-    @Autowired
-    private Session session;
-    @Autowired
-    private PersonRepository repository;
+	@Autowired
+	private Session session;
+	@Autowired
+	private PersonRepository repository;
 
-    @Test
-    public void shouldBootstrap() throws IOException {
-        assertNotNull(session);
-        assertNotNull(repository);
+	@Test
+	public void shouldBootstrap() throws IOException {
+		assertNotNull( session );
+		assertNotNull( repository );
 
-        repository.deleteAll();
+		repository.deleteAll();
 
-        repository.save(new Person("Alice"));
-        repository.save(new Person("Bob"));
+		repository.save( new Person( "Alice" ) );
+		repository.save( new Person( "Bob" ) );
 
-        assertEquals(2, repository.count());
+		assertEquals( 2, repository.count() );
 
-        Person alice = repository.findByName("Alice");
-        assertNotNull(alice);
-        assertEquals("Alice", alice.getName());
-    }
+		Person alice = repository.findByName( "Alice" );
+		assertNotNull( alice );
+		assertEquals( "Alice", alice.getName() );
+	}
 }

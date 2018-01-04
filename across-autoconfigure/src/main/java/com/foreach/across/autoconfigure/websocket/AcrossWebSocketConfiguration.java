@@ -10,7 +10,7 @@ import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 /**
  * Ensures that the {@link DelegatingWebSocketConfiguration} is created at the latest possible moment,
  * when all {@link WebSocketConfigurer}s are created.
- *
+ * <p>
  * Exposes all {@link WebSocketConfigurer}s from the bootstrapped modules
  * so they can be picked up by the {@link DelegatingWebSocketConfiguration}.
  *

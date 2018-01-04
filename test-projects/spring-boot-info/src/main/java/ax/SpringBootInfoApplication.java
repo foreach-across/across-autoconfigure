@@ -14,21 +14,23 @@ import java.util.Collections;
  * @since 1.0.0
  */
 @AcrossApplication(
-        modules = AcrossWebModule.NAME
+		modules = AcrossWebModule.NAME
 )
-public class SpringBootInfoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootInfoApplication.class);
-    }
+public class SpringBootInfoApplication
+{
+	public static void main( String[] args ) {
+		SpringApplication.run( SpringBootInfoApplication.class );
+	}
 
-    @Component
-    public class DeploymentInfoContributor implements InfoContributor {
+	@Component
+	public class DeploymentInfoContributor implements InfoContributor
+	{
 
-        @Override
-        public void contribute(Info.Builder builder) {
-            builder.withDetail("deployment",
-                    Collections.singletonMap("host", "s3-website-eu-west-1.amazonaws.com"));
-        }
+		@Override
+		public void contribute( Info.Builder builder ) {
+			builder.withDetail( "deployment",
+			                    Collections.singletonMap( "host", "s3-website-eu-west-1.amazonaws.com" ) );
+		}
 
-    }
+	}
 }
