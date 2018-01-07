@@ -23,12 +23,12 @@ public class MessageReceiver
 	private final RabbitTemplate rabbitTemplate;
 	private final MessageSender sender;
 
-	@RabbitListener(containerFactory = "myRabbitListenerContainerFactory", queues = SpringBootRabbitMQApplication.QUEUE_GENERIC_NAME, exclusive = true)
+	@RabbitListener(containerFactory = "myRabbitListenerContainerFactory", queues = SpringBootRabbitMQApplication.QUEUE_GENERIC_NAME, exclusive = true, id = "messageReceiver-queue-generic")
 	public void receiveMessage( final Message message ) {
 		log.info( "Received message as generic: {}", message.toString() );
 	}
 
-	@RabbitListener(containerFactory = "myRabbitListenerContainerFactory", queues = SpringBootRabbitMQApplication.QUEUE_SPECIFIC_NAME, exclusive = true)
+	@RabbitListener(containerFactory = "myRabbitListenerContainerFactory", queues = SpringBootRabbitMQApplication.QUEUE_SPECIFIC_NAME, exclusive = true, id = "messageReceiver-queue-specific")
 	public void receiveMessage( final EventMessage eventMessage ) {
 		received.add( eventMessage );
 		log.info( "Received message as specific class: {}", eventMessage.toString() );

@@ -54,6 +54,5 @@ public class TestSpringBootRabbitMQApplication
 		Message customMessage = customMessages.get( 0 );
 		assertEquals( MessageType.RED, customMessage.getType() );
 		assertEquals( "Red", customMessage.getContent() );
-
 	}
 }

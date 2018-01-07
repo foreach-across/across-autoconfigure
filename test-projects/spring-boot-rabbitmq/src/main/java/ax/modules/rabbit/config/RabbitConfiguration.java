@@ -5,6 +5,8 @@ import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFacto
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,6 +21,8 @@ public class RabbitConfiguration
 	public final static String ROUTING_KEY = "module*";
 
 	@Bean
+	@ConditionalOnMissingBean(AmqpAdmin.class)
+	@ConditionalOnBean(ConnectionFactory.class)
 	public AmqpAdmin amqpAdmin( final ConnectionFactory connectionFactory ) {
 		return new RabbitAdmin( connectionFactory );
 	}
@@ -29,13 +33,13 @@ public class RabbitConfiguration
 	}
 
 	@Bean
-	public Queue appQueueSpecific() {
+	public Queue moduleQueue() {
 		return new Queue( QUEUE_NAME );
 	}
 
 	@Bean
 	public Binding declareBindingSpecific() {
-		return BindingBuilder.bind( appQueueSpecific() ).to( appExchange() ).with( ROUTING_KEY );
+		return BindingBuilder.bind( moduleQueue() ).to( appExchange() ).with( ROUTING_KEY );
 	}
 
 	@Bean

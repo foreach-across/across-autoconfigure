@@ -18,7 +18,7 @@ public class CustomRabbitReceiver
 {
 	private List<Message> received = new ArrayList<>();
 
-	@RabbitListener(containerFactory = "customModuleRabbitListenerContainerFactory", queues = RabbitConfiguration.QUEUE_NAME, exclusive = true)
+	@RabbitListener(containerFactory = "customModuleRabbitListenerContainerFactory", queues = RabbitConfiguration.QUEUE_NAME, exclusive = true, id = "customRabbitReceiver-queue")
 	public void receiveMessage( final Message customMessage ) {
 		received.add( customMessage );
 	}
