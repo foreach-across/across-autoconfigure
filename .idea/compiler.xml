@@ -14,6 +14,7 @@
         <module name="spring-boot-data-cassandra" />
         <module name="spring-boot-data-couchbase" />
         <module name="spring-boot-data-elasticsearch" />
+        <module name="spring-boot-data-jpa" />
         <module name="spring-boot-data-ldap" />
         <module name="spring-boot-data-mongo" />
         <module name="spring-boot-data-neo4j" />
@@ -40,6 +41,7 @@
       <module name="spring-boot-data-cassandra" target="1.8" />
       <module name="spring-boot-data-couchbase" target="1.8" />
       <module name="spring-boot-data-elasticsearch" target="1.8" />
+      <module name="spring-boot-data-jpa" target="1.8" />
       <module name="spring-boot-data-ldap" target="1.8" />
       <module name="spring-boot-data-mongo" target="1.8" />
       <module name="spring-boot-data-neo4j" target="1.8" />

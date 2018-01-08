@@ -30,13 +30,14 @@
 		<module>blank</module>
 		<module>actuator</module>
 		<module>spring-boot-admin</module>
+		<module>spring-boot-data-jpa</module>
 		<module>spring-boot-data-cassandra</module>
 		<module>spring-boot-data-couchbase</module>
-        <module>spring-boot-data-elasticsearch</module>
+		<module>spring-boot-data-elasticsearch</module>
 		<module>spring-boot-data-ldap</module>
-        <module>spring-boot-data-mongo</module>
-        <module>spring-boot-data-neo4j</module>
-        <module>spring-boot-data-redis</module>
+		<module>spring-boot-data-mongo</module>
+		<module>spring-boot-data-neo4j</module>
+		<module>spring-boot-data-redis</module>
 		<module>spring-boot-data-rest</module>
 		<module>spring-boot-data-solr</module>
 		<module>spring-boot-info</module>
