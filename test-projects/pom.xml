@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-dependencies</artifactId>
-		<version>1.5.7.RELEASE</version>
+		<version>1.5.9.RELEASE</version>
 		<relativePath/>
 	</parent>
 
@@ -20,6 +20,7 @@
 	<properties>
 		<across.version>3.0.0-SNAPSHOT</across.version>
 		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+		<thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
 	</properties>
 
 	<name>${project.groupId}:${project.artifactId}</name>
