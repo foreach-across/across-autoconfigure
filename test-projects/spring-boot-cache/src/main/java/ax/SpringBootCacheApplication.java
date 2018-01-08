@@ -1,7 +1,6 @@
 package ax;
 
 import com.foreach.across.config.AcrossApplication;
-import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.web.AcrossWebModule;
 import org.springframework.boot.SpringApplication;
 
@@ -10,8 +9,7 @@ import org.springframework.boot.SpringApplication;
  */
 @AcrossApplication(
 		modules = {
-				AcrossWebModule.NAME,
-				AcrossHibernateJpaModule.NAME
+				AcrossWebModule.NAME
 		}
 )
 public class SpringBootCacheApplication
