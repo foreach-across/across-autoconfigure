@@ -13,6 +13,7 @@
 	<properties>
 		<across.version>3.0.0-SNAPSHOT</across.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -76,6 +77,25 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
+				<inherited>false</inherited>
+				<configuration>
+					<finalName>${project.artifactId}</finalName>
+					<descriptors>
+						<descriptor>site.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
