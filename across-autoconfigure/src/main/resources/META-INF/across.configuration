@@ -87,11 +87,11 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration->DynamicApplicationModule,\
   de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 
-#org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
 #org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\
