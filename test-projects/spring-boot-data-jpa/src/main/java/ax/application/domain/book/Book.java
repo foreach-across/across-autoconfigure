@@ -18,6 +18,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @EqualsAndHashCode
+@Builder
 public class Book implements Persistable<Long>, Serializable
 {
 	@Id
