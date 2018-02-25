@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * @author Steven Gentens
- * @since
+ * @since 3.0.0
  */
 @Configuration
 @AutoConfigureBefore(CassandraDataAutoConfiguration.class)
