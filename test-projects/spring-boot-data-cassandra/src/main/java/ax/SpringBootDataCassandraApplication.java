@@ -10,6 +10,7 @@ import org.cassandraunit.dataset.CQLDataSet;
 import org.cassandraunit.dataset.cql.ClassPathCQLDataSet;
 import org.cassandraunit.utils.EmbeddedCassandraServerHelper;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
@@ -26,11 +27,6 @@ public class SpringBootDataCassandraApplication
 {
 	public static void main( String[] args ) {
 		SpringApplication.run( SpringBootDataCassandraApplication.class );
-	}
-
-	@PostConstruct
-	public void setup() throws IOException, InterruptedException, ConfigurationException, TTransportException {
-		EmbeddedCassandraServerHelper.startEmbeddedCassandra();
 	}
 
 	@Bean
