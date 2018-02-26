@@ -12,7 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-couchbase/spring-boot-data-couchbase.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-couchbase/spring-boot-data-couchbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch/spring-boot-data-elasticsearch.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch/spring-boot-data-elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-jpa/spring-boot-data-jpa.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-jpa/spring-boot-data-jpa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-jpa/spring-boot-data-jpa.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-jpa/spring-boot-data-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-ldap/spring-boot-data-ldap.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-ldap/spring-boot-data-ldap.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-mongo/spring-boot-data-mongo.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-mongo/spring-boot-data-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/spring-boot-data-neo4j.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/spring-boot-data-neo4j.iml" />
@@ -21,7 +20,6 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" />

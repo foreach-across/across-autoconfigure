@@ -14,7 +14,6 @@
         <module name="spring-boot-data-cassandra" />
         <module name="spring-boot-data-couchbase" />
         <module name="spring-boot-data-elasticsearch" />
-        <module name="spring-boot-data-jpa" />
         <module name="spring-boot-data-ldap" />
         <module name="spring-boot-data-mongo" />
         <module name="spring-boot-data-neo4j" />
@@ -29,6 +28,14 @@
         <module name="spring-social-linkedin" />
         <module name="spring-social-twitter" />
         <module name="swagger2" />
+      </profile>
+      <profile name="Annotation profile for test-projects:test-projects" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processor name="com.querydsl.apt.jpa.JPAAnnotationProcessor" />
+        <processor name="lombok.launch.AnnotationProcessorHider$AnnotationProcessor" />
+        <module name="spring-boot-data-jpa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
