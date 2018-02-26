@@ -1,11 +1,9 @@
-package ax.application.config;
+package ax.infrastructure;
 
 import org.apache.cassandra.exceptions.ConfigurationException;
 import org.apache.thrift.transport.TTransportException;
 import org.cassandraunit.utils.EmbeddedCassandraServerHelper;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
-import org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -14,8 +12,7 @@ import java.io.IOException;
  * @author Steven Gentens
  * @since 3.0.0
  */
-@Configuration
-@AutoConfigureBefore(CassandraDataAutoConfiguration.class)
+@Component
 public class EmbeddedCassandraConfig
 {
 	@PostConstruct

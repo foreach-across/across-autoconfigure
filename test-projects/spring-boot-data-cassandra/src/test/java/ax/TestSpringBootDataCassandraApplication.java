@@ -3,6 +3,7 @@ package ax;
 import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
 import com.datastax.driver.core.utils.UUIDs;
+import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCassandraApplication.class)
@@ -20,6 +20,14 @@ public class TestSpringBootDataCassandraApplication
 {
 	@Autowired
 	private CustomerRepository repository;
+
+	@Autowired
+	private AcrossContextBeanRegistry beanRegistry;
+
+	@Test
+	public void repositoryIsCreatedInApplicationModule() {
+		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "customerRepository" ) );
+	}
 
 	@Test
 	public void shouldBootstrap() throws IOException {
