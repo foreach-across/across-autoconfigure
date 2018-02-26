@@ -75,8 +75,8 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\
   org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\

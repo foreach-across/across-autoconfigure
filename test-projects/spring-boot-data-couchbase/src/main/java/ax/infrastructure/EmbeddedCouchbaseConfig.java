@@ -1,11 +1,9 @@
-package ax.application.config;
+package ax.infrastructure;
 
 import com.couchbase.mock.Bucket;
 import com.couchbase.mock.BucketConfiguration;
 import com.couchbase.mock.CouchbaseMock;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
-import org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -15,8 +13,7 @@ import java.util.Collections;
  * @author Steven Gentens
  * @since 3.0.0
  */
-@Configuration
-@AutoConfigureBefore(CouchbaseAutoConfiguration.class)
+@Component
 public class EmbeddedCouchbaseConfig
 {
 	@PostConstruct

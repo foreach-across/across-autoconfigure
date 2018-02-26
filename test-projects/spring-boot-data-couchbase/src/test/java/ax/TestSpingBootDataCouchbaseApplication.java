@@ -5,6 +5,7 @@ import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.cluster.ClusterInfo;
 import com.couchbase.client.java.env.DefaultCouchbaseEnvironment;
+import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.IOException;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpingBootDataCouchcaseApplication.class)
-public class TestSpingBootDataCouchcaseApplication
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCouchbaseApplication.class)
+public class TestSpingBootDataCouchbaseApplication
 {
 	@Autowired
 	private UserRepository repository;
@@ -29,6 +31,13 @@ public class TestSpingBootDataCouchcaseApplication
 	private Cluster cluster;
 	@Autowired
 	private ClusterInfo clusterInfo;
+	@Autowired
+	private AcrossContextBeanRegistry beanRegistry;
+
+	@Test
+	public void repositoryIsCreatedInApplicationModule() {
+		assertTrue( beanRegistry.moduleContainsLocalBean( SpringBootDataCouchbaseApplication.class.getSimpleName() + "Module", "userRepository" ) );
+	}
 
 	@Test
 	public void shouldBootstrap() throws IOException {

@@ -11,9 +11,9 @@ import org.springframework.boot.SpringApplication;
 @AcrossApplication(
 		modules = AcrossWebModule.NAME
 )
-public class SpingBootDataCouchcaseApplication
+public class SpringBootDataCouchbaseApplication
 {
 	public static void main( String[] args ) {
-		SpringApplication.run( SpingBootDataCouchcaseApplication.class );
+		SpringApplication.run( SpringBootDataCouchbaseApplication.class );
 	}
 }
