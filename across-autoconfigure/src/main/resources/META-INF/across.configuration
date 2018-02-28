@@ -56,8 +56,8 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
   org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
   org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
   org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
   org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
