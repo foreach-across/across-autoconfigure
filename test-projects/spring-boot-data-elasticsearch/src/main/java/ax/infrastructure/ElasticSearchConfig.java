@@ -1,15 +1,12 @@
 package ax.infrastructure;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.Settings;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * @author Arne Vandamme
@@ -20,15 +17,6 @@ import java.io.IOException;
 class ElasticSearchConfig
 {
 	private final Client client;
-
-	static {
-		try {
-			FileUtils.deleteDirectory( new File( System.getProperty( "user.dir" ) + "/data" ) );
-		}
-		catch ( IOException e ) {
-			e.printStackTrace();
-		}
-	}
 
 	@PostConstruct
 	public void createIndex() {
