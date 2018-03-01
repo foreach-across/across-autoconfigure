@@ -4,7 +4,6 @@ import ax.application.business.Person;
 import ax.application.repositories.PersonRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.neo4j.ogm.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,15 +17,11 @@ import static org.junit.Assert.assertNotNull;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataNeo4jApplication.class)
 public class TestSpringBootDataNeo4JApplication
 {
-
-	@Autowired
-	private Session session;
 	@Autowired
 	private PersonRepository repository;
 
 	@Test
 	public void shouldBootstrap() throws IOException {
-		assertNotNull( session );
 		assertNotNull( repository );
 
 		repository.deleteAll();

@@ -64,8 +64,8 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration->DynamicApplicationModule,\
-  org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
