@@ -42,6 +42,7 @@
 		<module>spring-boot-data-solr</module>
 		<module>spring-boot-info</module>
 		<module>spring-boot-mail</module>
+		<module>spring-boot-session</module>
 		<module>spring-boot-websocket</module>
 		<module>spring-boot-cache</module>
 		<module>swagger2</module>
