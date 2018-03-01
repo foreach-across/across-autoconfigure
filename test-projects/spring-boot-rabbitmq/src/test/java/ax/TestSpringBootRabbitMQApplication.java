@@ -8,6 +8,7 @@ import ax.modules.rabbit.domain.Message;
 import ax.modules.rabbit.domain.MessageType;
 import ax.modules.rabbit.receivers.CustomRabbitReceiver;
 import ax.modules.rabbit.senders.CustomRabbitSender;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootRabbitMQApplication.class)
+@Ignore
 public class TestSpringBootRabbitMQApplication
 {
 	@Autowired
