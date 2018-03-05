@@ -25,6 +25,7 @@
         <module name="spring-boot-rabbitmq" />
         <module name="spring-boot-session" />
         <module name="spring-boot-websocket" />
+        <module name="spring-cloud-config" />
         <module name="spring-social-facebook" />
         <module name="spring-social-linkedin" />
         <module name="spring-social-twitter" />
@@ -61,6 +62,7 @@
       <module name="spring-boot-rabbitmq" target="1.8" />
       <module name="spring-boot-session" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
+      <module name="spring-cloud-config" target="1.8" />
       <module name="spring-social-facebook" target="1.8" />
       <module name="spring-social-linkedin" target="1.8" />
       <module name="spring-social-twitter" target="1.8" />

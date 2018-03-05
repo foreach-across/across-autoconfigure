@@ -90,8 +90,28 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration->DynamicApplicationModule,\
-  de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration
-#org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
+  de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration,\
+  org.springframework.cloud.client.CommonsClientAutoConfiguration,\
+  org.springframework.cloud.commons.util.UtilAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.RefreshAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration,\
+  org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.hypermedia.CloudHypermediaAutoConfiguration,\
+  org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration,\
+  org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration,\
+  org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration,\
+  org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration,\
+  org.springframework.cloud.commons.httpclient.HttpClientConfiguration,\
+  org.springframework.cloud.config.client.ConfigClientAutoConfiguration,\
+  org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration,\
+  org.springframework.cloud.config.server.config.EncryptionAutoConfiguration,\
+  org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+
+#org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
 #org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\

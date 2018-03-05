@@ -50,6 +50,7 @@
 		<module>spring-social-facebook</module>
 		<module>spring-social-linkedin</module>
 		<module>spring-boot-rabbitmq</module>
+		<module>spring-cloud-config</module>
 	</modules>
 
 	<repositories>

@@ -1,0 +1,23 @@
+across:
+  development:
+    active: true
+
+server:
+  port: 8001
+
+endpoints:
+  health:
+    sensitive: false
+  metrics:
+    sensitive: false
+  beans:
+    sensitive: false
+
+management:
+  security:
+    enabled: false
+
+spring:
+  cloud:
+    config:
+      name: myclient
