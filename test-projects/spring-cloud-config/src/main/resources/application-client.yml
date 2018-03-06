@@ -21,3 +21,5 @@ spring:
   cloud:
     config:
       name: myclient
+  jmx:
+    enabled: false

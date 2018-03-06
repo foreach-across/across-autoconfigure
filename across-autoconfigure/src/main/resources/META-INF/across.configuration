@@ -94,7 +94,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.cloud.client.CommonsClientAutoConfiguration,\
   org.springframework.cloud.commons.util.UtilAutoConfiguration,\
   org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration,\
-  org.springframework.cloud.autoconfigure.RefreshAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.RefreshAutoConfiguration:com.foreach.across.autoconfigure.CloudRefreshAutoConfigurationAdapter,\
   org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration,\
   org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration,\
   org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration,\

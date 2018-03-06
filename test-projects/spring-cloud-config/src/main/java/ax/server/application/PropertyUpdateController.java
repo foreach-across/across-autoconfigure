@@ -17,15 +17,15 @@ import java.util.Properties;
  */
 @RestController
 @RequiredArgsConstructor
-public class RandomPropertyController
+public class PropertyUpdateController
 {
 	private final ApplicationContext applicationContext;
 
 	@SneakyThrows
-	@GetMapping("/randomProperty")
-	public String randomProperty( @RequestParam("value") String value ) {
+	@GetMapping("/customProperty")
+	public String customProperty( @RequestParam("value") String value ) {
 		Properties properties = new Properties();
-		properties.setProperty( "random.property", value );
+		properties.setProperty( "custom.property", value );
 
 		String tempDir = applicationContext.getEnvironment().getProperty( "java.io.tmpdir" );
 
@@ -33,7 +33,7 @@ public class RandomPropertyController
 		File file = new File( tempDir, "ax-cloud-test-props/myclient.properties" );
 
 		try (FileOutputStream fileOut = new FileOutputStream( file )) {
-			properties.store( fileOut, "Random properties" );
+			properties.store( fileOut, "Custom properties" );
 			fileOut.close();
 		}
 

@@ -1,7 +1,7 @@
 package ax.client.application;
 
 import com.foreach.across.core.annotations.Exposed;
-import lombok.Getter;
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Exposed
-@ConfigurationProperties("random")
-public class RandomSettings
+@ConfigurationProperties("custom")
+@Data
+public class CustomSettings
 {
-	@Getter
 	private String property;
 }

@@ -3,6 +3,7 @@ package ax.server;
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
@@ -14,7 +15,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 public class SpringCloudConfigServerApplication
 {
 	public static void main( String[] args ) {
-		new SpringApplicationBuilder()
+		runApplication( args );
+	}
+
+	public static EmbeddedWebApplicationContext runApplication( String... args ) {
+		return (EmbeddedWebApplicationContext) new SpringApplicationBuilder()
 				.sources( SpringCloudConfigServerApplication.class )
 				.profiles( "server", "native" )
 				.run( args );

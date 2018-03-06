@@ -1,12 +1,15 @@
 package ax.client;
 
+import ax.client.application.BoundComponent;
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Arne Vandamme
@@ -15,36 +18,31 @@ import org.springframework.stereotype.Component;
 @AcrossApplication(modules = AcrossWebModule.NAME)
 public class SpringCloudConfigClientApplication
 {
-	@Component
+	@Bean
 	@RefreshScope
-	class RootComponent
-	{
-		@Value("${fixed.message}")
-		@Getter
-		private String fixedMessage;
-
-		@Value("${random.property}")
-		@Getter
-		private String randomValue;
+	public BoundComponent rootComponent() {
+		return new BoundComponent();
 	}
 
-/*	@RestController
+	@RestController
 	@RefreshScope
-	class ExampleController
+	class ApplicationCustomPropertyController
 	{
+		@Value("${custom.property:}")
+		private String customProperty;
 
-		@Value("${foo.bar}")
-		private String value;
-
-		@RequestMapping
-		public String sayValue() {
-			return value;
+		@GetMapping("/application/customProperty")
+		public String renderCustomPropertyValue() {
+			return customProperty;
 		}
 	}
-	*/
 
 	public static void main( String[] args ) {
-		new SpringApplicationBuilder()
+		runApplication( args );
+	}
+
+	public static EmbeddedWebApplicationContext runApplication( String... args ) {
+		return (EmbeddedWebApplicationContext) new SpringApplicationBuilder()
 				.sources( SpringCloudConfigClientApplication.class )
 				.profiles( "client", "development" )
 				.properties( "spring.cloud.config.enabled=true" )
