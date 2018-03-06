@@ -69,7 +69,7 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 	@Override
 	public void configure( AcrossContext context ) {
 		context.addApplicationContextConfigurer(
-				new AnnotatedClassConfigurer( RefreshAutoConfiguration.class, ConfigurationPropertiesRebinderAutoConfiguration.class ),
+				new AnnotatedClassConfigurer( RefreshScopeConfiguration.class, ConfigurationPropertiesRebinderAutoConfiguration.class ),
 				ConfigurerScope.CONTEXT_ONLY
 		);
 	}

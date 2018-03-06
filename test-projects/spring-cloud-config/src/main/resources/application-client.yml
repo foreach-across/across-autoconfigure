@@ -12,6 +12,8 @@ endpoints:
     sensitive: false
   beans:
     sensitive: false
+  restart:
+    enabled: true
 
 management:
   security:
