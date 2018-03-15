@@ -39,7 +39,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration,\
   org.springframework.boot.actuate.autoconfigure.JolokiaAutoConfiguration,\
   org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration,\
-  org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration->SpringSecurityModule,\
   org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration,\
   org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration,\
   org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration,\
