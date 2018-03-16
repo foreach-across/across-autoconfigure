@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.hateoas.EntityLinks;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -15,6 +16,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.Set;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -34,6 +37,9 @@ public class TestSpringBootDataJpaAcrossWebApplication extends TestSpringBootDat
 
 	@Autowired
 	private MockMvc mockMvc;
+
+	@Autowired
+	private EntityLinks entityLinks;
 
 	@Override
 	public void openEntityManagerInViewInterceptorRegistration() {
@@ -69,5 +75,26 @@ public class TestSpringBootDataJpaAcrossWebApplication extends TestSpringBootDat
 		mockMvc.perform( get( "/book/" + bookB.getId() ) )
 		       .andExpect( status().isOk() )
 		       .andExpect( content().string( "book b" ) );
+	}
+
+	@Test
+	@SneakyThrows
+	public void restEndpointWithEntityLinks() {
+		Book book = new Book();
+		book.setAuthor( "Jane Doe" );
+		book.setName( "Jane Doe says Hello" );
+		book.setPrice( 100 );
+
+		bookRepository.save( book );
+
+		mockMvc.perform( get( "/api/books" ) )
+		       .andExpect( status().isOk() )
+		       .andExpect( content().string( containsString( "Jane Doe says Hello" ) ) )
+		       .andExpect( content().string( containsString( "100" ) ) );
+
+		assertEquals(
+				"http://localhost/api/books/" + book.getId(),
+				entityLinks.linkForSingleResource( Book.class, book.getId() ).toUri().toString()
+		);
 	}
 }
