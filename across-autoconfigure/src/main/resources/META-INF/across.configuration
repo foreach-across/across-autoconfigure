@@ -149,3 +149,14 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
 #org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
+
+
+# List illegal configuration entries
+com.foreach.across.IllegalConfiguration=\
+  org.springframework.data.web.config.SpringDataWebConfiguration->AcrossContext:spring-data
+
+#
+# Illegal configuration descriptions.
+#
+com.foreach.across.IllegalConfiguration[spring-data].description=This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
+com.foreach.across.IllegalConfiguration[spring-data].action=Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
