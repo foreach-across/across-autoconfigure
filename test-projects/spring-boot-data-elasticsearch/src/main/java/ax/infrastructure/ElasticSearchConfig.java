@@ -20,7 +20,7 @@ class ElasticSearchConfig
 
 	@PostConstruct
 	public void createIndex() {
-		Settings indexSettings = Settings.settingsBuilder()
+		Settings indexSettings = Settings.builder()
 		                                 .put( "number_of_shards", 5 )
 		                                 .put( "number_of_replicas", 1 )
 		                                 .build();

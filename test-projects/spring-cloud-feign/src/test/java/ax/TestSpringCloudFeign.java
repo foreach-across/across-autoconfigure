@@ -8,8 +8,8 @@ import ax.server.application.domain.book.BookResource;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -28,7 +28,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class TestSpringCloudFeign
 {
-	private static EmbeddedWebApplicationContext serverContext, clientContext;
+	private static ServletWebServerApplicationContext serverContext, clientContext;
 	private static RestTemplate server;
 	private static BookClient client;
 	private static String serverUrl;
@@ -37,7 +37,7 @@ public class TestSpringCloudFeign
 	@BeforeClass
 	public static void start() {
 		serverContext = SpringCloudFeignServerApplication.runApplication( "--server.port=0" );
-		int serverPort = serverContext.getEmbeddedServletContainer().getPort();
+		int serverPort = serverContext.getWebServer().getPort();
 		serverUrl = "http://localhost:" + serverPort;
 		server = new RestTemplateBuilder().rootUri( serverUrl ).build();
 

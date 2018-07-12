@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Optional;
+
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
@@ -22,8 +24,9 @@ public class TestSpringBootDataSolrApplication
 		assertNotNull( productRepository );
 		assertEquals( 32, productRepository.count() );
 
-		Product product = productRepository.findOne( "TWINX2048-3200PRO" );
-		assertNotNull( product );
+		Optional<Product> holder = productRepository.findById( "TWINX2048-3200PRO" );
+		assertTrue( holder.isPresent() );
+		Product product = holder.get();
 		assertEquals( "TWINX2048-3200PRO", product.getId() );
 		assertEquals( "CORSAIR  XMS 2GB (2 x 1GB) 184-Pin DDR SDRAM Unbuffered DDR 400 (PC 3200) Dual Channel Kit System Memory - Retail", product.getName() );
 		assertTrue( product.isInStock() );

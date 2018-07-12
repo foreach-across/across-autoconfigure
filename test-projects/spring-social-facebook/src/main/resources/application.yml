@@ -1,6 +1,0 @@
-spring:
-  social:
-    facebook:
-      app-id: 563217347356948
-      app-secret: cbcb2a614328cedc149a8f2d54eb3840
-    auto-connection-views: true

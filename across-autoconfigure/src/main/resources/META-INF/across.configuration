@@ -118,9 +118,9 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration,\
   org.springframework.cloud.config.server.config.EncryptionAutoConfiguration,\
   org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
-  org.springframework.cloud.netflix.feign.FeignAutoConfiguration,\
-  org.springframework.cloud.netflix.feign.encoding.FeignAcceptGzipEncodingAutoConfiguration,\
-  org.springframework.cloud.netflix.feign.encoding.FeignContentGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.openfeign.FeignAutoConfiguration,\
+  org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingAutoConfiguration,\
   org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration
 
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
@@ -158,7 +158,7 @@ com.foreach.across.AutoConfigurationEnabled=\
 # List illegal configuration entries
 com.foreach.across.IllegalConfiguration=\
   org.springframework.data.web.config.SpringDataWebConfiguration->AcrossContext:spring-data,\
-  org.springframework.cloud.netflix.feign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
+  org.springframework.cloud.openfeign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
 
 #
 # Illegal configuration descriptions.

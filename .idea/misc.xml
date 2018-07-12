@@ -7,6 +7,13 @@
         <option value="$PROJECT_DIR$/test-projects/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/test-projects/spring-social-facebook/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-social-linkedin/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-social-twitter/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />

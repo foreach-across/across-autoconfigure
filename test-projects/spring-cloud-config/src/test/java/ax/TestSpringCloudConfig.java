@@ -11,8 +11,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.web.client.RestTemplate;
 
@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
  */
 public class TestSpringCloudConfig
 {
-	private static EmbeddedWebApplicationContext serverContext, clientContext;
+	private static ServletWebServerApplicationContext serverContext, clientContext;
 
 	private static RestTemplate server;
 	private static RestTemplate client;
@@ -42,11 +42,11 @@ public class TestSpringCloudConfig
 	@BeforeClass
 	public static void start() {
 		serverContext = SpringCloudConfigServerApplication.runApplication( "--server.port=0" );
-		int serverPort = serverContext.getEmbeddedServletContainer().getPort();
+		int serverPort = serverContext.getWebServer().getPort();
 		server = new RestTemplateBuilder().rootUri( "http://localhost:" + serverPort ).build();
 
 		clientContext = SpringCloudConfigClientApplication.runApplication( "--server.port=0", "--spring.cloud.config.uri=http://localhost:" + serverPort );
-		int clientPort = clientContext.getEmbeddedServletContainer().getPort();
+		int clientPort = clientContext.getWebServer().getPort();
 		client = new RestTemplateBuilder().rootUri( "http://localhost:" + clientPort ).build();
 	}
 
