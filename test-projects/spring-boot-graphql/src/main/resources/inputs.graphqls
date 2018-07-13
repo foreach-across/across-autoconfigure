@@ -1,0 +1,5 @@
+input CreateArticleInput {
+    title: String!
+    text: String!
+    authorId: Int!
+}

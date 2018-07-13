@@ -29,7 +29,10 @@ com.foreach.across.Exposed=\
   org.springframework.hateoas.ResourceProcessor,\
   org.springframework.hateoas.ResourceAssembler,\
   org.springframework.hateoas.LinkBuilderFactory,\
-  org.springframework.hateoas.LinkBuilder
+  org.springframework.hateoas.LinkBuilder,\
+  com.coxautodev.graphql.tools.GraphQLResolver,\
+  com.coxautodev.graphql.tools.SchemaParser,\
+  graphql.schema.GraphQLSchema
 
 #
 #com.foreach.across.AutoConfigurationDisabled=\
@@ -121,8 +124,10 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.cloud.netflix.feign.FeignAutoConfiguration,\
   org.springframework.cloud.netflix.feign.encoding.FeignAcceptGzipEncodingAutoConfiguration,\
   org.springframework.cloud.netflix.feign.encoding.FeignContentGzipEncodingAutoConfiguration,\
-  org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration
-
+  org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration,\
+  com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration,\
+  com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration->AcrossContextPostProcessorModule
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
