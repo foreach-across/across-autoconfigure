@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -27,13 +28,17 @@ import static org.junit.Assert.assertEquals;
 public class TestSpringBootGraphQLApplication
 {
 	@Value("${graphql.servlet.mapping}")
-	private String graphQlEndpoint;
+	private String graphQLEndpoint;
+
+	@Value("${graphiql.mapping}")
+	private String graphiQLEndpoint;
 
 	@Value("${local.server.port}")
 	private int port;
 
 	private RestTemplate restTemplate;
-	private String requestUrl;
+	private String graphQLUrl;
+	private String graphiQLUrl;
 
 	@Autowired
 	private ArticleRepository articleRepository;
@@ -41,10 +46,14 @@ public class TestSpringBootGraphQLApplication
 	@Before
 	public void init() {
 		restTemplate = new RestTemplate();
-		requestUrl = UriComponentsBuilder.newInstance().host( "localhost" )
+		graphQLUrl = UriComponentsBuilder.newInstance().host( "localhost" )
 		                                 .scheme( "http" )
 		                                 .port( port )
-		                                 .path( graphQlEndpoint ).toUriString();
+		                                 .path( graphQLEndpoint ).toUriString();
+		graphiQLUrl = UriComponentsBuilder.newInstance().host( "localhost" )
+		                                  .scheme( "http" )
+		                                  .port( port )
+		                                  .path( graphiQLEndpoint ).toUriString();
 	}
 
 	@Test
@@ -52,7 +61,7 @@ public class TestSpringBootGraphQLApplication
 		String query = "query AllArticles { articles { id title author { id username } } }";
 		assertEquals(
 				"{\"data\":{\"articles\":[{\"id\":1,\"title\":\"Hello wold\",\"author\":{\"id\":1,\"username\":\"g00glen00b\"}},{\"id\":2,\"title\":\"Foo\",\"author\":{\"id\":2,\"username\":\"admin\"}}]}}",
-				restTemplate.postForObject( requestUrl, new QueryObject( query, "", Collections.emptyMap() ), String.class ) );
+				restTemplate.postForObject( graphQLUrl, new QueryObject( query, "", Collections.emptyMap() ), String.class ) );
 	}
 
 	@Test
@@ -66,11 +75,16 @@ public class TestSpringBootGraphQLApplication
 		input.put( "authorId", 1 );
 		assertEquals(
 				"{\"data\":{\"createArticle\":{\"id\":3,\"title\":\"Writing GraphQL mutations with Spring boot\",\"author\":{\"id\":1,\"username\":\"g00glen00b\"}}}}",
-				restTemplate.postForObject( requestUrl, new QueryObject( query, "", Collections.singletonMap( "input", input ) ), String.class ) );
+				restTemplate.postForObject( graphQLUrl, new QueryObject( query, "", Collections.singletonMap( "input", input ) ), String.class ) );
 		assertEquals( 3, articleRepository.count() );
 		Article created = articleRepository.findAll().stream().max( Comparator.comparing( Article::getId ) ).get();
 		assertEquals( title, created.getTitle() );
 		articleRepository.delete( created.getId() );
+	}
+
+	@Test
+	public void graphiQlEndpointIsAvailable() {
+		assertEquals( HttpStatus.OK, restTemplate.getForEntity( graphiQLUrl, String.class ).getStatusCode() );
 	}
 
 	@Data
