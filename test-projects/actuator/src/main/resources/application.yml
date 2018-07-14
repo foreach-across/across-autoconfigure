@@ -1,7 +1,21 @@
-endpoints:
-  health:
-    sensitive: false
-  metrics:
-    sensitive: false
-  beans:
-    sensitive: false
+management:
+  endpoint:
+    health:
+      show-details: always
+    mappings:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  error:
+    include-stacktrace: always
+    whitelabel:
+      enabled: false
+
+info:
+  application-name: actuator
