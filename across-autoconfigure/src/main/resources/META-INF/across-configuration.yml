@@ -1,4 +1,14 @@
 #
+# General Spring Boot
+#
+spring.boot:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration: true
+    org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration: true
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: true
+
+#
 # Actuator
 #
 actuator:
@@ -94,16 +104,23 @@ actuator:
       destination: AcrossContextPostProcessorModule
 
 #
-# Spring data
+# Spring Data / REST / Hypermedia support
 #
-spring-data:
+spring-data-rest-hal:
   exposed:
     - org.springframework.data.repository.core.support.RepositoryFactoryInformation
     - org.springframework.data.mapping.context.MappingContext
+    - org.springframework.plugin.core.Plugin
+    - org.springframework.hateoas.ResourceProcessor
+    - org.springframework.hateoas.ResourceAssembler
+    - org.springframework.hateoas.LinkBuilderFactory
+    - org.springframework.hateoas.LinkBuilder
   auto-configuration:
     org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration:
       destination: AcrossContextPostProcessorModule
   illegal-configurations:
     spring-data-web:
@@ -123,3 +140,117 @@ spring-data-cassandra:
       destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration:
       destination: DynamicApplicationModule
+
+#
+# Spring Data Couchbase
+#
+spring-data-couchbase:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Elastic
+#
+spring-data-elastic:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data JPA
+#
+spring-data-jpa:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data LDAP
+#
+spring-data-ldap:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration: true
+    org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data MongoDb
+#
+spring-data-mongo:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Redis
+#
+spring-data-redis:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Session
+#
+spring-session:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.session.SessionAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# RabbitMQ
+#
+rabbitmq:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration: true
+
+#
+# Spring Cloud
+#
+spring-cloud:
+  auto-configuration:
+    org.springframework.cloud.client.CommonsClientAutoConfiguration: true
+    org.springframework.cloud.commons.util.UtilAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.RefreshAutoConfiguration:
+      adapter: com.foreach.across.autoconfigure.CloudRefreshAutoConfigurationAdapter
+    org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.WritableEnvironmentEndpointAutoConfiguration: true
+    org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.hypermedia.CloudHypermediaAutoConfiguration: true
+    org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration: true
+    org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration: true
+    org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration: true
+    org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration: true
+    org.springframework.cloud.commons.httpclient.HttpClientConfiguration: true
+    org.springframework.cloud.config.client.ConfigClientAutoConfiguration: true
+    org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration: true
+    org.springframework.cloud.config.server.config.EncryptionAutoConfiguration: true
+    org.springframework.cloud.openfeign.FeignAutoConfiguration: true
+    org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingAutoConfiguration: true
+    org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingAutoConfiguration: true
+    org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration: true

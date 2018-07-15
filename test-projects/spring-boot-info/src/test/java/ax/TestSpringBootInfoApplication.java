@@ -33,13 +33,14 @@ public class TestSpringBootInfoApplication
 	@Value("${local.server.port}")
 	private int port;
 
+	// Todo: merge into actuator test project
 	@Test
 	public void shouldBootStrapAndExposeBuildInfo() throws IOException, InterruptedException {
 		assertNotNull( gitProperties );
 		assertNotNull( buildProperties );
 
 		TestRestTemplate restTemplate = new TestRestTemplate();
-		ResponseEntity<Map> entity = restTemplate.getForEntity( "http://localhost:" + port + "/info", Map.class );
+		ResponseEntity<Map> entity = restTemplate.getForEntity( "http://localhost:" + port + "/actuator/info", Map.class );
 
 		assertNotNull( entity );
 		Map body = entity.getBody();

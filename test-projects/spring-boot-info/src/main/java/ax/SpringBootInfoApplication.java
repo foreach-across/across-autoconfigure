@@ -25,7 +25,6 @@ public class SpringBootInfoApplication
 	@Component
 	public class DeploymentInfoContributor implements InfoContributor
 	{
-
 		@Override
 		public void contribute( Info.Builder builder ) {
 			builder.withDetail( "deployment",

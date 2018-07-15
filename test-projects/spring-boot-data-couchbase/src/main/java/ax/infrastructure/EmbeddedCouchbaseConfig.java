@@ -1,13 +1,6 @@
 package ax.infrastructure;
 
-import com.couchbase.mock.Bucket;
-import com.couchbase.mock.BucketConfiguration;
-import com.couchbase.mock.CouchbaseMock;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-import java.io.IOException;
-import java.util.Collections;
 
 /**
  * @author Steven Gentens
@@ -15,7 +8,7 @@ import java.util.Collections;
  */
 @Component
 public class EmbeddedCouchbaseConfig
-{
+{/*
 	@PostConstruct
 	public void setup() throws IOException, InterruptedException {
 		BucketConfiguration bucketConfiguration = new BucketConfiguration();
@@ -28,5 +21,5 @@ public class EmbeddedCouchbaseConfig
 		CouchbaseMock couchbaseMock = new CouchbaseMock( 8091, Collections.singletonList( bucketConfiguration ) );
 		couchbaseMock.start();
 		couchbaseMock.waitForStartup();
-	}
+	}*/
 }

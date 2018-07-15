@@ -9,17 +9,10 @@ feign:
   hystrix:
     enabled: true
 
-endpoints:
-  health:
-    sensitive: false
-  metrics:
-    sensitive: false
-  beans:
-    sensitive: false
-
 management:
-  security:
-    enabled: false
+  endpoint:
+    health:
+      show-details: always
 
 spring:
   jmx:

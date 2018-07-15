@@ -17,6 +17,7 @@ import java.util.Base64;
 
 import static org.junit.Assert.assertEquals;
 
+// Todo: test does not seem to verify actual Spring session support
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootSessionApplication.class)
 public class TestSpringBootSessionApplication

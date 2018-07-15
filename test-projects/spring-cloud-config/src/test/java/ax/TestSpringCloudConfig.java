@@ -86,7 +86,7 @@ public class TestSpringCloudConfig
 		String initialValue = UUID.randomUUID().toString();
 		updateRandomValue( initialValue );
 		enableRenderViewElementNames( true );
-		client.postForObject( "/refresh", Collections.emptyMap(), String.class );
+		client.postForObject( "/actuator/refresh", Collections.emptyMap(), String.class );
 
 		expectRootValues( initialValue );
 		expectModuleValues( initialValue, true );
@@ -94,7 +94,7 @@ public class TestSpringCloudConfig
 		String randomValue = UUID.randomUUID().toString();
 		updateRandomValue( randomValue );
 		enableRenderViewElementNames( false );
-		String response = client.postForObject( "/refresh", Collections.emptyMap(), String.class );
+		String response = client.postForObject( "/actuator/refresh", Collections.emptyMap(), String.class );
 		assertTrue( response.contains( "custom.property" ) );
 		assertTrue( response.contains( "acrossWebModule.development.renderViewElementNames" ) );
 

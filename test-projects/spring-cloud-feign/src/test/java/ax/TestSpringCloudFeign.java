@@ -91,7 +91,7 @@ public class TestSpringCloudFeign
 	@Test
 	public void actuatorWithFeignAndHystrixShouldGiveStatus() {
 		URI healthUri = UriComponentsBuilder.fromHttpUrl( clientUrl )
-		                                    .path( "/health" )
+		                                    .path( "/actuator/health" )
 		                                    .build()
 		                                    .toUri();
 

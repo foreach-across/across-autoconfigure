@@ -19,9 +19,9 @@ import static org.junit.Assert.assertNotNull;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataElasticSearch.class)
 public class TestSpringBootDataElasticSearch
 {
-
 	@Autowired
 	private Client client;
+
 	@Autowired
 	private PersonRepository repository;
 
