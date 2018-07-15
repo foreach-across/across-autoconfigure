@@ -18,11 +18,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   com.foreach.across.autoconfigure.Swagger2AutoConfiguration,\
   org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
 
-  org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration->DynamicApplicationModule,\
-  org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration->DynamicApplicationModule,\
-  org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
-
-
+   org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
 
   de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration,\
 

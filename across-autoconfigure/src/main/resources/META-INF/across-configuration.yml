@@ -221,6 +221,16 @@ spring-data-solr:
       destination: DynamicApplicationModule
 
 #
+# Spring Data Neo4J
+#
+spring-data-neo4j:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
 # Spring Session
 #
 spring-session:
