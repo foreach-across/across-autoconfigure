@@ -92,3 +92,34 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+
+#
+# Spring data
+#
+spring-data:
+  exposed:
+    - org.springframework.data.repository.core.support.RepositoryFactoryInformation
+    - org.springframework.data.mapping.context.MappingContext
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+  illegal-configurations:
+    spring-data-web:
+      configuration:
+        org.springframework.data.web.config.SpringDataWebConfiguration:
+          illegal: AcrossContext
+      description: This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
+      action: Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
+
+#
+# Spring Data Cassandra
+#
+spring-data-cassandra:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule

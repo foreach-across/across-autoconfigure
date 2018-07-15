@@ -16,8 +16,6 @@
 com.foreach.across.autoconfigure=actuator
 
 com.foreach.across.Exposed=\
-  org.springframework.data.repository.core.support.RepositoryFactoryInformation,\
-  org.springframework.data.mapping.context.MappingContext,\
   org.springframework.plugin.core.Plugin,\
   org.springframework.hateoas.ResourceProcessor,\
   org.springframework.hateoas.ResourceAssembler,\
@@ -30,8 +28,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   com.foreach.across.autoconfigure.Swagger2AutoConfiguration,\
   org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
   org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration->AcrossContextPostProcessorModule,\
-  org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->AcrossContextPostProcessorModule,\
+
   org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration->AcrossContextPostProcessorModule,\
   org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
@@ -52,9 +49,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration->DynamicApplicationModule,\
-  org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
-  org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration->DynamicApplicationModule,\
-  org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration->DynamicApplicationModule,\
+
   org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration->DynamicApplicationModule,\
@@ -126,12 +121,9 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
 # List illegal configuration entries
 com.foreach.across.IllegalConfiguration=\
-  org.springframework.data.web.config.SpringDataWebConfiguration->AcrossContext:spring-data,\
   org.springframework.cloud.openfeign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
 #
 # Illegal configuration descriptions.
 #
-com.foreach.across.IllegalConfiguration[spring-data].description=This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
-com.foreach.across.IllegalConfiguration[spring-data].action=Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
 com.foreach.across.IllegalConfiguration[spring-cloud-feign].description=This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
 com.foreach.across.IllegalConfiguration[spring-cloud-feign].action=Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.
