@@ -7,6 +7,7 @@ spring.boot:
     org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration: true
     org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration: true
     org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: true
+    org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration: true
 
 #
 # Actuator
@@ -208,6 +209,15 @@ spring-data-redis:
   auto-configuration:
     org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration: true
     org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data SOLR
+#
+spring-data-solr:
+  auto-configuration:
+    org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration:
       destination: DynamicApplicationModule
 
 #
