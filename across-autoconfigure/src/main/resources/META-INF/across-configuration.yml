@@ -1,0 +1,94 @@
+#
+# Actuator
+#
+actuator:
+  exposed:
+    - org.springframework.boot.actuate.endpoint.annotation.Endpoint
+    - org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpoint
+    - org.springframework.boot.actuate.health.HealthIndicator
+    - org.springframework.boot.actuate.info.InfoContributor
+  auto-configuration:
+    org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet.CloudFoundryActuatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.cloudfoundry.reactive.ReactiveCloudFoundryActuatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticsearchHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.reactive.WebFluxMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.mongo.MongoHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.redis.RedisHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
