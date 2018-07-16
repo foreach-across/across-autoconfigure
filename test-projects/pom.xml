@@ -18,7 +18,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<across.version>3.1.0-SNAPSHOT</across.version>
+		<across.version>3.1.0.RELEASE</across.version>
 		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
 		<thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
 	</properties>
