@@ -33,12 +33,16 @@ public class TestSpringBootGraphQLApplication
 	@Value("${graphiql.mapping}")
 	private String graphiQLEndpoint;
 
+	@Value("${voyager.mapping}")
+	private String voyagerEndpoint;
+
 	@Value("${local.server.port}")
 	private int port;
 
 	private RestTemplate restTemplate;
 	private String graphQLUrl;
 	private String graphiQLUrl;
+	private String voyagerUrl;
 
 	@Autowired
 	private ArticleRepository articleRepository;
@@ -46,14 +50,12 @@ public class TestSpringBootGraphQLApplication
 	@Before
 	public void init() {
 		restTemplate = new RestTemplate();
-		graphQLUrl = UriComponentsBuilder.newInstance().host( "localhost" )
-		                                 .scheme( "http" )
-		                                 .port( port )
-		                                 .path( graphQLEndpoint ).toUriString();
-		graphiQLUrl = UriComponentsBuilder.newInstance().host( "localhost" )
-		                                  .scheme( "http" )
-		                                  .port( port )
-		                                  .path( graphiQLEndpoint ).toUriString();
+		UriComponentsBuilder basePath = UriComponentsBuilder.newInstance().host( "localhost" )
+		                                                    .scheme( "http" )
+		                                                    .port( this.port );
+		graphQLUrl = basePath.cloneBuilder().path( graphQLEndpoint ).toUriString();
+		graphiQLUrl = basePath.cloneBuilder().path( graphiQLEndpoint ).toUriString();
+		voyagerUrl = basePath.cloneBuilder().path( voyagerEndpoint ).toUriString();
 	}
 
 	@Test
@@ -85,6 +87,11 @@ public class TestSpringBootGraphQLApplication
 	@Test
 	public void graphiQlEndpointIsAvailable() {
 		assertEquals( HttpStatus.OK, restTemplate.getForEntity( graphiQLUrl, String.class ).getStatusCode() );
+	}
+
+	@Test
+	public void voyagerEndpointIsAvailable() {
+		assertEquals( HttpStatus.OK, restTemplate.getForEntity( voyagerUrl, String.class ).getStatusCode() );
 	}
 
 	@Data

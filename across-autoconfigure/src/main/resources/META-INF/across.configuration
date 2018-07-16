@@ -127,7 +127,8 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration,\
   com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration,\
   com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration->AcrossContextPostProcessorModule,\
-  com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration->AcrossContextPostProcessorModule
+  com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration->AcrossContextPostProcessorModule
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\

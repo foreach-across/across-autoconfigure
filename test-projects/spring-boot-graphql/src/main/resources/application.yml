@@ -10,3 +10,5 @@ graphiql:
 graphql:
   servlet:
     mapping: /graphql
+voyager:
+  mapping: /voyagers
