@@ -30,7 +30,6 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.env.StandardEnvironment;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 import java.util.Arrays;
@@ -76,8 +75,9 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 
 	@Override
 	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
-		moduleConfiguration.addConfigurationsToImport( RefreshScopeConfiguration.class.getName(),
-		                                               ConfigurationPropertiesRebinderAutoConfiguration.class.getName() );
+		moduleConfiguration.addConfigurationsToImport(
+				RefreshScopeConfiguration.class.getName(), ConfigurationPropertiesRebinderAutoConfiguration.class.getName()
+		);
 	}
 
 	@Override
@@ -128,7 +128,6 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 		}
 	}
 
-	@Component
 	@ConditionalOnMissingBean(value = RefreshScope.class, search = SearchStrategy.CURRENT)
 	protected static class RefreshScopeConfiguration implements BeanDefinitionRegistryPostProcessor
 	{
@@ -140,10 +139,13 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 		@Override
 		public void postProcessBeanDefinitionRegistry( BeanDefinitionRegistry registry )
 				throws BeansException {
-			registry.registerBeanDefinition( "refreshScope",
-			                                 BeanDefinitionBuilder.genericBeanDefinition( RefreshScope.class )
-			                                                      .setRole( BeanDefinition.ROLE_INFRASTRUCTURE )
-			                                                      .getBeanDefinition() );
+			if ( !registry.containsBeanDefinition( "refreshScope" ) ) {
+				// double check in case conditional is being skipped
+				registry.registerBeanDefinition( "refreshScope",
+				                                 BeanDefinitionBuilder.genericBeanDefinition( RefreshScope.class )
+				                                                      .setRole( BeanDefinition.ROLE_INFRASTRUCTURE )
+				                                                      .getBeanDefinition() );
+			}
 		}
 	}
 }

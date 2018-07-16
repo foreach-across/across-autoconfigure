@@ -78,7 +78,7 @@ public class TestSpringCloudConfig
 
 		String json = server.getForObject( "/myclient/development", String.class );
 		assertTrue( json.contains( "\"custom.property\":\"" + expected + "\"" ) );
-		assertTrue( json.contains( "\"acrossWebModule.development.renderViewElementNames\":\"false\"" ) );
+		assertTrue( json.contains( "\"across.web.development.renderViewElementNames\":\"false\"" ) );
 	}
 
 	@Test
@@ -96,7 +96,7 @@ public class TestSpringCloudConfig
 		enableRenderViewElementNames( false );
 		String response = client.postForObject( "/actuator/refresh", Collections.emptyMap(), String.class );
 		assertTrue( response.contains( "custom.property" ) );
-		assertTrue( response.contains( "acrossWebModule.development.renderViewElementNames" ) );
+		assertTrue( response.contains( "across.web.development.renderViewElementNames" ) );
 
 		expectRootValues( randomValue );
 		expectModuleValues( randomValue, false );

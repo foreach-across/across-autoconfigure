@@ -6,6 +6,15 @@ server:
   port: 8001
 
 management:
+  endpoint:
+    health:
+      show-details: always
+    mappings:
+      enabled: true
+    info:
+      enabled: true
+    restart:
+      enabled: true
   endpoints:
     web:
       exposure:
