@@ -13,6 +13,13 @@ management:
   endpoint:
     health:
       show-details: always
+    hystrix:
+      config:
+        x: y
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 spring:
   jmx:

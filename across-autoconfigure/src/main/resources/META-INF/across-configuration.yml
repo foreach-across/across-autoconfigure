@@ -273,4 +273,12 @@ spring-cloud:
     org.springframework.cloud.openfeign.FeignAutoConfiguration: true
     org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingAutoConfiguration: true
     org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingAutoConfiguration: true
-    org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration: true
+    org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+  illegal-configurations:
+    openfeign:
+      configuration:
+        org.springframework.cloud.openfeign.FeignClientFactoryBean:
+          illegal: AcrossContext
+      description: This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
+      action: Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.

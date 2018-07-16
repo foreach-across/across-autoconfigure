@@ -18,6 +18,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -95,7 +96,9 @@ public class TestSpringCloudFeign
 		                                    .build()
 		                                    .toUri();
 
-		assertNotNull( new RestTemplate().getForEntity( healthUri, HashMap.class ).getBody().get( "hystrix" ) );
+		HashMap body = new RestTemplate().getForEntity( healthUri, HashMap.class ).getBody();
+		assertNotNull( body );
+		assertNotNull( ( (Map) body.get( "details" ) ).get( "hystrix" ) );
 	}
 
 	private void assertBookResource( BookResource bookFromServer, BookClientResource bookFromClient ) {

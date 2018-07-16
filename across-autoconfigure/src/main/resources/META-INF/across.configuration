@@ -53,12 +53,3 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
 #org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
-
-# List illegal configuration entries
-com.foreach.across.IllegalConfiguration=\
-  org.springframework.cloud.openfeign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
-#
-# Illegal configuration descriptions.
-#
-com.foreach.across.IllegalConfiguration[spring-cloud-feign].description=This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
-com.foreach.across.IllegalConfiguration[spring-cloud-feign].action=Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.
