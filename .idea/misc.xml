@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-info/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-facebook/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-linkedin/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-twitter/pom.xml" />

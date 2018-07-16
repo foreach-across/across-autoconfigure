@@ -19,3 +19,6 @@ server:
 
 info:
   application-name: actuator
+spring:
+  application:
+    name: Actuator

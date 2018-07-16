@@ -20,7 +20,6 @@
         <module name="spring-boot-data-redis" />
         <module name="spring-boot-data-rest" />
         <module name="spring-boot-data-solr" />
-        <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-rabbitmq" />
         <module name="spring-boot-session" />
