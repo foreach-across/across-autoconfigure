@@ -18,12 +18,14 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-graphql/spring-boot-graphql.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-graphql/spring-boot-graphql.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-info/spring-boot-info.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-session/spring-boot-session.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-session/spring-boot-session.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-websocket/spring-boot-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-cloud-config/spring-cloud-config.iml" filepath="$PROJECT_DIR$/test-projects/spring-cloud-config/spring-cloud-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-cloud-feign/spring-cloud-feign.iml" filepath="$PROJECT_DIR$/test-projects/spring-cloud-feign/spring-cloud-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-facebook/spring-social-facebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-linkedin/spring-social-linkedin.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-linkedin/spring-social-linkedin.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-social-twitter/spring-social-twitter.iml" filepath="$PROJECT_DIR$/test-projects/spring-social-twitter/spring-social-twitter.iml" />

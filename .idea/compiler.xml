@@ -20,12 +20,14 @@
         <module name="spring-boot-data-redis" />
         <module name="spring-boot-data-rest" />
         <module name="spring-boot-data-solr" />
+        <module name="spring-boot-graphql" />
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-rabbitmq" />
         <module name="spring-boot-session" />
         <module name="spring-boot-websocket" />
         <module name="spring-cloud-config" />
+        <module name="spring-cloud-feign" />
         <module name="spring-social-facebook" />
         <module name="spring-social-linkedin" />
         <module name="spring-social-twitter" />
@@ -57,12 +59,14 @@
       <module name="spring-boot-data-redis" target="1.8" />
       <module name="spring-boot-data-rest" target="1.8" />
       <module name="spring-boot-data-solr" target="1.8" />
+      <module name="spring-boot-graphql" target="1.8" />
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.8" />
       <module name="spring-boot-session" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
       <module name="spring-cloud-config" target="1.8" />
+      <module name="spring-cloud-feign" target="1.8" />
       <module name="spring-social-facebook" target="1.8" />
       <module name="spring-social-linkedin" target="1.8" />
       <module name="spring-social-twitter" target="1.8" />
