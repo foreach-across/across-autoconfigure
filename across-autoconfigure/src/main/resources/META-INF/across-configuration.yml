@@ -282,3 +282,24 @@ spring-cloud:
           illegal: AcrossContext
       description: This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
       action: Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.
+
+#
+# Spring Boot Admin
+#
+spring-boot-admin:
+  exposed:
+    - org.springframework.web.accept.ContentNegotiationManager
+    - de.codecentric.boot.admin.server.web.AdminController
+  auto-configuration:
+    de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    de.codecentric.boot.admin.client.config.SpringBootAdminClientCloudFoundryAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    de.codecentric.boot.admin.server.config.AdminServerCloudFoundryAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerHazelcastAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerAutoConfiguration:
+      adapter: com.foreach.across.autoconfigure.AdminServerAutoConfigurationAdapter
+    de.codecentric.boot.admin.server.cloud.config.AdminServerDiscoveryAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerNotifierAutoConfiguration: true
+    de.codecentric.boot.admin.server.ui.config.AdminServerUiAutoConfiguration:
+      destination: AcrossContextPostProcessorModule

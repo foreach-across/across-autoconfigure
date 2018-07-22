@@ -1,15 +1,18 @@
-spring.boot.admin.url: http://localhost:8080
-management.security.enabled: false
-
-endpoints:
-  health:
-    sensitive: false
-  metrics:
-    sensitive: false
-  beans:
-    sensitive: false
-  restart:
-    enabled: true
 spring:
   application:
     name: Spring Boot Admin Server
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8080"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  error:
+    whitelabel:
+      enabled: false
+    include-stacktrace: always
+  port: 8080
