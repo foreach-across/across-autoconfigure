@@ -5,12 +5,12 @@
 	<parent>
 		<artifactId>test-projects</artifactId>
 		<groupId>test-projects</groupId>
-		<version>1.0.1-SNAPSHOT</version>
+		<version>1.0.1.RELEASE</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>spring-social-linkedin</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1.RELEASE</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 
 	<dependencies>

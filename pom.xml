@@ -6,7 +6,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>across-autoconfigure-project</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1.RELEASE</version>
 
 	<packaging>pom</packaging>
 
