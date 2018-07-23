@@ -11,7 +11,6 @@ import javax.persistence.Id;
 @Data
 public class Book
 {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;

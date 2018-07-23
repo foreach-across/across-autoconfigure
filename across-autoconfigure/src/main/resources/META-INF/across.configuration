@@ -29,7 +29,10 @@ com.foreach.across.Exposed=\
   org.springframework.hateoas.ResourceProcessor,\
   org.springframework.hateoas.ResourceAssembler,\
   org.springframework.hateoas.LinkBuilderFactory,\
-  org.springframework.hateoas.LinkBuilder
+  org.springframework.hateoas.LinkBuilder,\
+  com.coxautodev.graphql.tools.GraphQLResolver,\
+  com.coxautodev.graphql.tools.SchemaParser,\
+  graphql.schema.GraphQLSchema
 
 #
 #com.foreach.across.AutoConfigurationDisabled=\
@@ -117,8 +120,15 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.cloud.config.client.ConfigClientAutoConfiguration,\
   org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration,\
   org.springframework.cloud.config.server.config.EncryptionAutoConfiguration,\
-  org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
-
+  org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.FeignAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.encoding.FeignAcceptGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.encoding.FeignContentGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration,\
+  com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration,\
+  com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration->AcrossContextPostProcessorModule
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
@@ -149,3 +159,17 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
 #org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
+
+
+# List illegal configuration entries
+com.foreach.across.IllegalConfiguration=\
+  org.springframework.data.web.config.SpringDataWebConfiguration->AcrossContext:spring-data,\
+  org.springframework.cloud.netflix.feign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
+
+#
+# Illegal configuration descriptions.
+#
+com.foreach.across.IllegalConfiguration[spring-data].description=This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
+com.foreach.across.IllegalConfiguration[spring-data].action=Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
+com.foreach.across.IllegalConfiguration[spring-cloud-feign].description=This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
+com.foreach.across.IllegalConfiguration[spring-cloud-feign].action=Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.

@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+book:
+  api:
+    url: http://localhost:8888
+
+feign:
+  hystrix:
+    enabled: true
+
+endpoints:
+  health:
+    sensitive: false
+  metrics:
+    sensitive: false
+  beans:
+    sensitive: false
+
+management:
+  security:
+    enabled: false
+
+spring:
+  jmx:
+    enabled: false

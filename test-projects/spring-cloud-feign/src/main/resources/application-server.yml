@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+endpoints:
+  health:
+    sensitive: false
+  metrics:
+    sensitive: false
+  beans:
+    sensitive: false
+
+management:
+  security:
+    enabled: false
+
+spring:
+  jmx:
+    enabled: false
