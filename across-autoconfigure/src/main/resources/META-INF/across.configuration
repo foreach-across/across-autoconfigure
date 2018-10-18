@@ -63,7 +63,7 @@ com.foreach.across.AutoConfigurationEnabled=\
   org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration->AcrossContextPostProcessorModule,\
   org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->AcrossContextPostProcessorModule,\
-  org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration->AcrossContextPostProcessorModule,\
+  org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration->DynamicApplicationModule,\
   org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
   org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
