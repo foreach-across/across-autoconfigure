@@ -13,7 +13,7 @@
 
 	<groupId>test-projects</groupId>
 	<artifactId>test-projects</artifactId>
-	<version>1.0.1.RELEASE</version>
+	<version>1.0.2-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -75,7 +75,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-autoconfigure</artifactId>
-				<version>1.0.1.RELEASE</version>
+				<version>1.0.2-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
