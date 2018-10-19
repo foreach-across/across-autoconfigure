@@ -10,7 +10,6 @@ import org.springframework.hateoas.core.Relation;
 @Relation(value = "employee", collectionRelation = "employees")
 public class Employee extends ResourceSupport
 {
-
 	private String name;
 	private int age;
 

@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Company extends ResourceSupport
 {
-
 	private String name;
 	private List<Employee> employees;
 

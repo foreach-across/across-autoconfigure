@@ -2,7 +2,8 @@ package ax.application.controllers;
 
 import ax.application.business.Company;
 import ax.application.business.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
+import ax.modules.custom.book.Book;
+import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.hateoas.MediaTypes;
@@ -21,13 +22,11 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @RestController
 @ExposesResourceFor(Company.class)
 @RequestMapping("/company")
+@RequiredArgsConstructor
 public class CompanyController
 {
-
-	@Autowired
-	private EntityLinks entityLinks;
-	@Autowired
-	private RelProvider relProvider;
+	private final EntityLinks entityLinks;
+	private final RelProvider relProvider;
 
 	@GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
 	public Company company( @PathVariable(value = "id", required = false) String id ) {
@@ -41,7 +40,7 @@ public class CompanyController
 		for ( Employee e : employees ) {
 			company.add( entityLinks.linkToSingleResource( Employee.class, e.getName() ).withRel( relProvider.getItemResourceRelFor( Employee.class ) ) );
 		}
-		company.add();
+		company.add( entityLinks.linkToSingleResource( Book.class, "someBook" ).withRel( relProvider.getItemResourceRelFor( Book.class ) ) );
 
 		return company;
 	}

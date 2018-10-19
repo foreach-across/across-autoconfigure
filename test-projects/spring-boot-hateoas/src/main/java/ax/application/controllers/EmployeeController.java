@@ -22,7 +22,6 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @ExposesResourceFor(Employee.class)
 public class EmployeeController
 {
-
 	@GetMapping("/{name}")
 	public Employee employee( @PathVariable String name ) {
 		Employee employee = new Employee( name, (int) ( Math.random() * 100 ) );
