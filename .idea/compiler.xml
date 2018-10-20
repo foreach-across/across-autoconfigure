@@ -21,6 +21,7 @@
         <module name="spring-boot-data-rest" />
         <module name="spring-boot-data-solr" />
         <module name="spring-boot-graphql" />
+        <module name="spring-boot-hateoas" />
         <module name="spring-boot-info" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-rabbitmq" />
@@ -60,6 +61,7 @@
       <module name="spring-boot-data-rest" target="1.8" />
       <module name="spring-boot-data-solr" target="1.8" />
       <module name="spring-boot-graphql" target="1.8" />
+      <module name="spring-boot-hateoas" target="1.8" />
       <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.8" />

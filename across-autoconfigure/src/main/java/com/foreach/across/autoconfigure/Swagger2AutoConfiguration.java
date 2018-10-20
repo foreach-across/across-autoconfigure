@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.configuration.Swagger2DocumentationConfi
  * Ensures that the correct ObjectMapper is detected and is published by the {@link ObjectMapperConfigurer} using the ObjectMapperConfigured event.
  *
  * @author Steven Gentens
- * @since 3.0.0
+ * @since 1.0.0
  */
 @Configuration
 @ConditionalOnBean(Swagger2DocumentationConfiguration.class)
