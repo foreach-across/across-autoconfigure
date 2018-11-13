@@ -20,13 +20,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>spring-cloud-config</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2.RELEASE</version>
 	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>test-projects</groupId>
 		<artifactId>test-projects</artifactId>
-		<version>1.0.2-SNAPSHOT</version>
+		<version>1.0.2.RELEASE</version>
 	</parent>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -36,7 +36,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Edgware.SR3</version>
+				<version>Edgware.SR5</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

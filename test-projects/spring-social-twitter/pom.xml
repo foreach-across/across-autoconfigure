@@ -5,12 +5,12 @@
 	<parent>
 		<artifactId>test-projects</artifactId>
 		<groupId>test-projects</groupId>
-		<version>1.0.2-SNAPSHOT</version>
+		<version>1.0.2.RELEASE</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>spring-social-twitter</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2.RELEASE</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 
