@@ -1,0 +1,8 @@
+spring:
+  hateoas:
+    use-hal-as-default-json-media-type: false
+server:
+  error:
+    whitelabel:
+      enabled: false
+    include-stacktrace: always
