@@ -33,6 +33,6 @@ public class QueryResolver implements GraphQLQueryResolver
 	}
 
 	public Article getArticle( Long id ) {
-		return articleRepository.findOne( id );
+		return articleRepository.findById( id ).orElse( null );
 	}
 }

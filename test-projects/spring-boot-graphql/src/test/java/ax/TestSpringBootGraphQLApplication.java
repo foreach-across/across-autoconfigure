@@ -81,7 +81,7 @@ public class TestSpringBootGraphQLApplication
 		assertEquals( 3, articleRepository.count() );
 		Article created = articleRepository.findAll().stream().max( Comparator.comparing( Article::getId ) ).get();
 		assertEquals( title, created.getTitle() );
-		articleRepository.delete( created.getId() );
+		articleRepository.deleteById( created.getId() );
 	}
 
 	@Test

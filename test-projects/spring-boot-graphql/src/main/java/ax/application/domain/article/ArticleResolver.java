@@ -18,7 +18,7 @@ public class ArticleResolver implements GraphQLResolver<Article>
 	private ProfileRepository profileRepository;
 
 	public Profile getAuthor( Article article ) {
-		return profileRepository.findOne( article.getAuthorId() );
+		return profileRepository.findById( article.getAuthorId() ).orElse( null );
 	}
 
 	public List<Comment> getComments( Article article ) {
