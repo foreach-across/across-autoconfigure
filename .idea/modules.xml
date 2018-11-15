@@ -18,6 +18,8 @@
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-redis/spring-boot-data-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-rest/spring-boot-data-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-data-solr/spring-boot-data-solr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-graphql/spring-boot-graphql.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-graphql/spring-boot-graphql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-hateoas/spring-boot-hateoas.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-hateoas/spring-boot-hateoas.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-mail/spring-boot-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-projects/spring-boot-session/spring-boot-session.iml" filepath="$PROJECT_DIR$/test-projects/spring-boot-session/spring-boot-session.iml" />
