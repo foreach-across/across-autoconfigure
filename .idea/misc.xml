@@ -9,10 +9,34 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/across-autoconfigure/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/blank/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-cassandra/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-couchbase/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-ldap/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-mongo/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-data-solr/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-boot-info/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-mail/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-session/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-boot-websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-cloud-config/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/spring-cloud-feign/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-facebook/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-linkedin/pom.xml" />
         <option value="$PROJECT_DIR$/test-projects/spring-social-twitter/pom.xml" />
+        <option value="$PROJECT_DIR$/test-projects/swagger2/pom.xml" />
       </set>
     </option>
   </component>

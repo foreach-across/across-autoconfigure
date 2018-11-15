@@ -13,16 +13,122 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+com.foreach.across.Exposed=\
+  org.springframework.boot.actuate.endpoint.Endpoint,\
+  org.springframework.boot.actuate.endpoint.PublicMetrics,\
+  org.springframework.boot.actuate.endpoint.mvc.MvcEndpoint,\
+  org.springframework.boot.actuate.endpoint.jmx.JmxEndpoint,\
+  org.springframework.boot.actuate.cache.CacheStatisticsProvider,\
+  org.springframework.boot.actuate.health.HealthIndicator,\
+  org.springframework.boot.actuate.info.InfoContributor,\
+  org.springframework.boot.actuate.metrics.CounterService,\
+  org.springframework.boot.actuate.metrics.GaugeService,\
+  org.springframework.data.repository.core.support.RepositoryFactoryInformation,\
+  org.springframework.data.mapping.context.MappingContext,\
+  org.springframework.plugin.core.Plugin,\
+  org.springframework.hateoas.ResourceProcessor,\
+  org.springframework.hateoas.ResourceAssembler,\
+  org.springframework.hateoas.LinkBuilderFactory,\
+  org.springframework.hateoas.LinkBuilder,\
+  com.coxautodev.graphql.tools.GraphQLResolver,\
+  com.coxautodev.graphql.tools.SchemaParser,\
+  graphql.schema.GraphQLSchema
 
+#
+#com.foreach.across.AutoConfigurationDisabled=\
+#
 com.foreach.across.AutoConfigurationEnabled=\
   com.foreach.across.autoconfigure.Swagger2AutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.JolokiaAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration->SpringSecurityModule,\
+  org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricsChannelAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,\
+  org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,\
+  org.springframework.boot.actuate.cloudfoundry.CloudFoundryActuatorAutoConfiguration,\
   org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
-
-   org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
-
-  \
-
-
+  org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration->AcrossContextPostProcessorModule,\
+  org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration->AcrossContextPostProcessorModule,\
+  org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration:com.foreach.across.autoconfigure.hateoas.HypermediaAutoConfigurationAdapter,\
+  org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
+  org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
+  org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
+  org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
+  org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration,\
+  org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration,\
+  org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration,\
+  org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration,\
+  org.springframework.boot.autoconfigure.session.SessionAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\
+  org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
+  org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration->DynamicApplicationModule,\
+  org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration->DynamicApplicationModule,\
+  de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration,\
+  org.springframework.cloud.client.CommonsClientAutoConfiguration,\
+  org.springframework.cloud.commons.util.UtilAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.RefreshAutoConfiguration:com.foreach.across.autoconfigure.CloudRefreshAutoConfigurationAdapter,\
+  org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration,\
+  org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration,\
+  org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration,\
+  org.springframework.cloud.client.hypermedia.CloudHypermediaAutoConfiguration,\
+  org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration,\
+  org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration,\
+  org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration,\
+  org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration,\
+  org.springframework.cloud.commons.httpclient.HttpClientConfiguration,\
+  org.springframework.cloud.config.client.ConfigClientAutoConfiguration,\
+  org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration,\
+  org.springframework.cloud.config.server.config.EncryptionAutoConfiguration,\
+  org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.FeignAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.encoding.FeignAcceptGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.netflix.feign.encoding.FeignContentGzipEncodingAutoConfiguration,\
+  org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration,\
+  com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration,\
+  com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration->AcrossContextPostProcessorModule,\
+  com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration->AcrossContextPostProcessorModule
 #org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,
 #org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
 #org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
@@ -53,3 +159,17 @@ com.foreach.across.AutoConfigurationEnabled=\
 #org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
 #org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
 #org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
+
+
+# List illegal configuration entries
+com.foreach.across.IllegalConfiguration=\
+  org.springframework.data.web.config.SpringDataWebConfiguration->AcrossContext:spring-data,\
+  org.springframework.cloud.netflix.feign.FeignClientFactoryBean->AcrossContext:spring-cloud-feign
+
+#
+# Illegal configuration descriptions.
+#
+com.foreach.across.IllegalConfiguration[spring-data].description=This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
+com.foreach.across.IllegalConfiguration[spring-data].action=Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
+com.foreach.across.IllegalConfiguration[spring-cloud-feign].description=This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
+com.foreach.across.IllegalConfiguration[spring-cloud-feign].action=Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.
