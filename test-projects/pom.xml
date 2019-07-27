@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-dependencies</artifactId>
-		<version>2.0.6.RELEASE</version>
+		<version>2.1.6.RELEASE</version>
 		<relativePath/>
 	</parent>
 
@@ -18,8 +18,8 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<across.version>4.0.0-SNAPSHOT</across.version>
-		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+		<across.version>5.0.0-SNAPSHOT</across.version>
+		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 		<thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
 	</properties>
 
@@ -57,6 +57,14 @@
 			<id>foreach-nexus</id>
 			<name>Foreach nexus</name>
 			<url>http://repository.foreach.be/nexus/repository/public/</url>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 

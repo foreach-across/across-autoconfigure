@@ -11,7 +11,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<across.version>4.0.0-SNAPSHOT</across.version>
+		<across.version>5.0.0-SNAPSHOT</across.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -42,6 +42,14 @@
 			<id>foreach-nexus</id>
 			<name>Foreach nexus</name>
 			<url>http://repository.foreach.be/nexus/repository/public/</url>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 
