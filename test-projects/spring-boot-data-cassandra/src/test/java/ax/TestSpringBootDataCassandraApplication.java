@@ -15,6 +15,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCassandraApplication.class)
 public class TestSpringBootDataCassandraApplication
@@ -25,7 +26,6 @@ public class TestSpringBootDataCassandraApplication
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
-	@Ignore
 	@Test
 	public void repositoryIsCreatedInApplicationModule() {
 		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "customerRepository" ) );
