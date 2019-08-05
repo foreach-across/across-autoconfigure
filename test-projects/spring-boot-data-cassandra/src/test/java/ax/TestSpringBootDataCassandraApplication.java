@@ -4,6 +4,7 @@ import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
 import com.datastax.driver.core.utils.UUIDs;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ public class TestSpringBootDataCassandraApplication
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
+	@Ignore
 	@Test
 	public void repositoryIsCreatedInApplicationModule() {
 		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "customerRepository" ) );
