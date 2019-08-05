@@ -25,7 +25,6 @@ public class TestSpringBootDataCassandraApplication
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
-	@Ignore
 	@Test
 	public void repositoryIsCreatedInApplicationModule() {
 		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "customerRepository" ) );
