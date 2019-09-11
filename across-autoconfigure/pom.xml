@@ -19,20 +19,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>across-autoconfigure</artifactId>
-	<version>2.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-autoconfigure-project</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
+		<version>${revision}</version>
 	</parent>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<artifactId>across-autoconfigure</artifactId>
 
 	<properties>
 		<spring.boot.admin.version>2.0.1</spring.boot.admin.version>
+		<maven.javadoc.skip>false</maven.javadoc.skip>
+		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
 
 	<dependencyManagement>
@@ -48,12 +46,6 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>LATEST</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>com.foreach.across</groupId>
 			<artifactId>across-web</artifactId>
@@ -106,7 +98,6 @@
 			<plugin>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok-maven-plugin</artifactId>
-				<version>1.16.18.0</version>
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
@@ -124,10 +115,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
 				<configuration>
 					<failOnError>false</failOnError>
-					<additionalparam>-Xdoclint:none</additionalparam>
+					<doclint>none</doclint>
 					<sourcepath>
 						target/delombok;target/generated-sources
 					</sourcepath>
@@ -143,7 +133,7 @@
 						<inherited>true</inherited>
 						<id>aggregate</id>
 						<goals>
-							<goal>aggregate</goal>
+							<goal>aggregate-no-fork</goal>
 						</goals>
 						<phase>prepare-package</phase>
 						<configuration>
@@ -154,26 +144,23 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
+				<!-- This defines how a specific module will be flattened -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>generate-sources</id>
+						<id>flatten</id>
+						<phase>process-resources</phase>
 						<goals>
-							<goal>jar</goal>
+							<goal>flatten</goal>
 						</goals>
 					</execution>
 					<execution>
-						<inherited>true</inherited>
-						<id>aggregate</id>
+						<id>flatten.clean</id>
+						<phase>clean</phase>
 						<goals>
-							<goal>aggregate</goal>
+							<goal>clean</goal>
 						</goals>
-						<phase>prepare-package</phase>
-						<configuration>
-							<outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

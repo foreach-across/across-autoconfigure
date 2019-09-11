@@ -13,24 +13,24 @@
         <module name="spring-boot-data-ldap" />
         <module name="spring-boot-data-elasticsearch" />
         <module name="spring-boot-cache" />
-        <module name="spring-boot-data-mongo" />
+        <module name="spring-boot-session" />
         <module name="swagger2" />
         <module name="blank" />
         <module name="spring-boot-data-redis" />
+        <module name="actuator" />
         <module name="spring-boot-data-neo4j" />
-        <module name="spring-boot-session" />
-        <module name="spring-cloud-feign" />
+        <module name="spring-boot-admin" />
+        <module name="spring-boot-data-mongo" />
         <module name="spring-boot-mail" />
         <module name="spring-boot-data-couchbase" />
         <module name="spring-boot-data-cassandra" />
         <module name="spring-boot-rabbitmq" />
         <module name="spring-boot-websocket" />
-        <module name="spring-boot-graphql" />
         <module name="across-autoconfigure" />
-        <module name="actuator" />
-        <module name="spring-boot-admin" />
+        <module name="spring-boot-graphql" />
+        <module name="spring-cloud-feign" />
       </profile>
-      <profile name="Annotation profile for test-projects:test-projects" enabled="true">
+      <profile name="Annotation profile for test-projects" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
