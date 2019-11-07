@@ -75,7 +75,7 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 
 	@Override
 	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
-		moduleConfiguration.extendModule( true, true, RefreshScopeConfiguration.class.getName(),
+		moduleConfiguration.extendModule( true, false, RefreshScopeConfiguration.class.getName(),
 		                                  ConfigurationPropertiesRebinderAutoConfiguration.class.getName() );
 	}
 
