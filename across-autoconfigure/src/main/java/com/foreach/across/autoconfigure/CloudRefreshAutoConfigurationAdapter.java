@@ -75,9 +75,8 @@ public class CloudRefreshAutoConfigurationAdapter implements AcrossContextConfig
 
 	@Override
 	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
-		moduleConfiguration.addConfigurationsToImport(
-				RefreshScopeConfiguration.class.getName(), ConfigurationPropertiesRebinderAutoConfiguration.class.getName()
-		);
+		moduleConfiguration.extendModule( true, true, RefreshScopeConfiguration.class.getName(),
+		                                  ConfigurationPropertiesRebinderAutoConfiguration.class.getName() );
 	}
 
 	@Override
