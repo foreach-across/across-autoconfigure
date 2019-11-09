@@ -73,6 +73,12 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration:
