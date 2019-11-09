@@ -81,6 +81,10 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa.HibernateMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsAutoConfiguration:
