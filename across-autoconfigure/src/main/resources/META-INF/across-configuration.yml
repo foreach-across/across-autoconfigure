@@ -29,7 +29,11 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.cache.CachesEndpointAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet.CloudFoundryActuatorAutoConfiguration:
       destination: AcrossContextPostProcessorModule
@@ -108,6 +112,8 @@ actuator:
     org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration:
       destination: AcrossContextPostProcessorModule

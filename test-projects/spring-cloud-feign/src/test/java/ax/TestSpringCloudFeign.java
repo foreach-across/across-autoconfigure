@@ -98,7 +98,7 @@ public class TestSpringCloudFeign
 
 		HashMap body = new RestTemplate().getForEntity( healthUri, HashMap.class ).getBody();
 		assertNotNull( body );
-		assertNotNull( ( (Map) body.get( "details" ) ).get( "hystrix" ) );
+		assertNotNull( ( (Map) body.get( "components" ) ).get( "hystrix" ) );
 	}
 
 	private void assertBookResource( BookResource bookFromServer, BookClientResource bookFromClient ) {
