@@ -49,7 +49,7 @@ public class TestActuatorEndpoints
 		assertEquals( HttpStatus.SERVICE_UNAVAILABLE, response.getStatusCode() );
 
 		Map data = response.getBody();
-		Map customIndicator = (Map) ( (Map) data.get( "details" ) ).get( "my" );
+		Map customIndicator = (Map) ( (Map) data.get( "components" ) ).get( "my" );
 		assertNotNull( customIndicator );
 		assertEquals( "DOWN", customIndicator.get( "status" ) );
 	}
