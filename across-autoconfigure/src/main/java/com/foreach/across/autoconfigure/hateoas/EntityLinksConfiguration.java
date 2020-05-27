@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.annotation.Order;
-import org.springframework.hateoas.EntityLinks;
-import org.springframework.hateoas.RelProvider;
+import org.springframework.hateoas.server.EntityLinks;
+import org.springframework.hateoas.server.LinkRelationProvider;
 
 import static com.foreach.across.core.context.bootstrap.AcrossBootstrapConfigurer.CONTEXT_POSTPROCESSOR_MODULE;
 
@@ -36,14 +36,14 @@ class EntityLinksConfiguration
 	private final AcrossModuleInfo currentModule;
 
 	@Bean
-	@ConditionalOnMissingBean(RelProvider.class)
+	@ConditionalOnMissingBean(LinkRelationProvider.class)
 	@Primary
-	public RelProvider internalRelProvider( AcrossContextBeanRegistry beanRegistry ) {
+	public LinkRelationProvider internalRelProvider( AcrossContextBeanRegistry beanRegistry ) {
 		AcrossContextResolvingBeanTargetSource targetSource = new AcrossContextResolvingBeanTargetSource();
 		targetSource.setBeanRegistry( beanRegistry );
 		targetSource.setModuleName( CONTEXT_POSTPROCESSOR_MODULE );
-		targetSource.setBeanType( RelProvider.class );
-		return ProxyFactory.getProxy( RelProvider.class, targetSource );
+		targetSource.setBeanType( LinkRelationProvider.class );
+		return ProxyFactory.getProxy( LinkRelationProvider.class, targetSource );
 	}
 
 	@Bean

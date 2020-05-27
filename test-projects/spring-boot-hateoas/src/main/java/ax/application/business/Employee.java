@@ -1,14 +1,14 @@
 package ax.application.business;
 
-import org.springframework.hateoas.ResourceSupport;
-import org.springframework.hateoas.core.Relation;
+import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.server.core.Relation;
 
 /**
  * @author Gunther Van Geetsom
  * @since 1.0.2
  */
 @Relation(value = "employee", collectionRelation = "employees")
-public class Employee extends ResourceSupport
+public class Employee extends RepresentationModel
 {
 	private String name;
 	private int age;

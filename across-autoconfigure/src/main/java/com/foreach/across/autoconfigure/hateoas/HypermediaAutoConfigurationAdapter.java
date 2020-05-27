@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.plugin.core.Plugin;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 1.0.2
  */
 @Configuration
-@ConditionalOnClass({ Resource.class, RequestMapping.class, Plugin.class })
+@ConditionalOnClass({ EntityModel.class, RequestMapping.class, Plugin.class })
 @ConditionalOnWebApplication
 public class HypermediaAutoConfigurationAdapter implements AcrossBootstrapConfigurer
 {

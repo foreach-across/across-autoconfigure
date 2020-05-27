@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.hateoas.MediaTypes;
-import org.springframework.hateoas.PagedResources;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.hateoas.client.Traverson;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -47,10 +47,10 @@ public class TestSpringBootDataRestApplication
 
 	private Collection<Book> getBooks() throws URISyntaxException {
 		final Traverson traverson = new Traverson( getBaseUri( "/api" ), MediaTypes.HAL_JSON );
-		final ParameterizedTypeReference<PagedResources<Book>> resourceParameterizedTypeReference = new ParameterizedTypeReference<PagedResources<Book>>()
+		final ParameterizedTypeReference<PagedModel<Book>> resourceParameterizedTypeReference = new ParameterizedTypeReference<PagedModel<Book>>()
 		{
 		};
-		final PagedResources<Book> resources = traverson.follow( rel( "books" ) ).toObject( resourceParameterizedTypeReference );
+		final PagedModel<Book> resources = traverson.follow( rel( "books" ) ).toObject( resourceParameterizedTypeReference );
 		return resources.getContent();
 	}
 

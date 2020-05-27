@@ -1,10 +1,10 @@
 package ax.application.business;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.util.List;
 
-public class Company extends ResourceSupport
+public class Company extends RepresentationModel<Company>
 {
 	private String name;
 	private List<Employee> employees;

@@ -2,7 +2,6 @@ package ax;
 
 import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
-import com.datastax.driver.core.utils.UUIDs;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -12,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import static org.junit.Assert.*;
 
@@ -39,8 +39,8 @@ public class TestSpringBootDataCassandraApplication
 
 		assertEquals( 0, repository.count() );
 
-		Customer alice = new Customer( UUIDs.timeBased(), "Alice", "Smith" );
-		Customer bob = new Customer( UUIDs.timeBased(), "Bob", "Smith" );
+		Customer alice = new Customer( UUID.randomUUID(), "Alice", "Smith" );
+		Customer bob = new Customer( UUID.randomUUID(), "Bob", "Smith" );
 
 		repository.save( alice );
 		repository.save( bob );

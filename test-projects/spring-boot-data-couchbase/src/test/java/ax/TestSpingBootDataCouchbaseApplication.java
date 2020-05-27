@@ -3,8 +3,7 @@ package ax;
 import ax.application.repositories.UserRepository;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
-import com.couchbase.client.java.cluster.ClusterInfo;
-import com.couchbase.client.java.env.DefaultCouchbaseEnvironment;
+import com.couchbase.client.java.env.ClusterEnvironment;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -28,11 +27,9 @@ public class TestSpingBootDataCouchbaseApplication
 	@Autowired
 	private Bucket bucket;
 	@Autowired
-	private DefaultCouchbaseEnvironment couchbaseEnvironment;
+	private ClusterEnvironment clusterEnvironment;
 	@Autowired
 	private Cluster cluster;
-	@Autowired
-	private ClusterInfo clusterInfo;
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
@@ -45,9 +42,8 @@ public class TestSpingBootDataCouchbaseApplication
 	public void shouldBootstrap() throws IOException {
 		assertNotNull( repository );
 		assertNotNull( bucket );
-		assertNotNull( couchbaseEnvironment );
+		assertNotNull( clusterEnvironment );
 		assertNotNull( cluster );
-		assertNotNull( clusterInfo );
 
 		repository.deleteAll();
 
