@@ -3,7 +3,7 @@ package ax;
 import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
-import com.mongodb.MongoClient;
+import com.mongodb.client.MongoClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +29,11 @@ public class TestSpringBootDataMongoApplication
 
 	@Test
 	public void repositoryIsCreatedInApplicationModule() {
-		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataMongoApplicationModule", "customerRepository" ) );
+		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataMongoApplicationModule", "ax.application.repositories.CustomerRepository" ) );
 	}
 
 	@Test
-	public void shouldBootStrap() throws IOException {
+	public void shouldBootStrap() {
 		assertNotNull( mongoClient );
 
 		repository.deleteAll();

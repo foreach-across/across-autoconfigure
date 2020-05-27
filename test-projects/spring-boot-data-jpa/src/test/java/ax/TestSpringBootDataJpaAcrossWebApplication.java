@@ -44,7 +44,7 @@ public class TestSpringBootDataJpaAcrossWebApplication extends TestSpringBootDat
 	@Override
 	public void openEntityManagerInViewInterceptorRegistration() {
 		Set<String> beanNames = beanRegistry.getBeansOfTypeAsMap( WebMvcConfigurer.class, true ).keySet();
-		assertTrue( beanNames.stream().anyMatch( beanName -> beanName.contains( "JpaWebMvcConfiguration" ) ) );
+		assertTrue( beanNames.stream().anyMatch( beanName -> beanName.contains( "openEntityManagerInViewInterceptorConfigurer" ) ) );
 	}
 
 	@Test
