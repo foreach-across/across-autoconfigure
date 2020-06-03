@@ -19,17 +19,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>spring-boot-data-couchbase</artifactId>
-	<version>1.0.2.RELEASE</version>
-	<packaging>jar</packaging>
-
 	<parent>
 		<groupId>test-projects</groupId>
 		<artifactId>test-projects</artifactId>
-		<version>1.0.2.RELEASE</version>
+		<version>${revision}</version>
 	</parent>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<artifactId>spring-boot-data-couchbase</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -44,10 +40,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-couchbase</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.couchbase.mock</groupId>
 			<artifactId>CouchbaseMock</artifactId>
-			<version>1.5.12</version>
+			<version>1.5.19</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>com.playtika.testcontainers</groupId>
+			<artifactId>embedded-couchbase</artifactId>
+			<version>1.7</version>
 		</dependency>
 	</dependencies>
 </project>

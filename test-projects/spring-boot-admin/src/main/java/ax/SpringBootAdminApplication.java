@@ -2,7 +2,7 @@ package ax;
 
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
-import de.codecentric.boot.admin.config.EnableAdminServer;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 
 /**

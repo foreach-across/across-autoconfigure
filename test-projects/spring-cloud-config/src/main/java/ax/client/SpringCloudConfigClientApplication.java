@@ -5,7 +5,7 @@ import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
+import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,8 +41,8 @@ public class SpringCloudConfigClientApplication
 		runApplication( args );
 	}
 
-	public static EmbeddedWebApplicationContext runApplication( String... args ) {
-		return (EmbeddedWebApplicationContext) new SpringApplicationBuilder()
+	public static ServletWebServerApplicationContext runApplication( String... args ) {
+		return (ServletWebServerApplicationContext) new SpringApplicationBuilder()
 				.sources( SpringCloudConfigClientApplication.class )
 				.profiles( "client", "development" )
 				.properties( "spring.cloud.config.enabled=true" )

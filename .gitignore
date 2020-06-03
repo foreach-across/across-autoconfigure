@@ -32,4 +32,4 @@ target
 pom.xml.versionsBackup
 
 */spring-boot-data-elasticsearch/data/
-
+.flattened-pom.xml

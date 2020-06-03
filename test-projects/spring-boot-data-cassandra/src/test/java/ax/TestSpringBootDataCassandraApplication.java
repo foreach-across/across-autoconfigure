@@ -4,6 +4,7 @@ import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
 import com.datastax.driver.core.utils.UUIDs;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCassandraApplication.class)
 public class TestSpringBootDataCassandraApplication

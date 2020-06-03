@@ -31,7 +31,7 @@ public class HypermediaAutoConfigurationAdapter implements AcrossBootstrapConfig
 	@Override
 	public void configureModule( ModuleBootstrapConfig moduleConfiguration ) {
 		if ( !CONTEXT_POSTPROCESSOR_MODULE.equals( moduleConfiguration.getModuleName() ) ) {
-			moduleConfiguration.addConfigurationsToImport( EntityLinksConfiguration.class.getName() );
+			moduleConfiguration.extendModule( true, true, EntityLinksConfiguration.class.getName() );
 		}
 	}
 }
