@@ -19,20 +19,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>spring-boot-admin</artifactId>
-	<version>1.0.2.RELEASE</version>
-	<packaging>jar</packaging>
-
 	<parent>
 		<groupId>test-projects</groupId>
 		<artifactId>test-projects</artifactId>
-		<version>1.0.2.RELEASE</version>
+		<version>${revision}</version>
 	</parent>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<artifactId>spring-boot-admin</artifactId>
 
 	<properties>
-		<spring.boot.admin.version>1.5.7</spring.boot.admin.version>
+		<spring.boot.admin.version>2.1.0</spring.boot.admin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -40,7 +36,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Edgware.SR5</version>
+				<version>Greenwich.SR2</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -62,12 +58,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-server</artifactId>
-			<version>${spring.boot.admin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
 			<version>${spring.boot.admin.version}</version>
 		</dependency>
 		<dependency>

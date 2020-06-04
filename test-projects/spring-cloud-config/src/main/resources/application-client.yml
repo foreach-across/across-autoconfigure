@@ -5,19 +5,20 @@ across:
 server:
   port: 8001
 
-endpoints:
-  health:
-    sensitive: false
-  metrics:
-    sensitive: false
-  beans:
-    sensitive: false
-  restart:
-    enabled: true
-
 management:
-  security:
-    enabled: false
+  endpoint:
+    health:
+      show-details: always
+    mappings:
+      enabled: true
+    info:
+      enabled: true
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 spring:
   cloud:

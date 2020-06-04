@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<artifactId>test-projects</artifactId>
 		<groupId>test-projects</groupId>
-		<version>1.0.2.RELEASE</version>
+		<version>${revision}</version>
 	</parent>
-	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>spring-boot-graphql</artifactId>
-
-	<name>${project.groupId}:${project.artifactId}</name>
 
 	<dependencies>
 		<dependency>
@@ -19,24 +18,25 @@
 			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.graphql-java</groupId>
+			<!-- some versions are only on jcenter, but 5.0.6 with 5.3.5 is on mvnrepository -->
+			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-spring-boot-starter</artifactId>
-			<version>4.2.0</version>
+			<version>5.0.6</version>
 		</dependency>
 		<dependency>
-			<groupId>com.graphql-java</groupId>
+			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-java-tools</artifactId>
-			<version>5.1.0</version>
+			<version>5.3.5</version>
 		</dependency>
 		<dependency>
-			<groupId>com.graphql-java</groupId>
+			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphiql-spring-boot-starter</artifactId>
-			<version>4.2.0</version>
+			<version>5.0.6</version>
 		</dependency>
 		<dependency>
-			<groupId>com.graphql-java</groupId>
+			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>voyager-spring-boot-starter</artifactId>
-			<version>4.2.0</version>
+			<version>5.0.6</version>
 		</dependency>
 
 		<dependency>
@@ -45,7 +45,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.hibernate</groupId>
+			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 		<dependency>

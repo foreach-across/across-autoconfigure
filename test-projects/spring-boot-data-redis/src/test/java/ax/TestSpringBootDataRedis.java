@@ -17,7 +17,6 @@ import static org.junit.Assert.assertNotNull;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataRedis.class)
 public class TestSpringBootDataRedis
 {
-
 	@Autowired
 	private PersonRepository repository;
 

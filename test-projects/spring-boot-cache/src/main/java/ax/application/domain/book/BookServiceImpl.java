@@ -36,10 +36,10 @@ public class BookServiceImpl implements BookService
 
 	@org.springframework.cache.annotation.Cacheable(value = "books", key = "#id")
 	public Book findOne( long id ) {
-		return bookRepository.findOne( id );
+		return bookRepository.findById( id ).orElse( null );
 	}
 
 	public void delete( long id ) {
-		bookRepository.delete( id );
+		bookRepository.deleteById( id );
 	}
 }

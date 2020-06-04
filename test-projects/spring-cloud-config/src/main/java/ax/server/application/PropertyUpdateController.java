@@ -34,7 +34,6 @@ public class PropertyUpdateController
 
 		try (FileOutputStream fileOut = new FileOutputStream( file )) {
 			properties.store( fileOut, "Custom properties" );
-			fileOut.close();
 		}
 
 		return "OK";
@@ -44,7 +43,7 @@ public class PropertyUpdateController
 	@GetMapping("/renderViewElementNames")
 	public String renderViewElementNames( @RequestParam("enabled") boolean enabled ) {
 		Properties properties = new Properties();
-		properties.setProperty( "acrossWebModule.development.renderViewElementNames", "" + enabled );
+		properties.setProperty( "across.web.development.renderViewElementNames", "" + enabled );
 
 		String tempDir = applicationContext.getEnvironment().getProperty( "java.io.tmpdir" );
 
@@ -53,7 +52,6 @@ public class PropertyUpdateController
 
 		try (FileOutputStream fileOut = new FileOutputStream( file )) {
 			properties.store( fileOut, "Render view element names" );
-			fileOut.close();
 		}
 
 		return "OK";

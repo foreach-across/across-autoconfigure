@@ -19,17 +19,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-data-mongo</artifactId>
-    <version>1.0.2.RELEASE</version>
-    <packaging>jar</packaging>
-
     <parent>
         <groupId>test-projects</groupId>
         <artifactId>test-projects</artifactId>
-        <version>1.0.2.RELEASE</version>
+        <version>${revision}</version>
     </parent>
 
-    <name>${project.groupId}:${project.artifactId}</name>
+    <artifactId>spring-boot-data-mongo</artifactId>
 
     <dependencies>
         <dependency>

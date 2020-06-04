@@ -17,12 +17,11 @@ import static org.junit.Assert.assertNotNull;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestSpringBootDataLdap
 {
-
 	@Autowired
 	private PersonRepository personRepository;
 
 	@Test
-	public void shouldBootstrapAndReturnWhitelabelErrorPage() throws Exception {
+	public void shouldBootstrapAndFindPerson() throws Exception {
 		assertEquals( 7, personRepository.count() );
 
 		Person person = personRepository.findByUid( "joe" );
@@ -31,6 +30,6 @@ public class TestSpringBootDataLdap
 		assertEquals( "Joe Smeth", person.getCn() );
 		assertEquals( "Smeth", person.getSn() );
 
-		assertEquals( person, personRepository.findOne( new LdapName( "uid=joe,ou=otherpeople,dc=springframework,dc=org" ) ) );
+		assertEquals( person, personRepository.findById( new LdapName( "uid=joe,ou=otherpeople,dc=springframework,dc=org" ) ).orElse( null ) );
 	}
 }

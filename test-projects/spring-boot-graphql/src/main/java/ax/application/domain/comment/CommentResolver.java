@@ -13,6 +13,6 @@ public class CommentResolver implements GraphQLResolver<Comment>
 	private ProfileRepository profileRepository;
 
 	public Profile getAuthor( Comment comment ) {
-		return profileRepository.findOne( comment.getAuthorId() );
+		return profileRepository.findById( comment.getAuthorId() ).orElse( null );
 	}
 }

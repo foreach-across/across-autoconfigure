@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spring Cloud Config Client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="spring-cloud-config" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ax.client.SpringCloudConfigClientApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method />
+  </configuration>
+</component>

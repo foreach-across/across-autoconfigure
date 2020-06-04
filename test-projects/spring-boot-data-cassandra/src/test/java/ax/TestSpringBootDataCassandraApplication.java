@@ -15,6 +15,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCassandraApplication.class)
 public class TestSpringBootDataCassandraApplication

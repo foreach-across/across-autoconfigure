@@ -1,6 +1,7 @@
 package ax;
 
 import com.foreach.across.test.support.config.MockMvcConfiguration;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author Gunther Van Geetsom
  * @since 1.0.2
  */
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(
 		webEnvironment = SpringBootTest.WebEnvironment.MOCK,

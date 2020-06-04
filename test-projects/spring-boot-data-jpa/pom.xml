@@ -2,22 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<artifactId>test-projects</artifactId>
 		<groupId>test-projects</groupId>
-		<version>1.0.2.RELEASE</version>
+		<version>${revision}</version>
 	</parent>
-	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>spring-boot-data-jpa</artifactId>
-	<version>1.0.2.RELEASE</version>
-	<packaging>jar</packaging>
-
-	<name>${project.groupId}:${project.artifactId}</name>
-
-	<properties>
-		<querydsl.version>4.1.4</querydsl.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -25,7 +18,7 @@
 			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate</groupId>
+			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 		<dependency>

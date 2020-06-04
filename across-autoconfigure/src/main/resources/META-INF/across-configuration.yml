@@ -1,0 +1,341 @@
+#
+# General Spring Boot
+#
+spring.boot:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration: true
+    org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration: true
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: true
+    org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration: true
+    com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration: true
+
+#
+# Actuator
+#
+actuator:
+  priority: 900
+  exposed:
+    - org.springframework.boot.actuate.endpoint.annotation.Endpoint
+    - org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpoint
+    - org.springframework.boot.actuate.health.HealthIndicator
+    - org.springframework.boot.actuate.info.InfoContributor
+    - com.coxautodev.graphql.tools.GraphQLResolver
+    - com.coxautodev.graphql.tools.SchemaParser
+    - graphql.schema.GraphQLSchema
+  auto-configuration:
+    org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.cloudfoundry.servlet.CloudFoundryActuatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.cloudfoundry.reactive.ReactiveCloudFoundryActuatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticsearchHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.liquibase.LiquibaseEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.orm.jpa.HibernateMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.reactive.WebFluxMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.mongo.MongoHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.redis.RedisHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+
+#
+# Spring Data / REST / Hypermedia support
+#
+spring-data-rest-hal:
+  priority: 900
+  exposed:
+    - org.springframework.data.repository.core.support.RepositoryFactoryInformation
+    - org.springframework.data.mapping.context.MappingContext
+    - org.springframework.plugin.core.Plugin
+    - org.springframework.hateoas.ResourceProcessor
+    - org.springframework.hateoas.ResourceAssembler
+    - org.springframework.hateoas.LinkBuilderFactory
+    - org.springframework.hateoas.LinkBuilder
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+  illegal-configurations:
+    spring-data-web:
+      configuration:
+        org.springframework.data.web.config.SpringDataWebConfiguration:
+          illegal: AcrossContext
+      description: This is usually due to the use of @EnableSpringDataWebSupport on the application configuration, which is not compatible with Across applications.
+      action: Simply remove the annotation altogether. Spring Data web support is usually activated automatically. If you want to use a custom configuration, ensure you add the configuration to the AcrossContextPostProcessorModule.
+
+#
+# Spring Data Cassandra
+#
+spring-data-cassandra:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Couchbase
+#
+spring-data-couchbase:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Elastic
+#
+spring-data-elastic:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data JPA
+#
+spring-data-jpa:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data LDAP
+#
+spring-data-ldap:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration: true
+    org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data MongoDb
+#
+spring-data-mongo:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Redis
+#
+spring-data-redis:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data SOLR
+#
+spring-data-solr:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration: true
+    org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Data Neo4J
+#
+spring-data-neo4j:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration:
+      destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# Spring Session
+#
+spring-session:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.session.SessionAutoConfiguration:
+      destination: DynamicApplicationModule
+
+#
+# RabbitMQ
+#
+rabbitmq:
+  priority: 900
+  auto-configuration:
+    org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration: true
+
+#
+# Spring Cloud
+#
+spring-cloud:
+  priority: 900
+  auto-configuration:
+    org.springframework.cloud.client.CommonsClientAutoConfiguration: true
+    org.springframework.cloud.commons.util.UtilAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.RefreshAutoConfiguration:
+      adapter: com.foreach.across.autoconfigure.CloudRefreshAutoConfigurationAdapter
+    org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration: true
+    org.springframework.cloud.autoconfigure.WritableEnvironmentEndpointAutoConfiguration: true
+    org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration: true
+    org.springframework.cloud.client.hypermedia.CloudHypermediaAutoConfiguration: true
+    org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration: true
+    org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration: true
+    org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration: true
+    org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration: true
+    org.springframework.cloud.commons.httpclient.HttpClientConfiguration: true
+    org.springframework.cloud.config.client.ConfigClientAutoConfiguration: true
+    org.springframework.cloud.config.server.config.ConfigServerAutoConfiguration: true
+    org.springframework.cloud.config.server.config.EncryptionAutoConfiguration: true
+    org.springframework.cloud.openfeign.FeignAutoConfiguration: true
+    org.springframework.cloud.openfeign.encoding.FeignAcceptGzipEncodingAutoConfiguration: true
+    org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingAutoConfiguration: true
+    org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+  illegal-configurations:
+    openfeign:
+      configuration:
+        org.springframework.cloud.openfeign.FeignClientFactoryBean:
+          illegal: AcrossContext
+      description: This is usually due to the use of @EnableFeignClients on the application configuration, which is not compatible with Across applications.
+      action: Move the annotation to a configuration class inside the desired Across modules that want to use Feign clients.
+
+#
+# Spring Boot Admin
+#
+spring-boot-admin:
+  priority: 900
+  exposed:
+    - org.springframework.web.accept.ContentNegotiationManager
+    - de.codecentric.boot.admin.server.web.AdminController
+  auto-configuration:
+    de.codecentric.boot.admin.client.config.SpringBootAdminClientAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    de.codecentric.boot.admin.client.config.SpringBootAdminClientCloudFoundryAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    de.codecentric.boot.admin.server.config.AdminServerCloudFoundryAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerHazelcastAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerAutoConfiguration:
+      adapter: com.foreach.across.autoconfigure.AdminServerAutoConfigurationAdapter
+    de.codecentric.boot.admin.server.cloud.config.AdminServerDiscoveryAutoConfiguration: true
+    de.codecentric.boot.admin.server.config.AdminServerNotifierAutoConfiguration: true
+    de.codecentric.boot.admin.server.ui.config.AdminServerUiAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
