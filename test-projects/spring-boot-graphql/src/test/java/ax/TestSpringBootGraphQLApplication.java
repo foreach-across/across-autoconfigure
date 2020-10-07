@@ -5,14 +5,14 @@ import ax.application.domain.article.ArticleRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -21,9 +21,9 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = { SpringBootGraphQlApplication.class })
 public class TestSpringBootGraphQLApplication
 {
@@ -47,7 +47,7 @@ public class TestSpringBootGraphQLApplication
 	@Autowired
 	private ArticleRepository articleRepository;
 
-	@Before
+	@BeforeEach
 	public void init() {
 		restTemplate = new RestTemplate();
 		UriComponentsBuilder basePath = UriComponentsBuilder.newInstance().host( "localhost" )

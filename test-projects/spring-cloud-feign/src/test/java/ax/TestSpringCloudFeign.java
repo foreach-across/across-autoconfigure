@@ -5,9 +5,9 @@ import ax.client.application.domain.book.BookClient;
 import ax.client.application.domain.book.BookClientResource;
 import ax.server.SpringCloudFeignServerApplication;
 import ax.server.application.domain.book.BookResource;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.web.client.RestTemplate;
@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @author Gunther Van Geetsom
@@ -35,7 +35,7 @@ public class TestSpringCloudFeign
 	private static String serverUrl;
 	private static String clientUrl;
 
-	@BeforeClass
+	@BeforeAll
 	public static void start() {
 		serverContext = SpringCloudFeignServerApplication.runApplication( "--server.port=0" );
 		int serverPort = serverContext.getWebServer().getPort();
@@ -47,7 +47,7 @@ public class TestSpringCloudFeign
 		client = clientContext.getBean( BookClient.class );
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void stop() {
 		clientContext.close();
 		serverContext.close();

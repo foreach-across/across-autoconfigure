@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
-		<version>6.0.0-SNAPSHOT</version>
+		<version>5.1.0-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -67,6 +67,17 @@
 				<artifactId>across-autoconfigure</artifactId>
 				<version>${revision}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-test</artifactId>
+				<version>5.1.0-SNAPSHOT</version>
+				<exclusions>
+					<exclusion>
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -82,8 +93,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

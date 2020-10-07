@@ -1,11 +1,11 @@
 package ax;
 
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,15 +15,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @author Steven Gentens
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ITSwagger2Application
 {
@@ -44,19 +44,19 @@ public class ITSwagger2Application
 	private static String PHANTOMJS_BINARY;
 	private String URL;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setupClass() {
 		PhantomJsDriverManager.getInstance().setup();
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		URL = "http://127.0.0.1:" + port + SWAGGER_UI_ENDPOINT;
 		PHANTOMJS_BINARY = System.getProperty( "phantomjs.binary.path" );
 	}
 
 	@Test
-	@Ignore
+	@Disabled
 	public void shouldContainModel() {
 		final DesiredCapabilities capabilities = new DesiredCapabilities();
 		// Configure our WebDriver to support JavaScript and be able to find the PhantomJS binary

@@ -7,10 +7,10 @@ import ax.server.SpringCloudConfigServerApplication;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
 import com.foreach.across.modules.web.AcrossWebModule;
 import com.foreach.across.modules.web.config.AcrossWebModuleDevSettings;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.core.env.Environment;
@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 import java.util.UUID;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Arne Vandamme
@@ -39,7 +39,7 @@ public class TestSpringCloudConfig
 	private Environment acrossWebModuleEnvironment;
 	private AcrossWebModuleDevSettings acrossWebModuleDevSettings;
 
-	@BeforeClass
+	@BeforeAll
 	public static void start() {
 		serverContext = SpringCloudConfigServerApplication.runApplication( "--server.port=0" );
 		int serverPort = serverContext.getWebServer().getPort();
@@ -50,13 +50,13 @@ public class TestSpringCloudConfig
 		client = new RestTemplateBuilder().rootUri( "http://localhost:" + clientPort ).build();
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void stop() {
 		clientContext.close();
 		serverContext.close();
 	}
 
-	@Before
+	@BeforeEach
 	public void fetchComponents() {
 		AcrossContextBeanRegistry beanRegistry = clientContext.getBean( AcrossContextBeanRegistry.class );
 		rootComponent = clientContext.getBean( "rootComponent", BoundComponent.class );
