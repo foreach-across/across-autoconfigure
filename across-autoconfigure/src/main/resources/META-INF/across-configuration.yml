@@ -191,6 +191,7 @@ spring-data-elastic:
   priority: 900
   auto-configuration:
     org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration: true
+    org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration: true
     org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration:
       destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration:

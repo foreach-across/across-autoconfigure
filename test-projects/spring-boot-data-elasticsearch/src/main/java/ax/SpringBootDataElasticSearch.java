@@ -3,7 +3,13 @@ package ax;
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.elasticsearch.client.ClientConfiguration;
+import org.springframework.data.elasticsearch.client.RestClients;
+import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfiguration;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,6 +36,11 @@ public class SpringBootDataElasticSearch
 	}
 
 	public static void main( String[] args ) {
-		SpringApplication.run( SpringBootDataElasticSearch.class );
+		// Use DevSpringBootDataApplication
+		createSpringApplication().run(args);
+	}
+
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication(SpringBootDataElasticSearch.class);
 	}
 }
