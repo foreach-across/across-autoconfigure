@@ -1,7 +1,6 @@
 package ax;
 
 import com.foreach.across.test.support.config.MockMvcConfiguration;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author Gunther Van Geetsom
  * @since 1.0.2
  */
-@Disabled
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(
 		webEnvironment = SpringBootTest.WebEnvironment.MOCK,

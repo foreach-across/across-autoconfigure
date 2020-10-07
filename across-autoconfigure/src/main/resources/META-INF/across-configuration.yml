@@ -151,7 +151,7 @@ spring-data-rest-hal:
     org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration:
-      destination: AcrossContextPostProcessorModule
+      adapter: com.foreach.across.autoconfigure.hateoas.HypermediaAutoConfigurationAdapter
   illegal-configurations:
     spring-data-web:
       configuration:
