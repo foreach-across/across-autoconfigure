@@ -2,6 +2,7 @@ package ax;
 
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.web.AcrossWebModule;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
@@ -12,6 +13,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class SpringBootDataMongoApplication
 {
 	public static void main( String[] args ) {
-		new SpringApplicationBuilder( SpringBootDataMongoApplication.class ).build().run();
+		// Use DevSpringBootDataApplication
+		createSpringApplication().run(args);
+	}
+
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication(SpringBootDataMongoApplication.class);
 	}
 }

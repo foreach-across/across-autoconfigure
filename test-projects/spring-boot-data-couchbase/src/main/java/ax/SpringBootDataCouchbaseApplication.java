@@ -14,7 +14,7 @@ import org.springframework.boot.SpringApplication;
 public class SpringBootDataCouchbaseApplication
 {
 	public static void main( String[] args ) {
-		// Use DevSpringBootDataCouchbaseApplication
+		// Use DevSpringBootDataApplication
 		createSpringApplication().run(args);
 	}
 
