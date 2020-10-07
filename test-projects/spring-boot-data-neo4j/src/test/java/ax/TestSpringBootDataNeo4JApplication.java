@@ -2,28 +2,19 @@ package ax;
 
 import ax.application.business.Person;
 import ax.application.repositories.PersonRepository;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@Disabled
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataNeo4jApplication.class)
-public class TestSpringBootDataNeo4JApplication
+public class TestSpringBootDataNeo4JApplication extends AbstractIntegrationTest
 {
 	@Autowired
 	private PersonRepository repository;
 
 	@Test
-	public void shouldBootstrap() throws IOException {
+	public void shouldBootstrap() {
 		assertNotNull( repository );
 
 		repository.deleteAll();
