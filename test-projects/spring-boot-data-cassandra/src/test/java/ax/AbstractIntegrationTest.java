@@ -3,7 +3,6 @@ package ax;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.KeyspaceMetadata;
 import com.datastax.driver.core.Session;
-import lombok.SneakyThrows;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,7 +34,6 @@ abstract class AbstractIntegrationTest {
 			implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
 		@Override
-		@SneakyThrows
 		public void initialize(ConfigurableApplicationContext context) {
 			container.start();
 

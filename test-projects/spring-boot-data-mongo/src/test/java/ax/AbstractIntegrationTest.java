@@ -1,6 +1,5 @@
 package ax;
 
-import lombok.SneakyThrows;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +26,6 @@ abstract class AbstractIntegrationTest {
 			implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
 		@Override
-		@SneakyThrows
 		public void initialize(ConfigurableApplicationContext context) {
 			container.start();
 			TestPropertyValues.of(

@@ -5,7 +5,6 @@ import ax.application.repositories.UserRepository;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.env.ClusterEnvironment;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
-import lombok.SneakyThrows;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

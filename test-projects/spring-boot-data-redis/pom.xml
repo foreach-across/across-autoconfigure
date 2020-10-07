@@ -22,10 +22,10 @@
     <parent>
         <groupId>test-projects</groupId>
         <artifactId>test-projects</artifactId>
-	    <version>${revision}</version>
+        <version>${revision}</version>
     </parent>
 
-	<artifactId>spring-boot-data-redis</artifactId>
+    <artifactId>spring-boot-data-redis</artifactId>
 
     <dependencies>
         <dependency>
@@ -41,9 +41,15 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.kstyrc</groupId>
-            <artifactId>embedded-redis</artifactId>
-            <version>0.6</version>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- testcontainers 1.14 uses junit 4 -->
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

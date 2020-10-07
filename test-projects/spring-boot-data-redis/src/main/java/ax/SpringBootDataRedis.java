@@ -14,7 +14,11 @@ import org.springframework.boot.SpringApplication;
 public class SpringBootDataRedis
 {
 	public static void main( String[] args ) {
-		SpringApplication.run( SpringBootDataRedis.class );
+		// Use DevSpringBootDataApplication
+		createSpringApplication().run(args);
 	}
 
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication(SpringBootDataRedis.class);
+	}
 }

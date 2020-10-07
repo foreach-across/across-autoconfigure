@@ -8,15 +8,16 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.testcontainers.couchbase.BucketDefinition;
-import org.testcontainers.couchbase.CouchbaseContainer;
+import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.containers.wait.strategy.Wait;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(initializers = AbstractIntegrationTest.Initializer.class)
 abstract class AbstractIntegrationTest {
 
-	static CouchbaseContainer container = new CouchbaseContainer().withBucket(new BucketDefinition("mybucket"));
+	static int REDIS_PORT = 6379;
+	static GenericContainer<?> container = new GenericContainer<>("redis:6.0.8").withExposedPorts(REDIS_PORT);
 
 	@AfterClass
 	public static void stop() {
@@ -30,9 +31,7 @@ abstract class AbstractIntegrationTest {
 		public void initialize(ConfigurableApplicationContext context) {
 			container.start();
 			TestPropertyValues.of(
-					"spring.couchbase.connection-string=" + container.getConnectionString(),
-					"spring.couchbase.username=" + container.getUsername(),
-					"spring.couchbase.password=" + container.getPassword()
+					"spring.redis.url=redis://" + container.getHost() + ":" + container.getMappedPort(REDIS_PORT)
 			).applyTo(context);
 		}
 	}

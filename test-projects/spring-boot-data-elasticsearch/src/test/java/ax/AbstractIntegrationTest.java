@@ -1,14 +1,5 @@
 package ax;
 
-import lombok.SneakyThrows;
-import org.apache.http.HttpHost;
-import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.CredentialsProvider;
-import org.apache.http.impl.client.BasicCredentialsProvider;
-import org.elasticsearch.client.Request;
-import org.elasticsearch.client.Response;
-import org.elasticsearch.client.RestClient;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +27,6 @@ abstract class AbstractIntegrationTest {
 			implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
 		@Override
-		@SneakyThrows
 		public void initialize(ConfigurableApplicationContext context) {
 			container.start();
 			TestPropertyValues.of(
