@@ -1,6 +1,8 @@
 package ax.application.business;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
@@ -9,7 +11,9 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 import java.util.Date;
 
 @Data
-@SolrDocument(solrCoreName = "techproducts")
+@SolrDocument(collection = "techproducts")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product
 {
 	@Id
