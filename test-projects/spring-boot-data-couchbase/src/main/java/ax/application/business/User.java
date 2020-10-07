@@ -1,10 +1,16 @@
 package ax.application.business;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.couchbase.core.mapping.Document;
 import org.springframework.data.couchbase.core.mapping.Field;
 
 @Document
+@EqualsAndHashCode(of="id")
+@Getter
+@Setter
 public class User
 {
 	@Id
@@ -15,28 +21,4 @@ public class User
 
 	@Field
 	private String lastName;
-
-	public String getId() {
-		return this.id;
-	}
-
-	public void setId( String id ) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName( String firstName ) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName( String lastName ) {
-		this.lastName = lastName;
-	}
 }

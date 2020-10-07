@@ -3,8 +3,8 @@ package ax;
 import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
 import com.datastax.driver.core.utils.UUIDs;
+import com.datastax.oss.driver.api.core.CqlSession;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
-import org.junit.AfterClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,14 +18,9 @@ public class TestSpringBootDataCassandraApplication extends AbstractIntegrationT
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
-	@AfterClass
-	public static void stop() {
-		cassandra.stop();
-	}
-
 	@Test
 	public void repositoryIsCreatedInApplicationModule() {
-		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "ax.application.repositories.CustomerRepository" ) );
+		assertTrue( beanRegistry.moduleContainsLocalBean( SpringBootDataCassandraApplication.class.getSimpleName() + "Module", "ax.application.repositories.CustomerRepository" ) );
 	}
 
 	@Test

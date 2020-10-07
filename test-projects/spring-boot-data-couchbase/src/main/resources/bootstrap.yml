@@ -1,4 +1,0 @@
-embedded:
-  couchbase:
-    enabled: true
-    bootstrapHttpDirectPort: 8091

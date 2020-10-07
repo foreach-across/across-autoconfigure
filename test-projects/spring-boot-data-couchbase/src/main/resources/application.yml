@@ -1,9 +1,11 @@
 server:
   port: 8000
 
-spring.couchbase.bootstrap-hosts: localhost
 
-#spring.couchbase.env.timeouts.connect: 10000
-#spring.couchbase.env.timeouts.socket-connect: 10000
-
-spring.data.couchbase.auto-index: true
+spring:
+  data:
+    couchbase:
+      bucket-name: 'mybucket'
+      auto-index: false
+  couchbase:
+    connection-string: localhost

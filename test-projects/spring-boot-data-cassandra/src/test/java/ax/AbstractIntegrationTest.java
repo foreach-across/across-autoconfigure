@@ -4,6 +4,7 @@ import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.KeyspaceMetadata;
 import com.datastax.driver.core.Session;
 import lombok.SneakyThrows;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.util.TestPropertyValues;
@@ -23,7 +24,12 @@ import static org.junit.Assert.assertEquals;
 @ContextConfiguration(initializers = AbstractIntegrationTest.Initializer.class)
 abstract class AbstractIntegrationTest {
 
-	static CassandraContainer<?> cassandra = new CassandraContainer<>().withInitScript("setup.cql");
+	static CassandraContainer<?> container = new CassandraContainer<>().withInitScript("setup.cql");
+
+	@AfterClass
+	public static void stop() {
+		container.stop();
+	}
 
 	static class Initializer
 			implements ApplicationContextInitializer<ConfigurableApplicationContext> {
@@ -31,9 +37,9 @@ abstract class AbstractIntegrationTest {
 		@Override
 		@SneakyThrows
 		public void initialize(ConfigurableApplicationContext context) {
-			cassandra.start();
+			container.start();
 
-			Cluster cluster = cassandra.getCluster();
+			Cluster cluster = container.getCluster();
 
 			try(Session session = cluster.connect()) {
 
@@ -50,10 +56,10 @@ abstract class AbstractIntegrationTest {
 			}
 
 			TestPropertyValues.of(
-					"spring.data.cassandra.port=" + cassandra.getMappedPort(CassandraContainer.CQL_PORT),
+					"spring.data.cassandra.port=" + container.getMappedPort(CassandraContainer.CQL_PORT),
 					"spring.data.cassandra.localDatacenter=datacenter1",
 					"spring.data.cassandra.keyspaceName=testKeySpace",
-					"spring.data.cassandra.contactPoints=127.0.0.1:" + cassandra.getMappedPort(CassandraContainer.CQL_PORT)
+					"spring.data.cassandra.contactPoints=" + container.getHost() + ":" + container.getMappedPort(CassandraContainer.CQL_PORT)
 			).applyTo(context);
 		}
 	}

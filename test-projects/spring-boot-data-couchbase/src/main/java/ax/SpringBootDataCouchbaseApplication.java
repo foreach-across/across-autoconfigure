@@ -14,6 +14,11 @@ import org.springframework.boot.SpringApplication;
 public class SpringBootDataCouchbaseApplication
 {
 	public static void main( String[] args ) {
-		SpringApplication.run( SpringBootDataCouchbaseApplication.class );
+		// Use DevSpringBootDataCouchbaseApplication
+		createSpringApplication().run(args);
+	}
+
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication(SpringBootDataCouchbaseApplication.class);
 	}
 }
