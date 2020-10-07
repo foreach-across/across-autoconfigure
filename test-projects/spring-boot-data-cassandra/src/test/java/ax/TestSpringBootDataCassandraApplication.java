@@ -2,23 +2,15 @@ package ax;
 
 import ax.application.business.Customer;
 import ax.application.repositories.CustomerRepository;
+import com.datastax.driver.core.utils.UUIDs;
 import com.foreach.across.core.context.registry.AcrossContextBeanRegistry;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.AfterClass;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.io.IOException;
-import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Disabled
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootDataCassandraApplication.class)
-public class TestSpringBootDataCassandraApplication
+public class TestSpringBootDataCassandraApplication extends AbstractIntegrationTest
 {
 	@Autowired
 	private CustomerRepository repository;
@@ -26,21 +18,26 @@ public class TestSpringBootDataCassandraApplication
 	@Autowired
 	private AcrossContextBeanRegistry beanRegistry;
 
-	@Test
-	public void repositoryIsCreatedInApplicationModule() {
-		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "customerRepository" ) );
+	@AfterClass
+	public static void stop() {
+		cassandra.stop();
 	}
 
 	@Test
-	public void shouldBootstrap() throws IOException {
+	public void repositoryIsCreatedInApplicationModule() {
+		assertTrue( beanRegistry.moduleContainsLocalBean( "SpringBootDataCassandraApplicationModule", "ax.application.repositories.CustomerRepository" ) );
+	}
+
+	@Test
+	public void shouldBootstrap() {
 		assertNotNull( repository );
 
 		repository.deleteAll();
 
 		assertEquals( 0, repository.count() );
 
-		Customer alice = new Customer( UUID.randomUUID(), "Alice", "Smith" );
-		Customer bob = new Customer( UUID.randomUUID(), "Bob", "Smith" );
+		Customer alice = new Customer( UUIDs.timeBased(), "Alice", "Smith" );
+		Customer bob = new Customer( UUIDs.timeBased(), "Bob", "Smith" );
 
 		repository.save( alice );
 		repository.save( bob );

@@ -14,6 +14,11 @@ import org.springframework.boot.SpringApplication;
 public class SpringBootDataCassandraApplication
 {
 	public static void main( String[] args ) {
-		SpringApplication.run( SpringBootDataCassandraApplication.class );
+		// Use DevSpringBootDataCassandraApplication
+		createSpringApplication().run(args);
+	}
+
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication(SpringBootDataCassandraApplication.class);
 	}
 }
