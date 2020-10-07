@@ -14,7 +14,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.internet.MimeMessage;
-import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -36,7 +35,7 @@ public class TestSpringBootMailApplication
 	private GreenMail smtpServer;
 
 	@Test
-	public void shouldBootstrapAndSendMail() throws IOException, MessagingException {
+	public void shouldBootstrapAndSendMail() throws MessagingException {
 		assertNotNull( mailSender );
 		assertNotNull( mailProperties );
 		assertNotNull( session );
