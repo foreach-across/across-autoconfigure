@@ -28,7 +28,7 @@
 	<artifactId>across-autoconfigure</artifactId>
 
 	<properties>
-		<spring.boot.admin.version>2.0.1</spring.boot.admin.version>
+		<spring.boot.admin.version>2.3.0</spring.boot.admin.version>
 		<maven.javadoc.skip>false</maven.javadoc.skip>
 		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>

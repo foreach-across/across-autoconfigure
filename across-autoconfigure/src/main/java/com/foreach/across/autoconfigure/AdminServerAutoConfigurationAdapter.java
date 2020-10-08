@@ -7,6 +7,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -20,7 +21,7 @@ import org.springframework.web.accept.ContentNegotiationManager;
  * @since 2.0.0
  */
 @Configuration
-@Import(AdminServerAutoConfiguration.class)
+@Import( { WebClientAutoConfiguration.class, AdminServerAutoConfiguration.class } )
 public class AdminServerAutoConfigurationAdapter implements BeanDefinitionRegistryPostProcessor
 {
 	@Override
