@@ -20,6 +20,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.Testcontainers;
 import org.testcontainers.containers.BrowserWebDriverContainer;
+import org.testcontainers.dockerclient.DockerClientConfigUtils;
 
 import java.net.InetAddress;
 import java.nio.file.Files;
@@ -58,10 +59,9 @@ public class ITSwagger2Application
 				.withCapabilities(new ChromeOptions())
 				.withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.SKIP, null );
 
-		boolean insideDocker = Files.exists( Paths.get( "/.dockerenv" ));
 		String url;
 
-		if( !insideDocker ) {
+		if( !DockerClientConfigUtils.IN_A_CONTAINER) {
 			url = "http://host.testcontainers.internal:" + port + SWAGGER_UI_ENDPOINT;
 			Testcontainers.exposeHostPorts( port );
 			container.start();
