@@ -2,6 +2,7 @@ package ax.application.handlers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -18,15 +19,15 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Component
 public class WebSocketByeHandler extends TextWebSocketHandler
 {
-	private List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
-	private ObjectMapper objectMapper = new ObjectMapper();
+	private final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
+	private final ObjectMapper objectMapper = new ObjectMapper();
 
 	@Override
-	public void handleTextMessage( WebSocketSession session, TextMessage message )
-			throws InterruptedException, IOException {
+	public void handleTextMessage( @NotNull WebSocketSession session, @NotNull TextMessage message )
+			throws IOException {
 
 		for ( WebSocketSession webSocketSession : sessions ) {
-			Map value = objectMapper.readValue( message.getPayload(), new TypeReference<Map<String, String>>()
+			Map<String, String> value = objectMapper.readValue( message.getPayload(), new TypeReference<Map<String, String>>()
 			{
 			} );
 			webSocketSession.sendMessage( new TextMessage( "Bye " + value.get( "name" ) + " !" ) );
@@ -34,7 +35,7 @@ public class WebSocketByeHandler extends TextWebSocketHandler
 	}
 
 	@Override
-	public void afterConnectionEstablished( WebSocketSession session ) throws Exception {
+	public void afterConnectionEstablished( @NotNull WebSocketSession session ) {
 		//the messages will be broadcasted to all users.
 		sessions.add( session );
 	}

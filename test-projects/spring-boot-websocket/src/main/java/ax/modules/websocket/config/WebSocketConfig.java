@@ -3,12 +3,13 @@ package ax.modules.websocket.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
 /**
  * @author Steven Gentens
  */
 @Configuration
-public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer
 {
 	@Override
 	public void registerStompEndpoints( StompEndpointRegistry registry ) {
