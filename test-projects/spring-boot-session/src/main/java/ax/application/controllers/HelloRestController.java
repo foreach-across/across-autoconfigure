@@ -11,6 +11,7 @@ public class HelloRestController
 
 	@GetMapping("/")
 	String uid( HttpSession session ) {
+		session.setAttribute("user", session.getId());
 		return session.getId();
 	}
 
