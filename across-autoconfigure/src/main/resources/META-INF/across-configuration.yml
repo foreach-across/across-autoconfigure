@@ -287,6 +287,14 @@ rabbitmq:
     org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration: true
 
 #
+# Swagger
+#
+swagger2:
+  priority: 900
+  auto-configuration:
+    com.foreach.across.autoconfigure.Swagger2AutoConfiguration: true
+
+#
 # Spring Cloud
 #
 spring-cloud:

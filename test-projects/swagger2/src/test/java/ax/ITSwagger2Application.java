@@ -25,7 +25,12 @@ import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Steven Gentens
@@ -45,7 +50,7 @@ public class ITSwagger2Application
 			"  \"id\": 0,\n" +
 			"  \"name\": \"string\",\n" +
 			"  \"relatedItems\": [\n" +
-			"    {}\n" +
+			"    null\n" +
 			"  ]\n" +
 			"}";
 
@@ -66,15 +71,18 @@ public class ITSwagger2Application
 			DockerClient dockerClient = container.getDockerClient();
 			String hostname = InetAddress.getLocalHost().getHostName();
 			InspectContainerResponse maven = dockerClient.inspectContainerCmd( hostname ).exec();
-			ContainerNetwork bridge = maven.getNetworkSettings().getNetworks().get( "bridge" );
-			String ip = bridge.getIpAddress();
+			ContainerNetwork network = maven.getNetworkSettings().getNetworks().values()
+			                                .stream()
+			                                .findFirst()
+			                                .orElseThrow( () -> new RuntimeException( "Cannot find a network" ) );
+			String ip = network.getIpAddress();
 
 			container.start();
 
-			dockerClient.connectToNetworkCmd().withContainerId(container.getContainerId()).withNetworkId(bridge.getNetworkID()).exec();
+			dockerClient.connectToNetworkCmd().withContainerId(container.getContainerId()).withNetworkId(network.getNetworkID()).exec();
 
 			System.out.println("======================");
-			System.out.println(hostname + " -> " + ip + " /  container connecting to " + bridge.getNetworkID() );
+			System.out.println(hostname + " -> " + ip + " /  container connecting to " + network.getNetworkID() );
 			System.out.println("======================");
 
 			url = "http://" + ip + ":" + port + SWAGGER_UI_ENDPOINT;
@@ -99,13 +107,10 @@ public class ITSwagger2Application
 		WebElement apiItemPath = wait.until( ExpectedConditions.visibilityOfElementLocated( By.partialLinkText( "/api/item/{id}" ) ) );
 		apiItemPath.click();
 
-		/*
-		WebElement exampleValueForPath = driver.findElement( By.className( "snippet_json" ) );
-		//( new WebDriverWait( driver, 10 ) ).until( ExpectedConditions.visibilityOfElementLocated( By.className( "snippet_json" ) ) );
+		WebElement exampleValueForPath= wait.until( ExpectedConditions.visibilityOfElementLocated( By.className( "highlight-code" ) ) );
 
 		assertNotNull( exampleValueForPath );
 		assertEquals( EXAMPLE_VALUE_SNIPPET, exampleValueForPath.getText() );
-		 */
 		container.stop();
 	}
 }
