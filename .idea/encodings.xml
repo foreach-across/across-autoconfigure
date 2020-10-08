@@ -1,79 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/across-autoconfigure" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/across-autoconfigure/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/across-autoconfigure/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/actuator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/actuator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/actuator/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/blank" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/blank/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/blank/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-admin/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-cache" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-cache/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-cassandra" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-cassandra/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-cassandra/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-couchbase" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-couchbase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-couchbase/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-elasticsearch/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-jpa" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-jpa/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-jpa/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-ldap" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-ldap/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-ldap/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-mongo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-mongo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-mongo/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-neo4j" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-neo4j/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-redis/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-rest/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-data-solr/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-graphql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-graphql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-graphql/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-hateoas" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-hateoas/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-hateoas/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-mail" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-mail/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-mail/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-rabbitmq/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-session" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-session/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-session/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-boot-websocket" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-boot-websocket/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-config/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-feign/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test-projects/swagger2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/swagger2/src/main/java" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

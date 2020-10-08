@@ -6,29 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-data-rest" />
-        <module name="spring-boot-data-solr" />
+        <module name="spring-boot-data-cassandra" />
         <module name="spring-boot-hateoas" />
+        <module name="spring-boot-admin" />
+        <module name="spring-boot-mail" />
+        <module name="blank" />
+        <module name="spring-boot-data-mongo" />
+        <module name="swagger2" />
         <module name="spring-cloud-config" />
-        <module name="spring-boot-data-ldap" />
+        <module name="spring-cloud-feign" />
+        <module name="spring-boot-data-rest" />
         <module name="spring-boot-data-elasticsearch" />
+        <module name="across-autoconfigure" />
+        <module name="actuator" />
+        <module name="spring-boot-rabbitmq" />
+        <module name="spring-boot-data-neo4j" />
         <module name="spring-boot-cache" />
         <module name="spring-boot-session" />
-        <module name="swagger2" />
-        <module name="blank" />
         <module name="spring-boot-data-redis" />
-        <module name="actuator" />
-        <module name="spring-boot-data-neo4j" />
-        <module name="spring-boot-admin" />
-        <module name="spring-boot-data-mongo" />
-        <module name="spring-boot-mail" />
         <module name="spring-boot-data-couchbase" />
-        <module name="spring-boot-data-cassandra" />
-        <module name="spring-boot-rabbitmq" />
+        <module name="spring-boot-data-ldap" />
+        <module name="spring-boot-data-solr" />
         <module name="spring-boot-websocket" />
-        <module name="across-autoconfigure" />
         <module name="spring-boot-graphql" />
-        <module name="spring-cloud-feign" />
       </profile>
       <profile name="Annotation profile for test-projects" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -58,16 +58,12 @@
       <module name="spring-boot-data-solr" target="1.8" />
       <module name="spring-boot-graphql" target="1.8" />
       <module name="spring-boot-hateoas" target="1.8" />
-      <module name="spring-boot-info" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.8" />
       <module name="spring-boot-session" target="1.8" />
       <module name="spring-boot-websocket" target="1.8" />
       <module name="spring-cloud-config" target="1.8" />
       <module name="spring-cloud-feign" target="1.8" />
-      <module name="spring-social-facebook" target="1.8" />
-      <module name="spring-social-linkedin" target="1.8" />
-      <module name="spring-social-twitter" target="1.8" />
       <module name="swagger2" target="1.8" />
       <module name="test-projects" target="1.8" />
     </bytecodeTargetLevel>
