@@ -25,9 +25,6 @@ import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.Map;
-import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -58,7 +55,8 @@ public class ITSwagger2Application
 	@SneakyThrows
 	public void shouldContainModel() {
 		BrowserWebDriverContainer<?> container = new BrowserWebDriverContainer<>()
-				.withCapabilities(new ChromeOptions());
+				.withCapabilities(new ChromeOptions())
+				.withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.SKIP, null );
 
 		boolean insideDocker = Files.exists( Paths.get( "/.dockerenv" ));
 		String url;
@@ -88,11 +86,9 @@ public class ITSwagger2Application
 			url = "http://" + ip + ":" + port + SWAGGER_UI_ENDPOINT;
 		}
 
-		System.out.println("starting request to: " + url );
-		System.out.println("started");
+		System.out.println("Starting requests to: " + url );
 		WebDriver driver = container.getWebDriver();
-		driver.manage().timeouts().implicitlyWait( 10, TimeUnit.SECONDS );
-		System.out.println("driver" + driver);
+		System.out.println("Driver: " + driver);
 		driver.navigate().to(  url );
 
 		Wait<WebDriver> wait = new FluentWait<>( driver )
