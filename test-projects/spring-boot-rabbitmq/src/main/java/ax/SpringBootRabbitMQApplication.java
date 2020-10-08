@@ -31,7 +31,12 @@ public class SpringBootRabbitMQApplication
 	public static final String ROUTING_KEY = "app*";
 
 	public static void main( String[] args ) {
-		SpringApplication.run( SpringBootRabbitMQApplication.class );
+		// Use DevSpringBootDataApplication
+		createSpringApplication().run( args );
+	}
+
+	public static SpringApplication createSpringApplication() {
+		return new SpringApplication( SpringBootRabbitMQApplication.class );
 	}
 
 	@Bean

@@ -6,7 +6,6 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,7 +20,6 @@ public class RabbitConfiguration
 	public final static String ROUTING_KEY = "module*";
 
 	@Bean
-	@ConditionalOnMissingBean(AmqpAdmin.class)
 	@ConditionalOnBean(ConnectionFactory.class)
 	public AmqpAdmin amqpAdmin( final ConnectionFactory connectionFactory ) {
 		return new RabbitAdmin( connectionFactory );

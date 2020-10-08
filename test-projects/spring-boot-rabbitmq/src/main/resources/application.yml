@@ -1,6 +1,0 @@
-spring:
-  rabbitmq:
-    username: ttncygia
-    password: CtQojH_Mzaa8TNlQpa9Zl6ikI7RrhDaP
-    host: gopher.rmq.cloudamqp.com
-    virtual-host: ttncygia

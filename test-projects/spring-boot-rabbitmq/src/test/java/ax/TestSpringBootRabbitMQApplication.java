@@ -8,24 +8,17 @@ import ax.modules.rabbit.domain.Message;
 import ax.modules.rabbit.domain.MessageType;
 import ax.modules.rabbit.receivers.CustomRabbitReceiver;
 import ax.modules.rabbit.senders.CustomRabbitSender;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Steven Gentens
  */
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootRabbitMQApplication.class)
-@Disabled
-public class TestSpringBootRabbitMQApplication
+public class TestSpringBootRabbitMQApplication extends AbstractIntegrationTest
 {
 	@Autowired
 	private MessageSender sender;
