@@ -6,6 +6,7 @@ import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.command.InspectContainerResponse;
 import com.github.dockerjava.api.model.ContainerNetwork;
 import lombok.SneakyThrows;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
@@ -13,6 +14,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -20,13 +23,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.Testcontainers;
 import org.testcontainers.containers.BrowserWebDriverContainer;
+import org.testcontainers.containers.output.BaseConsumer;
+import org.testcontainers.containers.output.OutputFrame;
+import org.testcontainers.containers.output.ToStringConsumer;
 import org.testcontainers.dockerclient.DockerClientConfigUtils;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -58,7 +66,9 @@ public class ITSwagger2Application
 	public void shouldContainModel() {
 		BrowserWebDriverContainer<?> container = new BrowserWebDriverContainer<>()
 				.withCapabilities(new ChromeOptions());
+		container.withEnv( "GRID_DEBUG", "true" );
 
+		
 		String url;
 
 		if( !DockerClientConfigUtils.IN_A_CONTAINER) {
@@ -86,13 +96,24 @@ public class ITSwagger2Application
 			url = "http://" + ip + ":" + port + SWAGGER_UI_ENDPOINT;
 		}
 
+		StdOutConsumer toStringConsumer = new StdOutConsumer();
+		container.followOutput( toStringConsumer, OutputFrame.OutputType.STDOUT);
+
 		System.out.println("Starting requests to: " + url );
-		WebDriver driver = container.getWebDriver();
-		driver.manage().timeouts().implicitlyWait( 10, TimeUnit.SECONDS );
+		RemoteWebDriver driver = container.getWebDriver();
 		System.out.println("Driver: " + driver);
+		driver.setLogLevel( Level.INFO );
+
+		try {
+			driver.manage().timeouts().implicitlyWait( 10, TimeUnit.SECONDS );
+		} catch ( UnreachableBrowserException e ) {
+			e.printStackTrace();
+			Thread.sleep( 10000 );
+		}
+
 		driver.navigate().to(  url );
 
-		Wait<WebDriver> wait = new FluentWait<>( driver )
+		Wait<RemoteWebDriver> wait = new FluentWait<>( driver )
 				.withTimeout( Duration.ofSeconds( 30 ) )
 				.pollingEvery( Duration.ofSeconds( 3 ) )
 				.ignoring( NoSuchElementException.class );
@@ -109,5 +130,14 @@ public class ITSwagger2Application
 		assertNotNull( exampleValueForPath );
 		assertEquals( EXAMPLE_VALUE_SNIPPET, exampleValueForPath.getText() );
 		container.stop();
+	}
+
+	private static class StdOutConsumer extends BaseConsumer<StdOutConsumer> {
+		@Override
+		public void accept( OutputFrame outputFrame ) {
+			if (outputFrame.getBytes() != null) {
+				System.out.print( "BrowserWebDriverContainer ===> " + outputFrame.getUtf8String() );
+			}
+		}
 	}
 }
