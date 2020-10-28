@@ -9,7 +9,7 @@ spring.boot:
     org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration: true
     org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: true
     org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration: true
-    com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration: true
+    graphql.kickstart.graphiql.boot.GraphiQLAutoConfiguration: true
 
 #
 # Actuator
@@ -125,11 +125,11 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration:
       destination: AcrossContextPostProcessorModule
-    com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration:
+    graphql.kickstart.tools.boot.GraphQLJavaToolsAutoConfiguration:
       destination: AcrossContextPostProcessorModule
-    com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration:
+    graphql.kickstart.spring.web.boot.GraphQLWebAutoConfiguration:
       destination: AcrossContextPostProcessorModule
-    com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration:
+    graphql.kickstart.tools.boot.VoyagerAutoConfiguration:
       destination: AcrossContextPostProcessorModule
 
 #
