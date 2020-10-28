@@ -9,6 +9,7 @@ spring.boot:
     org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration: true
     org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration: true
     org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration: true
+    com.oembedler.moon.graphiql.boot.GraphiQLAutoConfiguration: true
     graphql.kickstart.graphiql.boot.GraphiQLAutoConfiguration: true
 
 #
@@ -21,8 +22,11 @@ actuator:
     - org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpoint
     - org.springframework.boot.actuate.health.HealthIndicator
     - org.springframework.boot.actuate.info.InfoContributor
+    # TODO: remove these older graphql library references from version 5.x
     - com.coxautodev.graphql.tools.GraphQLResolver
     - com.coxautodev.graphql.tools.SchemaParser
+    - graphql.kickstart.tools.GraphQLResolver
+    - graphql.kickstart.tools.SchemaParser
     - graphql.schema.GraphQLSchema
   auto-configuration:
     org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration:
@@ -125,13 +129,19 @@ actuator:
       destination: AcrossContextPostProcessorModule
     org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+    # TODO: remove these older graphql library references from version 5.x
+    com.oembedler.moon.graphql.boot.GraphQLJavaToolsAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    com.oembedler.moon.graphql.boot.GraphQLWebAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
+    com.oembedler.moon.voyager.boot.VoyagerAutoConfiguration:
+      destination: AcrossContextPostProcessorModule
     graphql.kickstart.tools.boot.GraphQLJavaToolsAutoConfiguration:
       destination: AcrossContextPostProcessorModule
     graphql.kickstart.spring.web.boot.GraphQLWebAutoConfiguration:
       destination: AcrossContextPostProcessorModule
-    graphql.kickstart.tools.boot.VoyagerAutoConfiguration:
+    graphql.kickstart.voyager.boot.VoyagerAutoConfiguration:
       destination: AcrossContextPostProcessorModule
-
 #
 # Spring Data / REST / Hypermedia support
 #

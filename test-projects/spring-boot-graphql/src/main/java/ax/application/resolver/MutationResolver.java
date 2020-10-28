@@ -3,7 +3,7 @@ package ax.application.resolver;
 import ax.application.domain.article.Article;
 import ax.application.domain.article.ArticleRepository;
 import ax.application.domain.article.input.CreateArticleInput;
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

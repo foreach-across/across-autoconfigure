@@ -2,7 +2,7 @@ package ax.application.domain.comment;
 
 import ax.application.domain.profile.Profile;
 import ax.application.domain.profile.ProfileRepository;
-import com.coxautodev.graphql.tools.GraphQLResolver;
+import graphql.kickstart.tools.GraphQLResolver;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

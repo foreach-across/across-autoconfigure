@@ -4,7 +4,9 @@ spring:
 
 graphiql:
     mapping: /graphiql
-    endpoint: /graphql
+    endpoint:
+      graphql: /graphql
+      subscriptions: /subscriptions
     enabled: true
     pageTitle: GraphiQL
 graphql:

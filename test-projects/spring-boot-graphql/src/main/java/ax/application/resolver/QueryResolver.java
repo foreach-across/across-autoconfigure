@@ -6,7 +6,7 @@ import ax.application.domain.comment.Comment;
 import ax.application.domain.comment.CommentRepository;
 import ax.application.domain.profile.Profile;
 import ax.application.domain.profile.ProfileRepository;
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
