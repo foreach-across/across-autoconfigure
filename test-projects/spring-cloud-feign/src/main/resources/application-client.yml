@@ -6,7 +6,7 @@ book:
     url: http://localhost:8888
 
 feign:
-  hystrix:
+  circuitbreaker:
     enabled: true
 
 management:

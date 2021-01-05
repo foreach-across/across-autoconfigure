@@ -7,3 +7,4 @@ spring:
       server:
         native:
           search-locations: classpath:/props,file:./,file:${java.io.tmpdir}/ax-cloud-test-props/
+      #profile: "server, native"

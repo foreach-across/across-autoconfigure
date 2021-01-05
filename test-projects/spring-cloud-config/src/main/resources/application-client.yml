@@ -20,9 +20,13 @@ management:
       exposure:
         include: "*"
 
+#spring:
+#  config:
+#    import: "optional:configserver:"
 spring:
   cloud:
     config:
+      profile: "client, development"
       name: myclient
   jmx:
     enabled: false

@@ -274,6 +274,8 @@ spring-data-solr:
 spring-data-neo4j:
   priority: 900
   auto-configuration:
+    org.springframework.boot.autoconfigure.neo4j.Neo4jAutoConfiguration:
+      destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration:
       destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration:
@@ -335,6 +337,7 @@ spring-cloud:
     org.springframework.cloud.openfeign.encoding.FeignContentGzipEncodingAutoConfiguration: true
     org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration:
       destination: AcrossContextPostProcessorModule
+    org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerAutoConfiguration: true
   illegal-configurations:
     openfeign:
       configuration:

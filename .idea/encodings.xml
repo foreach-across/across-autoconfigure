@@ -48,5 +48,7 @@
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/spring-cloud-feign/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-projects/swagger2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-projects/swagger2/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

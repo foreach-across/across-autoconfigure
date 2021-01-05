@@ -29,7 +29,7 @@
 	<name>Across Autoconfigure</name>
 
 	<properties>
-		<spring.boot.admin.version>2.3.0</spring.boot.admin.version>
+		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<maven.javadoc.skip>false</maven.javadoc.skip>
 		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
@@ -39,7 +39,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Hoxton.SR4</version>
+				<version>2020.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

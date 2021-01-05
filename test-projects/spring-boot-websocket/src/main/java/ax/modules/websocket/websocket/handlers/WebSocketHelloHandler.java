@@ -2,7 +2,7 @@ package ax.modules.websocket.websocket.handlers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jetbrains.annotations.NotNull;
+import lombok.NonNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -23,7 +23,7 @@ public class WebSocketHelloHandler extends TextWebSocketHandler
 	private final ObjectMapper objectMapper = new ObjectMapper();
 
 	@Override
-	public void handleTextMessage( @NotNull WebSocketSession session, @NotNull TextMessage message )
+	public void handleTextMessage( @NonNull WebSocketSession session, @NonNull TextMessage message )
 			throws IOException {
 
 		for ( WebSocketSession webSocketSession : sessions ) {
@@ -35,7 +35,7 @@ public class WebSocketHelloHandler extends TextWebSocketHandler
 	}
 
 	@Override
-	public void afterConnectionEstablished( @NotNull WebSocketSession session ) {
+	public void afterConnectionEstablished( @NonNull WebSocketSession session ) {
 		//the messages will be broadcasted to all users.
 		sessions.add( session );
 	}
