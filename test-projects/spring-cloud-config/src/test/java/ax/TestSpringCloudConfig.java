@@ -42,7 +42,7 @@ public class TestSpringCloudConfig
 		int serverPort = serverContext.getWebServer().getPort();
 		server = new RestTemplateBuilder().rootUri( "http://localhost:" + serverPort ).build();
 
-		clientContext = SpringCloudConfigClientApplication.runApplication( "--server.port=0", "--spring.cloud.config.uri=http://localhost:" + serverPort );
+		clientContext = SpringCloudConfigClientApplication.runApplication( "--server.port=0", "--location.of.server=http://localhost:" + serverPort );
 		int clientPort = clientContext.getWebServer().getPort();
 		client = new RestTemplateBuilder().rootUri( "http://localhost:" + clientPort ).build();
 	}
@@ -68,7 +68,6 @@ public class TestSpringCloudConfig
 	}
 
 	@Test
-	@Disabled("FIXME: https://github.com/spring-cloud/spring-cloud-config/issues/1777 ?")
 	public void propertyChangesAreAvailableImmediatelyOnTheServer() {
 		String expected = UUID.randomUUID().toString();
 		updateRandomValue( expected );
@@ -80,12 +79,15 @@ public class TestSpringCloudConfig
 	}
 
 	@Test
-	@Disabled("FIXME: https://github.com/spring-cloud/spring-cloud-config/issues/1777 ?")
 	public void refreshPropertiesOnClient() {
 		String initialValue = UUID.randomUUID().toString();
 		updateRandomValue( initialValue );
 		enableRenderViewElementNames( true );
 		client.postForObject( "/actuator/refresh", Collections.emptyMap(), String.class );
+
+		String json = server.getForObject( "/myclient/development", String.class );
+		assertTrue( json.contains( "\"custom.property\":\"" + initialValue + "\"" ) );
+		assertTrue( json.contains( "\"across.web.development.renderViewElementNames\":\"true\"" ) );
 
 		expectRootValues( initialValue );
 		expectModuleValues( initialValue, true );
