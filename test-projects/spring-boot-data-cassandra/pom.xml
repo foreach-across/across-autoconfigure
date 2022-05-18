@@ -27,16 +27,18 @@
 
 	<artifactId>spring-boot-data-cassandra</artifactId>
 
+<!--
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<!-- java.lang.ClassNotFoundException: com.google.common.util.concurrent.FutureFallback since version 20.0 removed -->
+				&lt;!&ndash; java.lang.ClassNotFoundException: com.google.common.util.concurrent.FutureFallback since version 20.0 removed &ndash;&gt;
 				<version>19.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+-->
 
 	<dependencies>
 		<dependency>
