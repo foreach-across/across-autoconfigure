@@ -33,3 +33,11 @@ pom.xml.versionsBackup
 
 */spring-boot-data-elasticsearch/data/
 .flattened-pom.xml
+
+# Maven:
+.effective-pom.xml
+.dependency-tree.txt
+.foreach-deps.txt
+
+# Emacs:
+*~

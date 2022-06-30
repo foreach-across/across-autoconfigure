@@ -8,6 +8,7 @@
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
 		<version>5.2-SNAPSHOT</version>
+		<relativePath/>
 	</parent>
 
 	<artifactId>across-autoconfigure-project</artifactId>
