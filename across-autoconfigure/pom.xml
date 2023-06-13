@@ -23,6 +23,7 @@
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-autoconfigure-project</artifactId>
 		<version>${revision}</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>across-autoconfigure</artifactId>
