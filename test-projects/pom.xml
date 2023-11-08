@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
-		<version>5.2.1.RELEASE</version>
+		<version>5.3.0-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -17,7 +17,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<revision>2.2.1.RELEASE</revision>
+		<revision>2.3.0-SNAPSHOT</revision>
 		<skipAssembly>true</skipAssembly>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 		<maven.deploy.skip>true</maven.deploy.skip>
@@ -37,7 +37,9 @@
 		<module>spring-boot-data-neo4j</module>
 		<module>spring-boot-data-redis</module>
 		<module>spring-boot-data-rest</module>
+		<!-- https://spring.io/blog/2020/04/07/spring-data-for-apache-solr-discontinued:
 		<module>spring-boot-data-solr</module>
+		-->
 		<module>spring-boot-mail</module>
 		<module>spring-boot-session</module>
 		<module>spring-boot-websocket</module>
@@ -68,7 +70,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-test</artifactId>
-				<version>5.2.1-SNAPSHOT</version>
+				<version>5.3.0-SNAPSHOT</version>
 				<exclusions>
 					<exclusion>
 						<groupId>junit</groupId>

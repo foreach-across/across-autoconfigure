@@ -23,7 +23,7 @@ public class BookController
 	public EntityModel<Book> book( @PathVariable(value = "id", required = false) String title ) {
 		Book book = new Book( title );
 
-		EntityModel<Book> bookResource = new EntityModel<>( book );
+		EntityModel<Book> bookResource = EntityModel.of( book );
 		bookResource.add( entityLinks.linkToItemResource( Book.class, "someBook" ).withSelfRel() );
 		bookResource.add( entityLinks.linkToItemResource( Book.class, "anotherBook" ).withRel( relProvider.getItemResourceRelFor( Book.class ) ) );
 		return bookResource;
