@@ -33,7 +33,7 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<!-- java.lang.ClassNotFoundException: com.google.common.util.concurrent.FutureFallback since version 20.0 removed -->
-				<version>19.0</version>
+				<version>32.1.3-jre</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
