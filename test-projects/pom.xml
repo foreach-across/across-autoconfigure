@@ -48,7 +48,9 @@
 		<module>spring-boot-rabbitmq</module>
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-feign</module>
+		<!-- GraphQL not used by Camalion nor any Bis project:
 		<module>spring-boot-graphql</module>
+		-->
 		<module>spring-boot-hateoas</module>
 	</modules>
 
