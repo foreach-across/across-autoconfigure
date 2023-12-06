@@ -71,12 +71,15 @@ public class ITSwagger2Application
 		
 		String url;
 
-		if( !DockerClientConfigUtils.IN_A_CONTAINER) {
+		if( !DockerClientConfigUtils.IN_A_CONTAINER || System.getenv("GITLAB_CI") != null ) {
 			url = "http://host.testcontainers.internal:" + port + SWAGGER_UI_ENDPOINT;
 			Testcontainers.exposeHostPorts( port );
 			container.start();
 		} else {
 			DockerClient dockerClient = container.getDockerClient();
+			// The assumption that local-hostname == container-name isn't true on GitLab CI/CD (with the docker-machine executor),
+			// because InetAddress.getLocalHost().getHostName() returns the VM hostname, not the container name. E.g. "runner-qf3sideqj-project-2547-concurrent-0".
+			// Note for the *regular* Docker executor: "The runner uses the build alias to resolve the job container." (https://docs.gitlab.com/runner/executors/docker.html)
 			String hostname = InetAddress.getLocalHost().getHostName();
 			InspectContainerResponse maven = dockerClient.inspectContainerCmd( hostname ).exec();
 			ContainerNetwork network = maven.getNetworkSettings().getNetworks().values()
