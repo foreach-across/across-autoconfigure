@@ -40,33 +40,5 @@
         <module name="spring-boot-data-jpa" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="across-autoconfigure" target="1.8" />
-      <module name="across-autoconfigure-project" target="1.8" />
-      <module name="actuator" target="1.8" />
-      <module name="blank" target="1.8" />
-      <module name="spring-boot-admin" target="1.8" />
-      <module name="spring-boot-cache" target="1.8" />
-      <module name="spring-boot-data-cassandra" target="1.8" />
-      <module name="spring-boot-data-couchbase" target="1.8" />
-      <module name="spring-boot-data-elasticsearch" target="1.8" />
-      <module name="spring-boot-data-jpa" target="1.8" />
-      <module name="spring-boot-data-ldap" target="1.8" />
-      <module name="spring-boot-data-mongo" target="1.8" />
-      <module name="spring-boot-data-neo4j" target="1.8" />
-      <module name="spring-boot-data-redis" target="1.8" />
-      <module name="spring-boot-data-rest" target="1.8" />
-      <module name="spring-boot-data-solr" target="1.8" />
-      <module name="spring-boot-graphql" target="1.8" />
-      <module name="spring-boot-hateoas" target="1.8" />
-      <module name="spring-boot-mail" target="1.8" />
-      <module name="spring-boot-rabbitmq" target="1.8" />
-      <module name="spring-boot-session" target="1.8" />
-      <module name="spring-boot-websocket" target="1.8" />
-      <module name="spring-cloud-config" target="1.8" />
-      <module name="spring-cloud-feign" target="1.8" />
-      <module name="swagger2" target="1.8" />
-      <module name="test-projects" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

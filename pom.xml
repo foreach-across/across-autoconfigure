@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
-		<version>5.2.3-gitlab-SNAPSHOT</version>
+		<version>5.3-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -18,7 +18,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<revision>2.2.2-gitlab-SNAPSHOT</revision>
+		<revision>2.3-SNAPSHOT</revision>
 	</properties>
 
 	<description>
