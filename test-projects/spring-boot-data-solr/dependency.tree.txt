@@ -81,7 +81,6 @@ test-projects:spring-boot-data-solr:jar:2.3-SNAPSHOT
 |        +- org.eclipse.jetty.http2:http2-common:jar:9.4.44.v20210927:compile
 |        +- org.eclipse.jetty.http2:http2-hpack:jar:9.4.44.v20210927:compile
 |        \- org.eclipse.jetty.http2:http2-http-client-transport:jar:9.4.44.v20210927:compile
-|           \- org.eclipse.jetty:jetty-alpn-openjdk8-client:jar:9.4.44.v20210927:compile
 +- org.testcontainers:solr:jar:1.18.3:test
 |  \- org.testcontainers:testcontainers:jar:1.18.3:test
 |     +- org.apache.commons:commons-compress:jar:1.23.0:test
