@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
-		<version>5.3.0-SNAPSHOT</version>
+		<version>5.4-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -18,7 +18,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<revision>2.3.0-SNAPSHOT</revision>
+		<revision>2.4-SNAPSHOT</revision>
+		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
+		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+		<!--spring-plugin.version>1.2.0.RELEASE</spring-plugin.version: Fails for test-projects/spring-boot-data-jpa -->
+		<!--spring-plugin.version>2.0.0.RELEASE</spring-plugin.version: Fails for test-projects/swagger2 -->
 	</properties>
 
 	<description>
@@ -40,6 +44,63 @@
 		</developer>
 	</developers>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-core</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-schema</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-spi</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-spring-web</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-common</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<!--
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-core</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-metadata</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-integration</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			-->
+		</dependencies>
+	</dependencyManagement>
+
 	<repositories>
 		<repository>
 			<id>across</id>
@@ -50,6 +111,7 @@
 
 	<modules>
 		<module>across-autoconfigure</module>
+		<module>test-projects</module>
 	</modules>
 
 	<scm>

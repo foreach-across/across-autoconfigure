@@ -27,10 +27,8 @@
 	</parent>
 
 	<artifactId>across-autoconfigure</artifactId>
-	<name>Across Autoconfigure</name>
 
 	<properties>
-		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<maven.javadoc.skip>false</maven.javadoc.skip>
 		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
@@ -59,7 +57,6 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
 			<optional>true</optional>
 			<scope>provided</scope>
 		</dependency>
@@ -95,56 +92,9 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>delombok</goal>
-						</goals>
-						<configuration>
-							<addOutputDirectory>false</addOutputDirectory>
-							<outputDirectory>target/delombok</outputDirectory>
-							<sourceDirectory>src/main/java</sourceDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<failOnError>false</failOnError>
-					<doclint>none</doclint>
-					<sourcepath>
-						target/delombok;target/generated-sources
-					</sourcepath>
-				</configuration>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-					<execution>
-						<inherited>true</inherited>
-						<id>aggregate</id>
-						<goals>
-							<goal>aggregate-no-fork</goal>
-						</goals>
-						<phase>prepare-package</phase>
-						<configuration>
-							<reportOutputDirectory>${project.reporting.outputDirectory}</reportOutputDirectory>
-							<destDir>${project.version}/javadoc</destDir>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<!-- This defines how a specific module will be flattened -->
 				<groupId>org.codehaus.mojo</groupId>
@@ -177,4 +127,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
