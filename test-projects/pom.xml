@@ -70,12 +70,6 @@
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-test</artifactId>
 				<version>5.4-SNAPSHOT</version>
-				<exclusions>
-					<exclusion>
-						<groupId>junit</groupId>
-						<artifactId>junit</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

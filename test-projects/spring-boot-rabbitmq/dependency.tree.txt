@@ -86,7 +86,7 @@ test-projects:spring-boot-rabbitmq:jar:2.4-SNAPSHOT
 |  +- org.junit.platform:junit-platform-engine:jar:1.8.2:test
 |  |  +- org.opentest4j:opentest4j:jar:1.2.0:compile
 |  |  \- org.junit.platform:junit-platform-commons:jar:1.8.2:compile
-|  +- junit:junit:jar:4.13.2:test
+|  +- junit:junit:jar:4.13.2:compile
 |  \- org.apiguardian:apiguardian-api:jar:1.1.2:compile
 +- org.springframework.boot:spring-boot-test:jar:2.7.17:test
 |  \- org.springframework.boot:spring-boot:jar:2.7.17:compile

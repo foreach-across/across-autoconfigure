@@ -39,6 +39,7 @@ jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
 javax.activation:javax.activation-api:jar:1.2.0:compile
 javax.inject:javax.inject:jar:1:provided
 javax.xml.bind:jaxb-api:jar:2.3.1:compile
+junit:junit:jar:4.13.2:test
 net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
 net.bytebuddy:byte-buddy:jar:1.12.23:compile
 net.java.dev.jna:jna:jar:5.12.1:test

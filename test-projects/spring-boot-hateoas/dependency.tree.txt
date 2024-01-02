@@ -55,6 +55,7 @@ test-projects:spring-boot-hateoas:jar:2.4-SNAPSHOT
 |  \- org.slf4j:slf4j-api:jar:1.7.36:compile
 +- com.foreach.across:across-test:jar:5.4-SNAPSHOT:test
 |  +- org.junit.vintage:junit-vintage-engine:jar:5.8.2:test
+|  |  \- junit:junit:jar:4.13.2:test
 |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:test
 |  |  \- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test
 |  +- com.zaxxer:HikariCP:jar:4.0.3:test
