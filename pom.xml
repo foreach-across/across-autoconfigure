@@ -21,6 +21,8 @@
 		<revision>2.3-SNAPSHOT</revision>
 		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+		<!--spring-plugin.version>1.2.0.RELEASE</spring-plugin.version: Fails for test-projects/spring-boot-data-jpa -->
+		<!--spring-plugin.version>2.0.0.RELEASE</spring-plugin.version: Fails for test-projects/swagger2 -->
 	</properties>
 
 	<description>
@@ -79,6 +81,23 @@
 				<artifactId>springfox-swagger-ui</artifactId>
 				<version>${springfox-swagger2.version}</version>
 			</dependency>
+			<!--
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-core</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-metadata</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.plugin</groupId>
+				<artifactId>spring-plugin-integration</artifactId>
+				<version>${spring-plugin.version}</version>
+			</dependency>
+			-->
 		</dependencies>
 	</dependencyManagement>
 
