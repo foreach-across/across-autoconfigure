@@ -24,7 +24,6 @@
 	</properties>
 
 	<modules>
-		<module>../across-autoconfigure</module>
 		<module>blank</module>
 		<module>actuator</module>
 		<module>spring-boot-admin</module>

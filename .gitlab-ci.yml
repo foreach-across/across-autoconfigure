@@ -100,9 +100,9 @@ after_script:
     DOCKER_TLS_CERTDIR: ""
     DOCKER_DRIVER: overlay2
   script:
-    - 'mvn $MAVEN_CLI_OPTS dependency:purge-local-repository -DmanualInclude=com.foreach -DreResolve=false'
+    # - 'mvn $MAVEN_CLI_OPTS dependency:purge-local-repository -DmanualInclude=com.foreach -DreResolve=false'
+    - find $CI_PROJECT_DIR/.m2/repository/com/foreach/ -type d -name "*-SNAPSHOT" | xargs rm -rf || echo "No snapshots to delete"
     - 'mvn $MAVEN_CLI_OPTS verify'
-    - 'cd test-projects && mvn $MAVEN_CLI_OPTS verify'
   artifacts:
     when: always
     reports:

@@ -50,6 +50,7 @@
 
 	<modules>
 		<module>across-autoconfigure</module>
+		<module>test-projects</module>
 	</modules>
 
 	<scm>
