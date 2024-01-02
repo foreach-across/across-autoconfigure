@@ -29,7 +29,6 @@
 	<artifactId>across-autoconfigure</artifactId>
 
 	<properties>
-		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<maven.javadoc.skip>false</maven.javadoc.skip>
 		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
@@ -58,7 +57,6 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
 			<optional>true</optional>
 			<scope>provided</scope>
 		</dependency>

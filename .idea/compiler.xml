@@ -31,7 +31,7 @@
         <module name="spring-boot-websocket" />
         <module name="spring-boot-graphql" />
       </profile>
-      <profile name="Annotation profile for test-projects" enabled="true">
+      <profile name="Annotation profile for across-autoconfigure-project" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
