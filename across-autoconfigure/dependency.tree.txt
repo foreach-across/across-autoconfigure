@@ -70,7 +70,6 @@ com.foreach.across:across-autoconfigure:jar:2.3-SNAPSHOT
 |  \- org.springframework.amqp:spring-rabbit:jar:2.3.12:provided
 |     +- org.springframework.amqp:spring-amqp:jar:2.3.12:provided
 |     |  \- org.springframework.retry:spring-retry:jar:1.3.1:provided
-|     |     \- javax.annotation:javax.annotation-api:jar:1.3.2:provided
 |     \- com.rabbitmq:amqp-client:jar:5.10.0:provided
 +- org.springframework.cloud:spring-cloud-context:jar:3.0.1:provided
 |  \- org.springframework.security:spring-security-crypto:jar:5.4.9:provided
