@@ -5,4 +5,5 @@ include:
       - '/gitlab-ci/common.gitlab-ci.yml'
       - '/gitlab-ci/unit-tests.gitlab-ci.yml'
       - '/gitlab-ci/unit-tests-docker.gitlab-ci.yml'
+      - '/gitlab-ci/integration-tests-docker.gitlab-ci.yml'
       - '/gitlab-ci/deploy.gitlab-ci.yml'
