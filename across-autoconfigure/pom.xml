@@ -27,6 +27,8 @@
 	</parent>
 
 	<artifactId>across-autoconfigure</artifactId>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Across Autoconfigure</description>
 
 	<properties>
 		<maven.javadoc.skip>false</maven.javadoc.skip>

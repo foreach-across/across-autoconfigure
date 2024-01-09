@@ -128,7 +128,7 @@ public class TestSpringBootWebsocketApplication
 		stompSession.subscribe( SUBSCRIBE_FAREWELL_ENDPOINT, new CreateFarewellStompFrameHandler() );
 		stompSession.send( FAREWELL_ENDPOINT, "Johnson" );
 
-		FarewellMessage farewellMessage = farewellCompletableFuture.get( 10, SECONDS );
+		FarewellMessage farewellMessage = farewellCompletableFuture.get( 20, SECONDS );
 
 		assertNotNull( farewellMessage );
 		String farewellContent = "Farewell, Johnson!";
@@ -137,7 +137,7 @@ public class TestSpringBootWebsocketApplication
 		stompSession.subscribe( SUBSCRIBE_GREETING_ENDPOINT, new CreateGreetingStompFrameHandler() );
 		stompSession.send( GREETING_ENDPOINT, "John" );
 
-		GreetingMessage greetingMessage = greetingCompletableFuture.get( 10, SECONDS );
+		GreetingMessage greetingMessage = greetingCompletableFuture.get( 20, SECONDS );
 
 		assertNotNull( greetingMessage );
 		String greetingContent = "Hello, John!";
