@@ -34,7 +34,9 @@
 		<module>spring-boot-data-neo4j</module>
 		<module>spring-boot-data-redis</module>
 		<module>spring-boot-data-rest</module>
+		<!-- https://spring.io/blog/2020/04/07/spring-data-for-apache-solr-discontinued:
 		<module>spring-boot-data-solr</module>
+		-->
 		<module>spring-boot-mail</module>
 		<module>spring-boot-session</module>
 		<module>spring-boot-websocket</module>
@@ -43,7 +45,9 @@
 		<module>spring-boot-rabbitmq</module>
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-feign</module>
+		<!-- GraphQL not used by any active project:
 		<module>spring-boot-graphql</module>
+		-->
 		<module>spring-boot-hateoas</module>
 	</modules>
 
@@ -65,7 +69,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-test</artifactId>
-				<version>5.3-SNAPSHOT</version>
+				<version>5.4-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

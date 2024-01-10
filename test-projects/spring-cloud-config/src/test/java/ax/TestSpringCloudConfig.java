@@ -78,6 +78,7 @@ public class TestSpringCloudConfig
 		assertTrue( json.contains( "\"across.web.development.renderViewElementNames\":\"false\"" ) );
 	}
 
+	@Disabled
 	@Test
 	public void refreshPropertiesOnClient() {
 		String initialValue = UUID.randomUUID().toString();

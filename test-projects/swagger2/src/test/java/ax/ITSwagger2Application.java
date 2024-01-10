@@ -103,7 +103,8 @@ public class ITSwagger2Application
 		container.followOutput( toStringConsumer, OutputFrame.OutputType.STDOUT);
 
 		System.out.println("Starting requests to: " + url );
-		RemoteWebDriver driver = container.getWebDriver();
+		// Follow the documentation: https://java.testcontainers.org/modules/webdriver_containers/
+		RemoteWebDriver driver = new RemoteWebDriver(container.getSeleniumAddress(), new ChromeOptions());
 		System.out.println("Driver: " + driver);
 		driver.setLogLevel( Level.INFO );
 

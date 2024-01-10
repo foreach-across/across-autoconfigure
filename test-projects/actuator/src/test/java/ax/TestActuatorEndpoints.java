@@ -68,7 +68,7 @@ public class TestActuatorEndpoints
 		Map body = entity.getBody();
 
 		assertNotNull( body );
-		assertEquals( 5, body.size() );
+		assertEquals( 4, body.size() );
 
 		Map git = (Map) body.get( "git" );
 		assertEquals( "6147f97", ( (Map) git.get( "commit" ) ).get( "id" ) );
@@ -81,7 +81,10 @@ public class TestActuatorEndpoints
 		Map deployment = (Map) body.get( "deployment" );
 		assertEquals( "s3-website-eu-west-1.amazonaws.com", deployment.get( "host" ) );
 
-		assertEquals( "actuator", body.get( "application-name" ) );
+		// EnvironmentInfoContributor is disabled by default in 2.6:
+		// https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes#actuator-env-infocontributor-disabled-by-default
+		// https://github.com/spring-projects/spring-boot/issues/28311
+		// assertEquals( "actuator", body.get( "application-name" ) );
 		assertEquals( "hello", body.get( "module.says" ) );
 	}
 }
