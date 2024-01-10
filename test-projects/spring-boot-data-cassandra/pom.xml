@@ -27,17 +27,6 @@
 
 	<artifactId>spring-boot-data-cassandra</artifactId>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<!-- java.lang.ClassNotFoundException: com.google.common.util.concurrent.FutureFallback since version 20.0 removed -->
-				<version>32.1.3-jre</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.foreach.across</groupId>
