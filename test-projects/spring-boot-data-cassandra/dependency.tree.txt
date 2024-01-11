@@ -1,8 +1,8 @@
-test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
-+- com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:5.4-SNAPSHOT:compile
-|  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.6.15:compile
-|  |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.6.15:compile
+test-projects:spring-boot-data-cassandra:jar:2.5-SNAPSHOT
++- com.foreach.across:across-autoconfigure:jar:2.5-SNAPSHOT:compile
+|  +- com.foreach.across:across-web:jar:5.5-SNAPSHOT:compile
+|  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+|  |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 |  |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
 |  |  |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
 |  |  |  \- org.springframework:spring-web:jar:5.3.31:compile
@@ -17,9 +17,9 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
 |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
-|  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.6.15:compile
-|  |  \- org.yaml:snakeyaml:jar:1.29:compile
-|  \- com.foreach.across:across-core:jar:5.4-SNAPSHOT:compile
+|  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+|  |  \- org.yaml:snakeyaml:jar:1.30:compile
+|  \- com.foreach.across:across-core:jar:5.5-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |     +- org.springframework:spring-context:jar:5.3.31:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.31:compile
@@ -34,34 +34,31 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |        \- com.opencsv:opencsv:jar:5.6:compile
 |           +- org.apache.commons:commons-text:jar:1.9:compile
 |           \- org.apache.commons:commons-collections4:jar:4.4:compile
-+- org.springframework.boot:spring-boot-starter-tomcat:jar:2.6.15:compile
++- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
 |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.84:compile
 |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.84:compile
 |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.84:compile
-+- org.springframework.boot:spring-boot-starter-data-cassandra:jar:2.6.15:compile
-|  +- org.springframework.boot:spring-boot-starter:jar:2.6.15:compile
-|  |  \- org.springframework.boot:spring-boot-starter-logging:jar:2.6.15:compile
++- org.springframework.boot:spring-boot-starter-data-cassandra:jar:2.7.18:compile
+|  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+|  |  \- org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
 |  |     +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
 |  |     |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
 |  |     \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
 |  +- org.springframework:spring-tx:jar:5.3.31:compile
 |  |  \- org.springframework:spring-beans:jar:5.3.31:compile
-|  \- org.springframework.data:spring-data-cassandra:jar:3.3.10:compile
+|  \- org.springframework.data:spring-data-cassandra:jar:3.4.18:compile
 |     +- org.springframework:spring-expression:jar:5.3.31:compile
-|     +- org.springframework.data:spring-data-commons:jar:2.6.10:compile
-|     +- com.datastax.oss:java-driver-core:jar:4.13.0:compile
-|     |  +- com.datastax.oss:native-protocol:jar:1.5.0:compile
+|     +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
+|     +- com.datastax.oss:java-driver-core:jar:4.14.1:compile
+|     |  +- com.datastax.oss:native-protocol:jar:1.5.1:compile
 |     |  +- com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile
 |     |  +- com.typesafe:config:jar:1.4.1:compile
 |     |  +- org.hdrhistogram:HdrHistogram:jar:2.1.12:compile
-|     |  +- com.esri.geometry:esri-geometry-api:jar:1.2.1:compile
-|     |  |  +- org.json:json:jar:20090211:compile
-|     |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.12:compile
 |     |  +- org.reactivestreams:reactive-streams:jar:1.0.4:compile
 |     |  +- com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile
 |     |  \- com.github.spotbugs:spotbugs-annotations:jar:3.1.12:compile
-|     \- com.datastax.oss:java-driver-query-builder:jar:4.13.0:compile
+|     \- com.datastax.oss:java-driver-query-builder:jar:4.14.1:compile
 +- org.testcontainers:cassandra:jar:1.19.3:test
 |  +- org.testcontainers:database-commons:jar:1.19.3:test
 |  |  \- org.testcontainers:testcontainers:jar:1.19.3:test
@@ -73,13 +70,13 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |  |        +- com.github.docker-java:docker-java-transport:jar:3.3.4:test
 |  |        \- net.java.dev.jna:jna:jar:5.13.0:test
 |  \- com.datastax.cassandra:cassandra-driver-core:jar:3.10.0:test
-|     +- io.netty:netty-handler:jar:4.1.92.Final:compile
-|     |  +- io.netty:netty-common:jar:4.1.92.Final:compile
-|     |  +- io.netty:netty-resolver:jar:4.1.92.Final:compile
-|     |  +- io.netty:netty-buffer:jar:4.1.92.Final:compile
-|     |  +- io.netty:netty-transport:jar:4.1.92.Final:compile
-|     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.92.Final:compile
-|     |  \- io.netty:netty-codec:jar:4.1.92.Final:compile
+|     +- io.netty:netty-handler:jar:4.1.101.Final:compile
+|     |  +- io.netty:netty-common:jar:4.1.101.Final:compile
+|     |  +- io.netty:netty-resolver:jar:4.1.101.Final:compile
+|     |  +- io.netty:netty-buffer:jar:4.1.101.Final:compile
+|     |  +- io.netty:netty-transport:jar:4.1.101.Final:compile
+|     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile
+|     |  \- io.netty:netty-codec:jar:4.1.101.Final:compile
 |     +- com.google.guava:guava:jar:32.1.3-jre:test
 |     |  +- com.google.guava:failureaccess:jar:1.0.1:test
 |     |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test
@@ -87,7 +84,7 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |     |  +- org.checkerframework:checker-qual:jar:3.42.0:test
 |     |  +- com.google.errorprone:error_prone_annotations:jar:2.21.1:test
 |     |  \- com.google.j2objc:j2objc-annotations:jar:2.8:test
-|     +- io.dropwizard.metrics:metrics-core:jar:4.2.18:compile
+|     +- io.dropwizard.metrics:metrics-core:jar:4.2.22:compile
 |     +- com.github.jnr:jnr-ffi:jar:2.1.7:compile
 |     |  +- com.github.jnr:jffi:jar:1.2.16:compile
 |     |  +- com.github.jnr:jffi:jar:native:1.2.16:runtime
@@ -107,8 +104,8 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |  |  \- org.hamcrest:hamcrest-core:jar:2.2:test
 |  |     \- org.hamcrest:hamcrest:jar:2.2:test
 |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
-+- org.springframework.boot:spring-boot-test:jar:2.6.15:test
-|  \- org.springframework.boot:spring-boot:jar:2.6.15:compile
++- org.springframework.boot:spring-boot-test:jar:2.7.18:test
+|  \- org.springframework.boot:spring-boot:jar:2.7.18:compile
 +- org.springframework:spring-test:jar:5.3.31:test
 |  \- org.springframework:spring-core:jar:5.3.31:compile
 |     \- org.springframework:spring-jcl:jar:5.3.31:compile
@@ -119,5 +116,5 @@ test-projects:spring-boot-data-cassandra:jar:2.4-SNAPSHOT
 |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
 |  |  \- commons-codec:commons-codec:jar:1.15:compile
 |  \- commons-logging:commons-logging:jar:1.2:compile
-+- org.projectlombok:lombok:jar:1.18.26:provided
-\- org.assertj:assertj-core:jar:3.21.0:test
++- org.projectlombok:lombok:jar:1.18.30:provided
+\- org.assertj:assertj-core:jar:3.22.0:test

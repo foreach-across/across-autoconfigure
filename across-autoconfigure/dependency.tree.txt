@@ -1,10 +1,10 @@
-com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT
-+- com.foreach.across:across-web:jar:5.4-SNAPSHOT:compile
-|  +- org.springframework.boot:spring-boot-starter-web:jar:2.6.15:compile
-|  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.6.15:compile
+com.foreach.across:across-autoconfigure:jar:2.5-SNAPSHOT
++- com.foreach.across:across-web:jar:5.5-SNAPSHOT:compile
+|  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+|  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
 |  |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
-|  |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.6.15:compile
+|  |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
 |  |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.84:compile
 |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.84:compile
 |  |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.84:compile
@@ -24,10 +24,10 @@ com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT
 |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
 |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
 |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
-|  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.6.15:compile
-|  |  \- org.springframework.boot:spring-boot:jar:2.6.15:compile
-|  \- org.yaml:snakeyaml:jar:1.29:compile
-+- com.foreach.across:across-core:jar:5.4-SNAPSHOT:compile
+|  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+|  |  \- org.springframework.boot:spring-boot:jar:2.7.18:compile
+|  \- org.yaml:snakeyaml:jar:1.30:compile
++- com.foreach.across:across-core:jar:5.5-SNAPSHOT:compile
 |  +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |  +- org.springframework:spring-context:jar:5.3.31:compile
 |  +- org.springframework:spring-jdbc:jar:5.3.31:compile
@@ -48,7 +48,7 @@ com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT
 |  +- io.swagger:swagger-models:jar:1.5.20:provided
 |  +- io.springfox:springfox-spi:jar:2.9.2:provided
 |  |  \- io.springfox:springfox-core:jar:2.9.2:provided
-|  |     \- net.bytebuddy:byte-buddy:jar:1.11.22:provided
+|  |     \- net.bytebuddy:byte-buddy:jar:1.12.23:provided
 |  +- io.springfox:springfox-schema:jar:2.9.2:provided
 |  +- io.springfox:springfox-swagger-common:jar:2.9.2:provided
 |  +- io.springfox:springfox-spring-web:jar:2.9.2:provided
@@ -63,63 +63,63 @@ com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT
 |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:provided
 |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:provided
 |  \- org.mapstruct:mapstruct:jar:1.2.0.Final:provided
-+- org.springframework.boot:spring-boot-starter-websocket:jar:2.6.15:provided
++- org.springframework.boot:spring-boot-starter-websocket:jar:2.7.18:provided
 |  +- org.springframework:spring-messaging:jar:5.3.31:provided
 |  \- org.springframework:spring-websocket:jar:5.3.31:provided
-+- org.springframework.boot:spring-boot-starter-amqp:jar:2.6.15:provided
-|  +- org.springframework.boot:spring-boot-starter:jar:2.6.15:compile
-|  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.6.15:compile
++- org.springframework.boot:spring-boot-starter-amqp:jar:2.7.18:provided
+|  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+|  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
 |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
 |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
 |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
 |  |  \- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
-|  \- org.springframework.amqp:spring-rabbit:jar:2.4.12:provided
-|     +- org.springframework.amqp:spring-amqp:jar:2.4.12:provided
+|  \- org.springframework.amqp:spring-rabbit:jar:2.4.17:provided
+|     +- org.springframework.amqp:spring-amqp:jar:2.4.17:provided
 |     |  \- org.springframework.retry:spring-retry:jar:1.3.4:provided
-|     \- com.rabbitmq:amqp-client:jar:5.13.1:provided
+|     \- com.rabbitmq:amqp-client:jar:5.14.3:provided
 +- org.springframework.cloud:spring-cloud-context:jar:3.0.1:provided
-|  \- org.springframework.security:spring-security-crypto:jar:5.6.12:provided
+|  \- org.springframework.security:spring-security-crypto:jar:5.7.11:provided
 +- de.codecentric:spring-boot-admin-server:jar:2.3.1:provided
-|  +- org.springframework.boot:spring-boot-starter-webflux:jar:2.6.15:provided
-|  |  +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.6.15:provided
-|  |  |  \- io.projectreactor.netty:reactor-netty-http:jar:1.0.32:provided
-|  |  |     +- io.netty:netty-codec-http:jar:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-common:jar:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-buffer:jar:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-transport:jar:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-codec:jar:4.1.92.Final:provided
-|  |  |     |  \- io.netty:netty-handler:jar:4.1.92.Final:provided
-|  |  |     +- io.netty:netty-codec-http2:jar:4.1.92.Final:provided
-|  |  |     +- io.netty:netty-resolver-dns:jar:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-resolver:jar:4.1.92.Final:provided
-|  |  |     |  \- io.netty:netty-codec-dns:jar:4.1.92.Final:provided
-|  |  |     +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.92.Final:provided
-|  |  |     |  \- io.netty:netty-resolver-dns-classes-macos:jar:4.1.92.Final:provided
-|  |  |     +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.92.Final:provided
-|  |  |     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.92.Final:provided
-|  |  |     |  \- io.netty:netty-transport-classes-epoll:jar:4.1.92.Final:provided
-|  |  |     \- io.projectreactor.netty:reactor-netty-core:jar:1.0.32:provided
-|  |  |        \- io.netty:netty-handler-proxy:jar:4.1.92.Final:provided
-|  |  |           \- io.netty:netty-codec-socks:jar:4.1.92.Final:provided
+|  +- org.springframework.boot:spring-boot-starter-webflux:jar:2.7.18:provided
+|  |  +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.7.18:provided
+|  |  |  \- io.projectreactor.netty:reactor-netty-http:jar:1.0.39:provided
+|  |  |     +- io.netty:netty-codec-http:jar:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-common:jar:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-buffer:jar:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-transport:jar:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-codec:jar:4.1.101.Final:provided
+|  |  |     |  \- io.netty:netty-handler:jar:4.1.101.Final:provided
+|  |  |     +- io.netty:netty-codec-http2:jar:4.1.101.Final:provided
+|  |  |     +- io.netty:netty-resolver-dns:jar:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-resolver:jar:4.1.101.Final:provided
+|  |  |     |  \- io.netty:netty-codec-dns:jar:4.1.101.Final:provided
+|  |  |     +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.101.Final:provided
+|  |  |     |  \- io.netty:netty-resolver-dns-classes-macos:jar:4.1.101.Final:provided
+|  |  |     +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:provided
+|  |  |     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:provided
+|  |  |     |  \- io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:provided
+|  |  |     \- io.projectreactor.netty:reactor-netty-core:jar:1.0.39:provided
+|  |  |        \- io.netty:netty-handler-proxy:jar:4.1.101.Final:provided
+|  |  |           \- io.netty:netty-codec-socks:jar:4.1.101.Final:provided
 |  |  \- org.springframework:spring-webflux:jar:5.3.31:provided
-|  +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.6.15:provided
-|  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.6.15:provided
-|  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.6.15:provided
-|  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.6.15:provided
-|  |  \- io.micrometer:micrometer-core:jar:1.8.13:provided
+|  +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.7.18:provided
+|  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.7.18:provided
+|  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.18:provided
+|  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.7.18:provided
+|  |  \- io.micrometer:micrometer-core:jar:1.9.17:provided
 |  |     +- org.hdrhistogram:HdrHistogram:jar:2.1.12:provided
 |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:provided
 |  +- org.apache.httpcomponents:httpclient:jar:4.5.14:provided
 |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:provided
 |  |  \- commons-codec:commons-codec:jar:1.15:provided
 |  \- io.projectreactor.addons:reactor-extra:jar:3.4.10:provided
-|     \- io.projectreactor:reactor-core:jar:3.4.29:provided
+|     \- io.projectreactor:reactor-core:jar:3.4.34:provided
 |        \- org.reactivestreams:reactive-streams:jar:1.0.4:provided
-+- org.springframework.boot:spring-boot-starter-hateoas:jar:2.6.15:provided
-|  \- org.springframework.hateoas:spring-hateoas:jar:1.4.5:provided
-|     \- com.jayway.jsonpath:json-path:jar:2.6.0:provided
-|        \- net.minidev:json-smart:jar:2.4.10:provided
-|           \- net.minidev:accessors-smart:jar:2.4.9:provided
++- org.springframework.boot:spring-boot-starter-hateoas:jar:2.7.18:provided
+|  \- org.springframework.hateoas:spring-hateoas:jar:1.5.6:provided
+|     \- com.jayway.jsonpath:json-path:jar:2.7.0:provided
+|        \- net.minidev:json-smart:jar:2.4.11:provided
+|           \- net.minidev:accessors-smart:jar:2.4.11:provided
 |              \- org.ow2.asm:asm:jar:9.3:provided
-+- org.projectlombok:lombok:jar:1.18.26:provided
-\- org.assertj:assertj-core:jar:3.21.0:test
++- org.projectlombok:lombok:jar:1.18.30:provided
+\- org.assertj:assertj-core:jar:3.22.0:test

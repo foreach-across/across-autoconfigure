@@ -60,18 +60,6 @@
 	</repositories>
 
 	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.foreach.across</groupId>
-				<artifactId>across-autoconfigure</artifactId>
-				<version>${revision}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.across</groupId>
-				<artifactId>across-test</artifactId>
-				<version>5.4-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
