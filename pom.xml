@@ -29,7 +29,7 @@
 	<description>
 		Project supporting compatibility between Spring Boot autoconfiguration and Across applications.
 	</description>
-	<url>https://across.dev</url>
+	<url>https://foreach-across.github.io/</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -131,7 +131,7 @@
 	</modules>
 
 	<scm>
-		<url>https://github.com/foreachos/across-autoconfigure</url>
+		<url>https://github.com/foreach-across/across-autoconfigure</url>
 	</scm>
 
 </project>
