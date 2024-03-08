@@ -20,7 +20,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<revision>2.5-SNAPSHOT</revision>
-		<across-framework.version>5.4-SNAPSHOT</across-framework.version>
+		<across-framework.version>5.4.1</across-framework.version>
 		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 		<!--spring-plugin.version>1.2.0.RELEASE</spring-plugin.version: Fails for test-projects/spring-boot-data-jpa -->
@@ -30,7 +30,7 @@
 	<description>
 		Project supporting compatibility between Spring Boot autoconfiguration and Across applications.
 	</description>
-	<url>https://across.dev</url>
+	<url>https://foreach-across.github.io/</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -144,7 +144,7 @@
 	</modules>
 
 	<scm>
-		<url>https://github.com/foreachos/across-autoconfigure</url>
+		<url>https://github.com/foreach-across/across-autoconfigure</url>
 	</scm>
 
 </project>
