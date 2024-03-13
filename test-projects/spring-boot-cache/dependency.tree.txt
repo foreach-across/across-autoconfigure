@@ -1,8 +1,8 @@
-test-projects:spring-boot-cache:jar:2.4-SNAPSHOT
+test-projects:spring-boot-cache:jar:2.4.2
 +- net.sf.ehcache:ehcache:jar:2.10.9.2:compile
 |  \- org.slf4j:slf4j-api:jar:1.7.36:compile
-+- com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:5.4-SNAPSHOT:compile
++- com.foreach.across:across-autoconfigure:jar:2.4.2:compile
+|  +- com.foreach.across:across-web:jar:5.4.2:compile
 |  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.6.15:compile
 |  |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.6.15:compile
 |  |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
@@ -21,7 +21,7 @@ test-projects:spring-boot-cache:jar:2.4-SNAPSHOT
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.6.15:compile
 |  |  \- org.yaml:snakeyaml:jar:1.29:compile
-|  \- com.foreach.across:across-core:jar:5.4-SNAPSHOT:compile
+|  \- com.foreach.across:across-core:jar:5.4.2:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |     +- org.springframework:spring-context:jar:5.3.32:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.32:compile
