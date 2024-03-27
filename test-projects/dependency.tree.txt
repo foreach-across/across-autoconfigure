@@ -1,4 +1,4 @@
-test-projects:test-projects:pom:2.4.2
+test-projects:test-projects:pom:dev-SNAPSHOT
 +- org.springframework.boot:spring-boot-test:jar:2.6.15:test
 |  \- org.springframework.boot:spring-boot:jar:2.6.15:test
 |     \- org.springframework:spring-context:jar:5.3.32:test
