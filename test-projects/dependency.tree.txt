@@ -1,13 +1,13 @@
 test-projects:test-projects:pom:dev-SNAPSHOT
 +- org.springframework.boot:spring-boot-test:jar:2.6.15:test
 |  \- org.springframework.boot:spring-boot:jar:2.6.15:test
-|     \- org.springframework:spring-context:jar:5.3.32:test
-|        +- org.springframework:spring-aop:jar:5.3.32:test
-|        +- org.springframework:spring-beans:jar:5.3.32:test
-|        \- org.springframework:spring-expression:jar:5.3.32:test
-+- org.springframework:spring-test:jar:5.3.32:test
-|  \- org.springframework:spring-core:jar:5.3.32:test
-|     \- org.springframework:spring-jcl:jar:5.3.32:test
+|     \- org.springframework:spring-context:jar:5.3.33:test
+|        +- org.springframework:spring-aop:jar:5.3.33:test
+|        +- org.springframework:spring-beans:jar:5.3.33:test
+|        \- org.springframework:spring-expression:jar:5.3.33:test
++- org.springframework:spring-test:jar:5.3.33:test
+|  \- org.springframework:spring-core:jar:5.3.33:test
+|     \- org.springframework:spring-jcl:jar:5.3.33:test
 +- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test
 |  +- org.junit.platform:junit-platform-engine:jar:1.8.2:test
 |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
