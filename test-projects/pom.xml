@@ -55,11 +55,23 @@
 		<repository>
 			<id>across</id>
 			<name>Across Repository</name>
-			<url>https://repository.foreach.be/nexus/repository/public/</url>
+			<url>https://repository.antwerpen.io-external.com/nexus/repository/public/</url>
 		</repository>
 	</repositories>
 
 	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-autoconfigure</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-test</artifactId>
+				<version>${across-framework.version}</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>

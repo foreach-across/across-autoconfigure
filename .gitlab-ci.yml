@@ -7,3 +7,7 @@ include:
       - '/gitlab-ci/unit-tests-docker.gitlab-ci.yml'
       - '/gitlab-ci/integration-tests-docker.gitlab-ci.yml'
       - '/gitlab-ci/deploy.gitlab-ci.yml'
+
+variables:
+  ACROSS_FRAMEWORK_VERSION: 5.5-SNAPSHOT
+  REVISION: 2.5-SNAPSHOT

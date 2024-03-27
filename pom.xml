@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-standard-module-parent</artifactId>
-		<version>5.5-SNAPSHOT</version>
+		<version>dev-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -19,8 +19,8 @@
 		<project.build.outputTimestamp>2023-01-01T00:00:00Z</project.build.outputTimestamp>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<revision>2.5-SNAPSHOT</revision>
-		<across-framework.version>5.4.1</across-framework.version>
+		<revision>dev-SNAPSHOT</revision>
+		<across-framework.version>dev-SNAPSHOT</across-framework.version>
 		<spring.boot.admin.version>2.3.1</spring.boot.admin.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 		<!--spring-plugin.version>1.2.0.RELEASE</spring-plugin.version: Fails for test-projects/spring-boot-data-jpa -->
@@ -57,7 +57,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-test</artifactId>
-				<version>5.5-SNAPSHOT</version>
+				<version>${across-framework.version}</version>
 			</dependency>
 
 			<dependency>
@@ -134,7 +134,7 @@
 		<repository>
 			<id>across</id>
 			<name>Across Repository</name>
-			<url>https://repository.foreach.be/nexus/repository/public/</url>
+			<url>https://repository.antwerpen.io-external.com/nexus/repository/public/</url>
 		</repository>
 	</repositories>
 
