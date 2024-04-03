@@ -64,10 +64,10 @@ test-projects:spring-cloud-config:jar:dev-SNAPSHOT
 |  +- org.eclipse.jgit:org.eclipse.jgit.http.apache:jar:5.13.1.202206130422-r:compile
 |  |  \- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
 |  +- org.eclipse.jgit:org.eclipse.jgit.ssh.apache:jar:5.13.1.202206130422-r:compile
-|  |  +- org.apache.sshd:sshd-osgi:jar:2.7.0:compile
-|  |  +- org.apache.sshd:sshd-sftp:jar:2.7.0:compile
-|  |  |  \- org.apache.sshd:sshd-core:jar:2.7.0:compile
-|  |  |     \- org.apache.sshd:sshd-common:jar:2.7.0:compile
+|  |  +- org.apache.sshd:sshd-osgi:jar:2.12.1:compile
+|  |  +- org.apache.sshd:sshd-sftp:jar:2.12.1:compile
+|  |  |  \- org.apache.sshd:sshd-core:jar:2.12.1:compile
+|  |  |     \- org.apache.sshd:sshd-common:jar:2.12.1:compile
 |  |  \- net.i2p.crypto:eddsa:jar:0.3.0:compile
 |  +- org.yaml:snakeyaml:jar:1.30:compile
 |  \- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.13.5:compile
