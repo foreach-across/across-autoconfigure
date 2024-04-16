@@ -6,8 +6,8 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  |  |     +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
 |  |  |     \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
 |  |  +- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
-|  |  +- org.springframework:spring-webmvc:jar:5.3.33:compile
-|  |  |  \- org.springframework:spring-expression:jar:5.3.33:compile
+|  |  +- org.springframework:spring-webmvc:jar:5.3.34:compile
+|  |  |  \- org.springframework:spring-expression:jar:5.3.34:compile
 |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
 |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
@@ -15,19 +15,18 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
-|     +- org.springframework:spring-context:jar:5.3.33:compile
-|     +- org.springframework:spring-jdbc:jar:5.3.33:compile
-|     +- ch.qos.logback:logback-classic:jar:1.2.12:compile
-|     |  \- ch.qos.logback:logback-core:jar:1.2.12:compile
+|     +- org.springframework:spring-context:jar:5.3.34:compile
+|     +- org.springframework:spring-jdbc:jar:5.3.34:compile
+|     +- ch.qos.logback:logback-classic:jar:1.2.13:compile
+|     |  \- ch.qos.logback:logback-core:jar:1.2.13:compile
 |     +- org.slf4j:slf4j-api:jar:1.7.36:compile
 |     +- org.slf4j:jcl-over-slf4j:jar:1.7.36:compile
 |     +- org.apache.commons:commons-lang3:jar:3.12.0:compile
-|     \- org.liquibase:liquibase-core:jar:4.17.0:compile
-|        +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
-|        |  \- javax.activation:javax.activation-api:jar:1.2.0:compile
-|        \- com.opencsv:opencsv:jar:5.6:compile
-|           +- org.apache.commons:commons-text:jar:1.9:compile
-|           \- org.apache.commons:commons-collections4:jar:4.4:compile
+|     \- org.liquibase:liquibase-core:jar:4.27.0:compile
+|        +- com.opencsv:opencsv:jar:5.9:compile
+|        +- org.apache.commons:commons-text:jar:1.11.0:compile
+|        +- org.apache.commons:commons-collections4:jar:4.4:compile
+|        \- javax.xml.bind:jaxb-api:jar:2.3.1:compile
 +- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
 |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
 |  +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
@@ -39,7 +38,7 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  |  |     +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
 |  |  |     |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
 |  |  |     \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
-|  |  +- org.springframework:spring-aop:jar:5.3.33:compile
+|  |  +- org.springframework:spring-aop:jar:5.3.34:compile
 |  |  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
 |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.18:compile
 |  +- jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile
@@ -56,15 +55,15 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  |     \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
 |  +- org.springframework.data:spring-data-jpa:jar:2.7.18:compile
 |  |  +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
-|  |  +- org.springframework:spring-tx:jar:5.3.33:compile
-|  |  \- org.springframework:spring-beans:jar:5.3.33:compile
-|  \- org.springframework:spring-aspects:jar:5.3.33:compile
+|  |  +- org.springframework:spring-tx:jar:5.3.34:compile
+|  |  \- org.springframework:spring-beans:jar:5.3.34:compile
+|  \- org.springframework:spring-aspects:jar:5.3.34:compile
 +- org.springframework.boot:spring-boot-starter-data-rest:jar:2.7.18:compile
 |  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
 |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
 |  |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
-|  |  \- org.springframework:spring-web:jar:5.3.33:compile
+|  |  \- org.springframework:spring-web:jar:5.3.34:compile
 |  \- org.springframework.data:spring-data-rest-webmvc:jar:3.7.18:compile
 |     +- org.springframework.data:spring-data-rest-core:jar:3.7.18:compile
 |     |  +- org.springframework.hateoas:spring-hateoas:jar:1.5.6:compile
@@ -78,9 +77,9 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 +- com.h2database:h2:jar:2.1.214:compile
 +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
 |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
-|  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.86:compile
-|  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.86:compile
-|  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.86:compile
+|  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.87:compile
+|  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.87:compile
+|  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.87:compile
 +- com.querydsl:querydsl-jpa:jar:5.0.0:compile
 |  \- com.querydsl:querydsl-core:jar:5.0.0:compile
 |     \- com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile
@@ -90,7 +89,7 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:test
 |  |  \- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test
 |  +- com.zaxxer:HikariCP:jar:4.0.3:compile
-|  +- org.springframework:spring-orm:jar:5.3.33:compile
+|  +- org.springframework:spring-orm:jar:5.3.34:compile
 |  +- org.hsqldb:hsqldb:jar:2.5.2:test
 |  +- org.xmlunit:xmlunit-matchers:jar:2.9.1:test
 |  |  +- org.xmlunit:xmlunit-core:jar:2.9.1:test
@@ -99,20 +98,20 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |  +- org.mockito:mockito-core:jar:4.5.1:test
 |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
 |  |  \- org.objenesis:objenesis:jar:3.2:test
-|  +- org.testcontainers:testcontainers:jar:1.19.3:test
+|  +- org.testcontainers:testcontainers:jar:1.19.7:test
 |  |  +- org.apache.commons:commons-compress:jar:1.24.0:test
 |  |  +- org.rnorth.duct-tape:duct-tape:jar:1.0.8:test
 |  |  |  \- org.jetbrains:annotations:jar:17.0.0:test
-|  |  +- com.github.docker-java:docker-java-api:jar:3.3.4:test
-|  |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.3.4:test
-|  |     +- com.github.docker-java:docker-java-transport:jar:3.3.4:test
+|  |  +- com.github.docker-java:docker-java-api:jar:3.3.6:test
+|  |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.3.6:test
+|  |     +- com.github.docker-java:docker-java-transport:jar:3.3.6:test
 |  |     \- net.java.dev.jna:jna:jar:5.13.0:test
-|  +- org.testcontainers:mysql:jar:1.19.3:test
-|  |  \- org.testcontainers:jdbc:jar:1.19.3:test
-|  |     \- org.testcontainers:database-commons:jar:1.19.3:test
-|  +- org.testcontainers:postgresql:jar:1.19.3:test
-|  +- org.testcontainers:mssqlserver:jar:1.19.3:test
-|  \- org.testcontainers:oracle-xe:jar:1.19.3:test
+|  +- org.testcontainers:mysql:jar:1.19.7:test
+|  |  \- org.testcontainers:jdbc:jar:1.19.7:test
+|  |     \- org.testcontainers:database-commons:jar:1.19.7:test
+|  +- org.testcontainers:postgresql:jar:1.19.7:test
+|  +- org.testcontainers:mssqlserver:jar:1.19.7:test
+|  \- org.testcontainers:oracle-xe:jar:1.19.7:test
 +- com.querydsl:querydsl-apt:jar:5.0.0:provided
 |  \- com.querydsl:querydsl-codegen:jar:5.0.0:provided
 |     +- com.querydsl:codegen-utils:jar:5.0.0:provided
@@ -121,9 +120,9 @@ test-projects:spring-boot-data-jpa:jar:dev-SNAPSHOT
 |     \- io.github.classgraph:classgraph:jar:4.8.108:provided
 +- org.springframework.boot:spring-boot-test:jar:2.7.18:test
 |  \- org.springframework.boot:spring-boot:jar:2.7.18:compile
-+- org.springframework:spring-test:jar:5.3.33:test
-|  \- org.springframework:spring-core:jar:5.3.33:compile
-|     \- org.springframework:spring-jcl:jar:5.3.33:compile
++- org.springframework:spring-test:jar:5.3.34:test
+|  \- org.springframework:spring-core:jar:5.3.34:compile
+|     \- org.springframework:spring-jcl:jar:5.3.34:compile
 +- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test
 |  +- org.junit.platform:junit-platform-engine:jar:1.8.2:test
 |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
