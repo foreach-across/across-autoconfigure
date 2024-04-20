@@ -1,5 +1,5 @@
-com.foreach.across:across-autoconfigure:jar:2.5.0-beta-1
-+- com.foreach.across:across-web:jar:5.5.0-beta-1:compile
+com.foreach.across:across-autoconfigure:jar:2.5-SNAPSHOT
++- com.foreach.across:across-web:jar:5.5-SNAPSHOT:compile
 |  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
 |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
@@ -27,7 +27,7 @@ com.foreach.across:across-autoconfigure:jar:2.5.0-beta-1
 |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.springframework.boot:spring-boot:jar:2.7.18:compile
 |  \- org.yaml:snakeyaml:jar:1.30:compile
-+- com.foreach.across:across-core:jar:5.5.0-beta-1:compile
++- com.foreach.across:across-core:jar:5.5-SNAPSHOT:compile
 |  +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |  +- org.springframework:spring-context:jar:5.3.34:compile
 |  +- org.springframework:spring-jdbc:jar:5.3.34:compile
