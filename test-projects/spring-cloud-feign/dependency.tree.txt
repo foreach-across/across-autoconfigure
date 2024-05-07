@@ -1,6 +1,6 @@
-test-projects:spring-cloud-feign:jar:2.5-SNAPSHOT
-+- com.foreach.across:across-autoconfigure:jar:2.5-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:5.5-SNAPSHOT:compile
+test-projects:spring-cloud-feign:jar:2.5.0
++- com.foreach.across:across-autoconfigure:jar:2.5.0:compile
+|  +- com.foreach.across:across-web:jar:5.5.0:compile
 |  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
 |  |  |  \- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 |  |  |     +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
@@ -18,7 +18,7 @@ test-projects:spring-cloud-feign:jar:2.5-SNAPSHOT
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
-|  \- com.foreach.across:across-core:jar:5.5-SNAPSHOT:compile
+|  \- com.foreach.across:across-core:jar:5.5.0:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |     +- org.springframework:spring-context:jar:5.3.34:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.34:compile
