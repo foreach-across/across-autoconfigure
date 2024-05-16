@@ -1,6 +1,5 @@
 package ax;
 
-import lombok.var;
 
 public class DevSpringBootDataApplication
 {

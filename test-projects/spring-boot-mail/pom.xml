@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.icegreen</groupId>
             <artifactId>greenmail-spring</artifactId>
-            <version>1.5.5</version>
+            <version>2.0.1</version>
         </dependency>
     </dependencies>
 </project>

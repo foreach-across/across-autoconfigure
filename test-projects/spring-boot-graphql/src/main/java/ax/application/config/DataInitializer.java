@@ -9,7 +9,7 @@ import ax.application.domain.profile.ProfileRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Configuration
 @RequiredArgsConstructor
