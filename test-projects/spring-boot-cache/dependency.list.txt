@@ -11,7 +11,7 @@ com.fasterxml:classmate:jar:1.5.1:compile
 com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
-com.foreach.libs:common-concurrent:jar:2.0.0-beta-1:compile
+com.foreach.libs:common-concurrent:jar:2.0.0-beta-2:compile
 com.opencsv:opencsv:jar:5.9:compile
 com.sun.activation:jakarta.activation:jar:1.2.2:runtime
 com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
