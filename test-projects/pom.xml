@@ -26,13 +26,17 @@
 		<module>actuator</module>
 		<module>spring-boot-admin</module>
 		<module>spring-boot-data-jpa</module>
+		<!--
 		<module>spring-boot-data-cassandra</module>
 		<module>spring-boot-data-couchbase</module>
 		<module>spring-boot-data-elasticsearch</module>
+		-->
 		<module>spring-boot-data-ldap</module>
+		<!--
 		<module>spring-boot-data-mongo</module>
 		<module>spring-boot-data-neo4j</module>
 		<module>spring-boot-data-redis</module>
+		-->
 		<module>spring-boot-data-rest</module>
 		<!-- https://spring.io/blog/2020/04/07/spring-data-for-apache-solr-discontinued:
 		<module>spring-boot-data-solr</module>
@@ -41,10 +45,14 @@
 		<module>spring-boot-session</module>
 		<module>spring-boot-websocket</module>
 		<module>spring-boot-cache</module>
+		<!--
 		<module>swagger2</module>
+		-->
 		<module>spring-boot-rabbitmq</module>
 		<module>spring-cloud-config</module>
+		<!--
 		<module>spring-cloud-feign</module>
+		-->
 		<!-- GraphQL not used by any active project:
 		<module>spring-boot-graphql</module>
 		-->
