@@ -219,6 +219,8 @@ spring-data-jpa:
       destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration:
       destination: DynamicApplicationModule
+    org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizationAutoConfiguration:
+      destination: DynamicApplicationModule
     org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration:
       destination: DynamicApplicationModule
 
