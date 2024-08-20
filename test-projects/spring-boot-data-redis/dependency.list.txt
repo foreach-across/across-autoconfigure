@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ch.qos.logback:logback-classic:jar:1.4.14:compile
 ch.qos.logback:logback-core:jar:1.4.14:compile
 com.fasterxml.jackson.core:jackson-annotations:jar:2.15.4:compile
@@ -10,6 +11,20 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
 com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
+=======
+ch.qos.logback:logback-classic:jar:1.2.13:compile
+ch.qos.logback:logback-core:jar:1.2.13:compile
+com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
+com.foreach.libs:common-concurrent:jar:2.0.0-beta-2:compile
+>>>>>>> origin/2.5
 com.github.docker-java:docker-java-api:jar:3.3.6:test
 com.github.docker-java:docker-java-transport-zerodep:jar:3.3.6:test
 com.github.docker-java:docker-java-transport:jar:3.3.6:test

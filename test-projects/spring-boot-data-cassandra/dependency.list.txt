@@ -5,6 +5,7 @@ com.datastax.oss:java-driver-core:jar:4.17.0:compile
 com.datastax.oss:java-driver-query-builder:jar:4.17.0:compile
 com.datastax.oss:java-driver-shaded-guava:jar:25.1-jre-graal-sub-1:compile
 com.datastax.oss:native-protocol:jar:1.5.1:compile
+<<<<<<< HEAD
 com.fasterxml.jackson.core:jackson-annotations:jar:2.15.4:compile
 com.fasterxml.jackson.core:jackson-core:jar:2.15.4:compile
 com.fasterxml.jackson.core:jackson-databind:jar:2.15.4:compile
@@ -15,6 +16,18 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
 com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
+=======
+com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
+com.foreach.libs:common-concurrent:jar:2.0.0-beta-2:compile
+>>>>>>> origin/2.5
 com.github.docker-java:docker-java-api:jar:3.3.6:test
 com.github.docker-java:docker-java-transport-zerodep:jar:3.3.6:test
 com.github.docker-java:docker-java-transport:jar:3.3.6:test
