@@ -9,5 +9,6 @@ include:
       - '/gitlab-ci/deploy.gitlab-ci.yml'
 
 variables:
+  JAVA_VERSION: 8
   ACROSS_FRAMEWORK_VERSION: 5.5-SNAPSHOT
   REVISION: 2.5-SNAPSHOT
