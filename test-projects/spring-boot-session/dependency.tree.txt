@@ -19,7 +19,6 @@ test-projects:spring-boot-session:jar:dev-SNAPSHOT
 |  |  \- org.yaml:snakeyaml:jar:2.2:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
-|     +- org.slf4j:jcl-over-slf4j:jar:2.0.13:compile
 |     +- org.apache.commons:commons-lang3:jar:3.13.0:compile
 |     \- org.liquibase:liquibase-core:jar:4.27.0:compile
 |        +- com.opencsv:opencsv:jar:5.9:compile

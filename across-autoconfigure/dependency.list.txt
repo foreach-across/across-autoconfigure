@@ -79,7 +79,6 @@ org.mapstruct:mapstruct:jar:1.2.0.Final:provided
 org.ow2.asm:asm:jar:9.6:provided
 org.projectlombok:lombok:jar:1.18.34:provided
 org.reactivestreams:reactive-streams:jar:1.0.4:provided
-org.slf4j:jcl-over-slf4j:jar:2.0.13:compile
 org.slf4j:jul-to-slf4j:jar:2.0.13:compile
 org.slf4j:slf4j-api:jar:2.0.13:compile
 org.springframework.amqp:spring-amqp:jar:3.1.6:provided
