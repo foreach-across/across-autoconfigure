@@ -6,9 +6,9 @@ com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
-com.foreach.across:across-autoconfigure:jar:2.5.1:compile
-com.foreach.across:across-core:jar:5.5.1:compile
-com.foreach.across:across-web:jar:5.5.1:compile
+com.foreach.across:across-autoconfigure:jar:2.5-SNAPSHOT:compile
+com.foreach.across:across-core:jar:5.5-SNAPSHOT:compile
+com.foreach.across:across-web:jar:5.5-SNAPSHOT:compile
 com.foreach.libs:common-concurrent:jar:2.0.0:compile
 com.opencsv:opencsv:jar:5.9:compile
 com.unboundid:unboundid-ldapsdk:jar:6.0.10:compile
