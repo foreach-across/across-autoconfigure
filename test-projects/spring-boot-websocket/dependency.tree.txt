@@ -1,6 +1,6 @@
-test-projects:spring-boot-websocket:jar:dev-SNAPSHOT
-+- com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
+test-projects:spring-boot-websocket:jar:2.5.1
++- com.foreach.across:across-autoconfigure:jar:2.5.1:compile
+|  +- com.foreach.across:across-web:jar:5.5.1:compile
 |  |  +- org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile
 |  |  |  \- org.thymeleaf:thymeleaf:jar:3.0.15.RELEASE:compile
 |  |  |     +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
@@ -15,7 +15,7 @@ test-projects:spring-boot-websocket:jar:dev-SNAPSHOT
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
-|  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
+|  \- com.foreach.across:across-core:jar:5.5.1:compile
 |     +- com.foreach.libs:common-concurrent:jar:2.0.0:compile
 |     +- org.springframework:spring-context:jar:5.3.39:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.39:compile
@@ -48,7 +48,7 @@ test-projects:spring-boot-websocket:jar:dev-SNAPSHOT
 |  +- org.springframework:spring-messaging:jar:5.3.39:compile
 |  |  \- org.springframework:spring-beans:jar:5.3.39:compile
 |  \- org.springframework:spring-websocket:jar:5.3.39:compile
-+- com.foreach.across:across-test:jar:dev-SNAPSHOT:compile
++- com.foreach.across:across-test:jar:5.5.1:compile
 |  +- org.junit.vintage:junit-vintage-engine:jar:5.8.2:compile
 |  |  \- junit:junit:jar:4.13.2:compile
 |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:compile
