@@ -153,14 +153,6 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<repositories>
-		<repository>
-			<id>across</id>
-			<name>Across Repository</name>
-			<url>https://repository.antwerpen.io-external.com/nexus/repository/public/</url>
-		</repository>
-	</repositories>
-
 	<modules>
 		<module>across-autoconfigure</module>
 		<module>test-projects</module>
