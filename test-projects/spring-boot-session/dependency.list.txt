@@ -9,7 +9,7 @@ com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.4:compile
 com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
-com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
+com.foreach.libs:common-concurrent:jar:3.0.0:compile
 com.h2database:h2:jar:2.2.224:compile
 com.opencsv:opencsv:jar:5.9:compile
 com.zaxxer:HikariCP:jar:5.0.1:compile

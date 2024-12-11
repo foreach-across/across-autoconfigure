@@ -15,7 +15,7 @@ test-projects:spring-boot-websocket:jar:dev-SNAPSHOT
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.2.12:compile
 |  |  \- org.yaml:snakeyaml:jar:2.2:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
-|     +- com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
+|     +- com.foreach.libs:common-concurrent:jar:3.0.0:compile
 |     +- org.springframework:spring-context:jar:6.1.15:compile
 |     |  \- io.micrometer:micrometer-observation:jar:1.12.13:compile
 |     |     \- io.micrometer:micrometer-commons:jar:1.12.13:compile
@@ -73,7 +73,7 @@ test-projects:spring-boot-websocket:jar:dev-SNAPSHOT
 |  |  +- com.github.docker-java:docker-java-api:jar:3.4.0:compile
 |  |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.4.0:compile
 |  |     +- com.github.docker-java:docker-java-transport:jar:3.4.0:compile
-|  |     \- net.java.dev.jna:jna:jar:5.13.0:compile
+|  |     \- net.java.dev.jna:jna:jar:5.15.0:compile
 |  +- org.testcontainers:mysql:jar:1.20.4:compile
 |  |  \- org.testcontainers:jdbc:jar:1.20.4:compile
 |  |     \- org.testcontainers:database-commons:jar:1.20.4:compile

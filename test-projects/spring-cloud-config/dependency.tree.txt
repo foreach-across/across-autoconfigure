@@ -13,7 +13,7 @@ test-projects:spring-cloud-config:jar:dev-SNAPSHOT
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.4:compile
 |  |  \- org.springframework.boot:spring-boot-autoconfigure:jar:3.2.12:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
-|     +- com.foreach.libs:common-concurrent:jar:3.0-SNAPSHOT:compile
+|     +- com.foreach.libs:common-concurrent:jar:3.0.0:compile
 |     +- org.springframework:spring-context:jar:6.1.15:compile
 |     +- org.springframework:spring-jdbc:jar:6.1.15:compile
 |     |  \- org.springframework:spring-tx:jar:6.1.15:compile
