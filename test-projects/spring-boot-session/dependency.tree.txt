@@ -1,6 +1,6 @@
-test-projects:spring-boot-session:jar:dev-SNAPSHOT
-+- com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
+test-projects:spring-boot-session:jar:6.0.0
++- com.foreach.across:across-autoconfigure:jar:6.0.0:compile
+|  +- com.foreach.across:across-web:jar:6.0.0:compile
 |  |  +- org.springframework.boot:spring-boot-starter-web:jar:3.2.12:compile
 |  |  |  +- org.springframework.boot:spring-boot-starter-json:jar:3.2.12:compile
 |  |  |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.4:compile
@@ -17,7 +17,7 @@ test-projects:spring-boot-session:jar:dev-SNAPSHOT
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.4:compile
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.2.12:compile
 |  |  \- org.yaml:snakeyaml:jar:2.2:compile
-|  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
+|  \- com.foreach.across:across-core:jar:6.0.0:compile
 |     +- com.foreach.libs:common-concurrent:jar:3.0.0:compile
 |     +- org.apache.commons:commons-lang3:jar:3.13.0:compile
 |     \- org.liquibase:liquibase-core:jar:4.30.0:compile
