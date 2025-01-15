@@ -21,10 +21,10 @@ org.projectlombok:lombok:jar:1.18.36:provided
 org.slf4j:slf4j-api:jar:2.0.16:compile
 org.springframework.boot:spring-boot-test:jar:3.2.12:test
 org.springframework.boot:spring-boot:jar:3.2.12:test
-org.springframework:spring-aop:jar:6.1.15:test
-org.springframework:spring-beans:jar:6.1.15:test
-org.springframework:spring-context:jar:6.1.15:test
-org.springframework:spring-core:jar:6.1.15:test
-org.springframework:spring-expression:jar:6.1.15:test
-org.springframework:spring-jcl:jar:6.1.15:test
-org.springframework:spring-test:jar:6.1.15:test
+org.springframework:spring-aop:jar:6.1.16:test
+org.springframework:spring-beans:jar:6.1.16:test
+org.springframework:spring-context:jar:6.1.16:test
+org.springframework:spring-core:jar:6.1.16:test
+org.springframework:spring-expression:jar:6.1.16:test
+org.springframework:spring-jcl:jar:6.1.16:test
+org.springframework:spring-test:jar:6.1.16:test

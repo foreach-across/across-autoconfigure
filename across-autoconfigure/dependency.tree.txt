@@ -8,17 +8,17 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT
 |  |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.33:compile
 |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.33:compile
 |  |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.33:compile
-|  |  \- org.springframework:spring-web:jar:6.1.15:compile
+|  |  \- org.springframework:spring-web:jar:6.1.16:compile
 |  +- org.thymeleaf:thymeleaf-spring6:jar:3.1.2.RELEASE:compile
 |  |  \- org.thymeleaf:thymeleaf:jar:3.1.2.RELEASE:compile
 |  |     +- org.attoparser:attoparser:jar:2.0.7.RELEASE:compile
 |  |     \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
-|  +- org.springframework:spring-webmvc:jar:6.1.15:compile
-|  |  +- org.springframework:spring-aop:jar:6.1.15:compile
-|  |  +- org.springframework:spring-beans:jar:6.1.15:compile
-|  |  +- org.springframework:spring-core:jar:6.1.15:compile
-|  |  |  \- org.springframework:spring-jcl:jar:6.1.15:compile
-|  |  \- org.springframework:spring-expression:jar:6.1.15:compile
+|  +- org.springframework:spring-webmvc:jar:6.1.16:compile
+|  |  +- org.springframework:spring-aop:jar:6.1.16:compile
+|  |  +- org.springframework:spring-beans:jar:6.1.16:compile
+|  |  +- org.springframework:spring-core:jar:6.1.16:compile
+|  |  |  \- org.springframework:spring-jcl:jar:6.1.16:compile
+|  |  \- org.springframework:spring-expression:jar:6.1.16:compile
 |  +- com.fasterxml.jackson.core:jackson-core:jar:2.15.4:compile
 |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.15.4:compile
 |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.15.4:compile
@@ -28,11 +28,11 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT
 |  \- org.yaml:snakeyaml:jar:2.2:compile
 +- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 |  +- com.foreach.libs:common-concurrent:jar:3.0.0:compile
-|  +- org.springframework:spring-context:jar:6.1.15:compile
+|  +- org.springframework:spring-context:jar:6.1.16:compile
 |  |  \- io.micrometer:micrometer-observation:jar:1.12.13:compile
 |  |     \- io.micrometer:micrometer-commons:jar:1.12.13:compile
-|  +- org.springframework:spring-jdbc:jar:6.1.15:compile
-|  |  \- org.springframework:spring-tx:jar:6.1.15:compile
+|  +- org.springframework:spring-jdbc:jar:6.1.16:compile
+|  |  \- org.springframework:spring-tx:jar:6.1.16:compile
 |  +- org.slf4j:slf4j-api:jar:2.0.16:compile
 |  +- org.apache.commons:commons-lang3:jar:3.13.0:compile
 |  \- org.liquibase:liquibase-core:jar:4.30.0:compile
@@ -61,8 +61,8 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT
 |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:provided (optional)
 |  \- org.mapstruct:mapstruct:jar:1.2.0.Final:provided (optional)
 +- org.springframework.boot:spring-boot-starter-websocket:jar:3.2.12:provided (optional)
-|  +- org.springframework:spring-messaging:jar:6.1.15:provided (optional)
-|  \- org.springframework:spring-websocket:jar:6.1.15:provided (optional)
+|  +- org.springframework:spring-messaging:jar:6.1.16:provided (optional)
+|  \- org.springframework:spring-websocket:jar:6.1.16:provided (optional)
 +- org.springframework.boot:spring-boot-starter-amqp:jar:3.2.12:provided (optional)
 |  +- org.springframework.boot:spring-boot-starter:jar:3.2.12:compile
 |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.2.12:compile
@@ -100,7 +100,7 @@ com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT
 |  |  |     \- io.projectreactor.netty:reactor-netty-core:jar:1.1.24:provided (optional)
 |  |  |        \- io.netty:netty-handler-proxy:jar:4.1.115.Final:provided (optional)
 |  |  |           \- io.netty:netty-codec-socks:jar:4.1.115.Final:provided (optional)
-|  |  \- org.springframework:spring-webflux:jar:6.1.15:provided (optional)
+|  |  \- org.springframework:spring-webflux:jar:6.1.16:provided (optional)
 |  +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.2.12:provided (optional)
 |  +- org.springframework.boot:spring-boot-starter-actuator:jar:3.2.12:provided (optional)
 |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.2.12:provided (optional)
