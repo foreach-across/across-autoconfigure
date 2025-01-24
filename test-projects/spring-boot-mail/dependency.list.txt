@@ -6,9 +6,9 @@ com.fasterxml.jackson.core:jackson-databind:jar:2.15.4:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.4:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.4:compile
 com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.4:compile
-com.foreach.across:across-autoconfigure:jar:6.0.1:compile
-com.foreach.across:across-core:jar:6.0.1:compile
-com.foreach.across:across-web:jar:6.0.1:compile
+com.foreach.across:across-autoconfigure:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
+com.foreach.across:across-web:jar:dev-SNAPSHOT:compile
 com.foreach.libs:common-concurrent:jar:3.0.0:compile
 com.icegreen:greenmail-spring:jar:2.0.1:compile
 com.icegreen:greenmail:jar:2.0.1:compile
